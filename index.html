@@ -1,373 +1,544 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>API TNT</title>
+    <meta property="og:image" content="https://i.imgur.com/WqKUKI9.png" />
+    <title>Wed API được tạo bởi TNT</title>
+    <meta property="og:profile:username" content="TNT">
+    <meta property="og:site_name" content="API">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta property="og:title" content="TNT API" />
+    <meta property="og:url" content="" />
+  <link href="https://i.imgur.com/ytckc8q.jpeg" rel="icon">
+    <link href="https://i.imgur.com/ytckc8q.jpeg" rel="apple-touch-icon">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3623406530584630"
+     crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
-body{
-  min-height: 100vh;
-  background: url(/static/background.jpg)no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-header{
-  background: #cc33ff ;
-  padding: 20px;
-  width: 100%;
-  height: 60px;
-}
-
-.loader{
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: black;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.loader img{
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  border-color: #fff;
-  margin-top: 60px;
-  animation: flow 5s linear infinite;
-  box-shadow: 0px 0px 10px #B9EEEE,
-  0px 0px 40px #fff;
-}
-
-.ilang {
-  animation: ilang 5s forwards;
-  transition: 0.6s ease;
-}
-
-@keyframes ilang{
-  50%{
-    opacity: 1;
-    }100%{
-      opacity: 0;
-      visibility: hidden;
+    html {
+        height: 100%;
     }
-  }
 
-  @keyframes flow{
-    0%{
-      transform: scale(0);
-      opacity: 0;
+    body {
+        height: 100%;
+        margin: 0px;
     }
-    50%{
-      opacity: 1;
+
+    .center .description .clock {
+        color: #000000;
+        font-size: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
     }
-    100%{
-      transform: scale(1);
-      opacity: 0;
+    .center {
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        margin: 0px;
+        width: 100%;
+        color: #222;
+        z-index: 1;
+        padding-top: 150px;
     }
-    
-  }
 
-  .kiri h3{
-    color: #00cccc;
-    text-align: center;
-    margin: -20px;
-    font-size: 25px;
-    font-weight: 1000;
-    margin-top: -10px;
-  }
-
-  footer{
-    background: #660033 ;
-    padding: 20px;
-    width: 100%;
-    height: 40px;
-  }
-
-  .kiri span{
-    color: #fff;
-  }
-
-  .bawah h4{
-    color: #fff;
-    text-align: center;
-    margin: -20px;
-    font-size: 13px;
-    font-weight: 200;
-    margin-top: -10px;
-  }
-
-  .bawah span{
-    color: #18ffff;
-  }
-
-  .side-bar{
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
-    width: 290px;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: -100%;
-    overflow-y: auto;
-    transition: 0.6s ease;
-    transition-property: left;
-  }
-
-  .side-bar.active{
-    left: 0;
-  }
-
-  .side-bar .menu{
-    width: 100%;
-    margin-top: 80px;
-  }
-
-  .side-bar .menu .item{
-    position: relative;
-    cursor: pointer;
-  }
-
-  .side-bar .menu .item a{
-    color: #1d1aff;
-    font-size: 12px;
-    text-decoration: none;
-    display: block;
-    padding: 5px 30px;
-    line-height: 40px;
-    font-weight: 600;
-  }
-
-  .side-bar .menu .item a:hover{
-    background: rgba(0, 0, 153, 0.4);
-    transition: 0.7s ease;
-  }
-
-  .side-bar .menu .item i{
-    color: #fff;
-    margin-right: 15px;
-    text-shadow: 0 0 10px #401aff;
-  }
-
-  .side-bar .menu .item a .dropdown{
-    position: absolute;
-    right: 0;
-    margin: 20px;
-    transition: 0.3s ease;
-  }
-
-  .side-bar .menu .item .sub-menu{
-    background: rgba(0, 0, 102, 0.2);
-    display: none;
-  }
-
-  .side-bar .menu .item .sub-menu a{
-    color: #B9EEEE;
-    font-weight: 450;
-    padding-left: 80px;
-  }
-
-  .side-bar .menu .item .sub-menu a:hover{
-    background: rgba(0,255,255, 0.5);
-    transition: 0.3s ease;
-  }
-
-  .side-bar .anunya{
-    width: 100px;
-    height: 100px;
-    border-radius: 100px;
-    margin-top: 60px;
-    box-shadow: 0px 0px 10px #cc33ff,
-    0px 0px 40px #cc33ff;
-    animation: blinkk 5s linear infinite;
-  }
-
-  @keyframes blinkk{
-    50%{
-      opacity: 0.5;
+    .center h1 {
+        font-size: 4rem;
     }
-  }
 
-  .side-bar h3{
-    color: #fff;
-  }
-
-  .side-bar h4{
-    color: #fff;
-  }
-
-  .side-bar span{
-    color: #18ffff;
-  }
-
-  .rotate{
-    transform: rotate(90deg);
-  }
-
-  .close-btn{
-    position: absolute;
-    color: #fff;
-    font-size: 20px;
-    right: 0;
-    margin: 25px;
-    cursor: pointer;
-  }
-
-  .menu-btn{
-    position: absolute;
-    font-size: 23px;
-    margin: 25px;
-    cursor: pointer;
-    margin-top: -50px;
-  }
-
-  .menu-btn i{
-    background: #cc33ff;
-    color: #fff;
-    display: block;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    transition: 5s ease;
-    line-height: 40px;
-    text-align: center;
-  }
-
-  .menu-btn i:hover{
-    box-shadow: 0px 0px 10px #B9EEEE,
-    0px 0px 20px #cc33ff;
-    text-shadow: 0 0 10px #00FFFF;
-  }
-
-  .main{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-  }
-
-  .main h1{
-    color: #ffcce6;
-    font-size: 60px;
-    text-align: center;
-    line-height: 50px;
-    text-shadow: 0 0 10px #734dff,
-    0 0 20px #7c4dff,
-    0 0 40px #4d58ff;
-  }
-
-  .main span{
-    color: #00FFFF;
-    font-size: 60px;
-    text-align: center;
-    line-height: 5px;
-  }
-
-  @media (max-width: 900px){
-    .main h1{
-      font-size: 40px;
-      line-height: 60px;
+    .center .description {
+        font-family: monospace;
+        line-height: 22px;
+        font-size: 18px;
+        width: 370px;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 25px;
     }
-  }
+
+    .center .description a {
+        text-decoration: none;
+        color: #111;
+        text-style: bold;
+    }
+
+    .select {
+        display: inline-block;
+        margin-right: 10px;
+        position: relative;
+    }
+
+    select {
+        transition: background-color 200ms ease;
+        font-size: 14px;
+        padding: 10px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        box-sizing: border-box;
+        border-radius: 3px;
+        font-family: monospace;
+        padding-right: 30px;
+        position: relative;
+        outline: 0px;
+        background: #fff;
+        cursor: pointer;
+    }
+
+    .select:after {
+        content: "▼";
+        padding: 14px 8px;
+        position: absolute;
+        right: 13px;
+        top: 0;
+        z-index: 1;
+        text-align: center;
+        width: 10%;
+        height: 100%;
+        pointer-events: none;
+        box-sizing: border-box;
+        font-size: 9px;
+    }
+
+    button {
+        transition: background-color 200ms ease;
+        font-size: 14px;
+        padding: 10px 12px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        box-sizing: border-box;
+        border-radius: 3px;
+        border: 1px solid #aaa;
+        background: #fff;
+        font-family: monospace;
+        cursor: pointer;
+        outline: 0px;
+    }
+
+    button:hover,
+    select:hover {
+        background-color: #eee;
+    }
+
+    .center .links {
+        padding-top: 10px;
+        font-family: monospace;
+        letter-spacing: 0.3px;
+        font-size: 14px;
+    }
+
+    .center .links a {
+        text-decoration: none;
+        margin-left: 0px;
+        margin-right: 100px;
+        color: #111;
+    }
+
+    .center .links a:hover {
+        text-decoration: underline;
+    }
+
+    .center .grid {
+      display: grid;
+      column-gap: 50px;
+    }
+    .center .grid hr {
+      border-top: 1px dashed gray;
+    }
+    .center .grid-item {
+      font-family: monospace;
+      letter-spacing: 0.3px;
+      font-size: 14px;
+      padding-bottom: 20px;
+    }
+    .center .grid-item a {
+      float: left;
+      text-decoration: none;
+      margin-left: 10px;
+      margin-right: 10px;
+      color: #111;
+    }
+
+    footer{
+        color: #000;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    iframe {
+        margin-left: 14px;
+        margin-bottom: -5px;
+    }
+
+    @media (max-width: 900px) {
+        .center h1 {
+            font-size: 50px;
+        }
+        .center .links a,
+        .center .links iframe {
+            display: block;
+            margin: auto;
+            margin-bottom: 12px;
+        }
+        .divider {
+            display: none;
+        }
+    }
+
+    @media (max-width: 400px) {
+        .center h1 {
+            font-size: 26px;
+        }
+        .center .description {
+            font-size: 14px;
+            width: 100%;
+            padding-left: 40px;
+            padding-right: 40px;
+            box-sizing: border-box;
+        }
+      }
+      table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    a {
+      color: blue;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+          .user-chat:empty {
+           background-color: transparent;
+           pointer-events: none;
+        }
+           .chat-container {
+            background-color: var(--primary);
+            color: #000;
+            padding: 10px;
+            border-radius: 5px;
+            height: 300px;
+            overflow-y: scroll;
+        }
+
+        .user-chat {
+            background-color: #dcf8c6;
+            color: #000;
+            padding: 5px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+            .bot-chat {
+            background-color: #ffffff;
+            color: #000;
+            padding: 5px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+    .live-chat-input {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #f5f5f5;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      padding: 10px;
+    }
+
+    #inputText {
+      flex: 1;
+      border: none;
+      outline: none;
+      margin-right: 10px;
+      font-size: 16px;
+    }
+
+    #submitBtn {
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      outline: none;
+      padding: 8px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    #submitBtn:hover {
+      background-color: #45a049;
+    }
+    }
+    <style>
+        /* CSS để tạo màu cho chữ */
+        .rainbow-text {
+            background-image: linear-gradient(to white, violet, indigo, blue, green, yellow, orange, red);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        /* CSS Animation để tạo hiệu ứng chữ màu động */
+        @keyframes rainbow {
+            0% {
+                color: white;
+            }
+            14% {
+                color: indigo;
+            }
+            28% {
+                color: blue;
+            }
+            42% {
+                color: green;
+            }
+            56% {
+                color: yellow;
+            }
+            70% {
+                color: orange;
+            }
+            84% {
+                color: red;
+            }
+            100% {
+                color: violet;
+            }
+        }
+
+        /* Áp dụng Animation cho chữ */
+        .animated-rainbow {
+            animation: rainbow 6s linear infinite;
+        }
+    body {
+        background: linear-gradient(to right, #d47d7d, #e1b460, rgb(224, 224, 81), rgb(95, 249, 95), rgb(77, 77, 235), rgb(166, 66, 237), rgb(217, 107, 217)); /* Mã màu hoặc tên màu */
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        height: 100vh; /* Để thấy rõ màu nền trên toàn bộ trang */
+    }
+    </style>
   </style>
-  <link href="/static/profile.jpg" rel="icon">
-  <title>TNT - API</title>
 </head>
-<header>
-  <div class="kiri">
-    <h3>TNT <span>API</span></h3>
-  </div>
-</header>
-
 <body>
-  <div class="menu-btn">
-    <i class="fas fa-bars"></i>
-  </div>
-  <div class="side-bar">
-    <div class="close-btn">
-      <i class="fas fa-times"></i>
+      <div class="center">
+      <h1 class="rainbow-text animated-rainbow">TNTXTRICK API</h1>
+      <h1 class="rainbow-text animated-rainbow">Tổng API: 47 (tổng số API)</h1>
+      <div class="description">
+        API TNTXTRICK
+        / Bán Src API giá rẻ
+        <table>
+            <hr>
+        </table>
+        <h3 class="rainbow-text animated-rainbow">MENU API</h3>
+        <table>
+            <p id="continuousTime"></p>
+            <hr>
+            <tr>
+                <th class="rainbow-text animated-rainbow">Số</th>
+                <th class="rainbow-text animated-rainbow">Tên</th>
+                <th class="rainbow-text animated-rainbow">Phương pháp</th>
+                <th class="rainbow-text animated-rainbow">Chuyển</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td class="rainbow-text animated-rainbow">SC</td>
+                <td>GET</td>
+                <td><a href="/sc/download?text=">[ ➠ ]</a></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td class="rainbow-text animated-rainbow">CapCut</td>
+                <td>GET</td>
+                <td><a href="/capcutdown?link=">[ ➠ ]</a></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td class="rainbow-text animated-rainbow">Facebook</td>
+                <td>GET</td>
+                <td><a href="/fb/download?link=">[ ➠ ]</a></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td class="rainbow-text animated-rainbow">Instagram</td>
+                <td>GET</td>
+                <td><a href="/instagramdown?link=">[ ➠ ]</a></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td class="rainbow-text animated-rainbow">TW</td>
+                <td>GET</td>
+                <td><a href="/tw/download?link=">[ ➠ ]</a></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td class="rainbow-text animated-rainbow">Tiktok</td>
+                <td>GET</td>
+                <td><a href="/tiktok/downloadvideo?url=">[ ➠ ]</a></td>
+            </tr>
+          <tr>
+              <td>7</td>
+              <td class="rainbow-text animated-rainbow">Youtube</td>
+              <td>GET</td>
+              <td><a href="/youtube/search?keywork=sontung">[ ➠ ]</a></td>
+          </tr>
+          <tr>
+              <td>8</td>
+              <td class="rainbow-text animated-rainbow">Pinterest</td>
+              <td>GET</td>
+              <td><a href="/pinterest/down?link=">[ ➠ ]</a></td>
+          </tr>
+          <tr>
+              <td>9</td>
+              <td class="rainbow-text animated-rainbow">Down All</td>
+              <td>GET</td>
+              <td><a href="/allinone?link=">[ ➠ ]</a></td>
+          </tr>
+          <tr>
+              <td>10</td>
+              <td class="rainbow-text animated-rainbow">SC search</td>
+              <td>GET</td>
+              <td><a href="/sc/search?text=">[ ➠ ]</a></td>
+          </tr>
+          <tr>
+              <td>11</td>
+              <td class="rainbow-text animated-rainbow">SC info</td>
+              <td>GET</td>
+              <td><a href="/sc/userinfo?text=">[ ➠ ]</a></td>
+          </tr>
+          <tr>
+              <td>12</td>
+              <td class="rainbow-text animated-rainbow">Get Token 6v7</td>
+              <td>GET</td>
+              <td><a href="/token6v7?user=tnt?pass=123?twofa=">[ ➠ ]</a></td>
+          </tr>
+          <tr>
+              <td>13</td>
+              <td class="rainbow-text animated-rainbow">Thời tiết 1h</td>
+              <td>GET</td>
+              <td><a href="/weather1h?loca=hanoi">[ ➠ ]</a></td>
+          </tr>
+          <tr>
+              <td>14</td>
+              <td class="rainbow-text animated-rainbow">Thời tiết 1d</td>
+              <td>GET</td>
+              <td><a href="/weather1d?loca=hanoi">[ ➠ ]</a></td>
+          </tr>
+          <tr>
+              <td>15</td>
+              <td class="rainbow-text animated-rainbow">Down all in one</td>
+              <td>GET</td>
+              <td><a href="/downall?link=">[ ➠ ]</a></td>
+          </tr>
+          <tr>
+              <td>16</td>
+              <td class="rainbow-text animated-rainbow">CapCut</td>
+              <td>GET</td>
+              <td><a href="/capcut?url=">[ ➠ ]</a></td>
+          </tr>
+          <tr>
+              <td>17</td>
+              <td class="rainbow-text animated-rainbow">Threads Down</td>
+              <td>GET</td>
+              <td><a href="/threadsdown?link=">[ ➠ ]</a></td>
+          </tr>
+          <tr>
+              <td>18</td>
+              <td class="rainbow-text animated-rainbow">Id Threads</td>
+              <td>GET</td>
+              <td><a href="/threads/iduser?keyword=">[ ➠ ]</a></td>
+          </tr>
+          <tr>
+              <td>18</td>
+              <td class="rainbow-text animated-rainbow">Threads Down</td>
+              <td>GET</td>
+              <td><a href="/threads/infouser?keyword=">[ ➠ ]</a></td>
+         </tr>
+         <tr>
+             <td>19</td>
+             <td class="rainbow-text animated-rainbow">Pinterest User</td>
+             <td>GET</td>
+             <td><a href="/pinterest/user?key=">[ ➠ ]</a></td>
+         </tr>
+         <tr>
+             <td>20</td>
+             <td class="rainbow-text animated-rainbow">Search GitHub</td>
+             <td>GET</td>
+             <td><a href="/github/search?user=">[ ➠ ]</a></td>
+        </tr>
+        <tr>
+             <td>21</td>
+             <td class="rainbow-text animated-rainbow">Threads Down</td>
+             <td>GET</td>
+             <td><a href="/threadsdown?link=">[ ➠ ]</a></td>
+       </tr>
+       <tr>
+            <td>22</td>
+            <td class="rainbow-text animated-rainbow">Youtube Short</td>
+            <td>GET</td>
+            <td><a href="/ytbshort?link=">[ ➠ ]</a></td>
+      </tr>
+      <tr>
+            <td>23</td>
+            <td class="rainbow-text animated-rainbow">Youtube Trending (mu/mo/n/g)</td>
+            <td>GET</td>
+            <td><a href="/ytb/trending?keyword=mu">[ ➠ ]</a></td>
+      </tr>
+      <tr>
+            <td>24</td>
+            <td class="rainbow-text animated-rainbow">Voice AI</td>
+            <td>GET</td>
+            <td><a href="/voiceai?keyword=">[ ➠ ]</a></td>
+      </tr>
+      <tr>
+            <td>25</td>
+            <td class="rainbow-text animated-rainbow">Sreenshort</td>
+            <td>GET</td>
+            <td><a href="/sreenshort/Uid/cookies">[ ➠ ]</a></td>
+      </tr>
+        </table>     
+        <br>
+        <hr>
+        <footer>
+            <p class="rainbow-text animated-rainbow">&#169; 2024 TNTXTRICK. Src được xây dựng bởi TNT.</p>
+        </footer>
+        </br>
+        </hr>
     </div>
-    <center>
-      <img src="/static/profile.jpg" class="anunya" alt="">
-      <h3>Welcome To<br></h3>
-      <h4>TNT <span>API</span></h4>
-    </center>
-    <div class="menu">
-      <div class="item">
-        <a class="sub-btn"><i class="fas fa-download"></i>Downloader<i class="fas fa-angle-right dropdown"></i></a>
-        <div class="sub-menu">
-          <a class="sub-item" href="/sc/download?link=&apikey=" target="_blank"><i>Sc down</i></a>
-          <a class="sub-item" href="/capcut?url=" target="_blank"><i>Capcut</i></a>
-          <a class="sub-item" href="/google/search?text=" target="_blank"><i>Google</i></a>
-          <a class="sub-item" href="/downinsta?link=" target="_blank"><i>Down insta</i></a>
-          <a class="sub-item" href="/tw/download?link=&apikey=" target="_blank"><i>Tw down</i></a>
-          <a class="sub-item" href="/tw/search?key=&apikey=" target="_blank"><i>Twitter search</i></a>
-          <a class="sub-item" href="/youtube/search?keyword=" target="_blank"><i>Youtube search</i></a>
-          <a class="sub-item" href="/pinterest/down?link=" target="_blank"><i>Pinteresr down</i></a>
-          <a class="sub-item" href="/sc/search?text=&apikey=" target="_blank"><i>Sc search</i></a>
-          <a class="sub-item" href="/sc/userinfo?text=&apikey=" target="_blank"><i>Sc info</i></a>
-          <a class="sub-item" href="/twinfo?user=&apikey=" target="_blank"><i>Tw info</i></a>
-          <a class="sub-item" href="/ytbshort?link=&apikey=" target="_blank"><i>Youtube short</i></a>
-          <a class="sub-item" href="/tracksc?keyword=" target="_blank"><i>Track sc</i></a>
-          <a class="sub-item" href="/instagram/searchig?ig=" target="_blank"><i>Insta search</i></a>
-          <a class="sub-item" href="/instagram/infouser?ig=" target="_blank"><i>Insta info</i></a>
-          <a class="sub-item" href="/threadsdown?link=&apikey=" target="_blank"><i>Thread down</i></a>
-          <a class="sub-item" href="/threads/iduser?keyword=&apikey=" target="_blank"><i>Thread id</i></a>
-          <a class="sub-item" href="/capwall/${uid}/${cookies}" target="_blank"><i>Capwall</i></a>
-          <a class="sub-item" href="/pinterest/user?key=" target="_blank"><i>Pinterest user</i></a>
-        </div>
-      </div>
-      <div class="item">
-        <a class="sub-btn"><i class="fas fa-archive"></i>Other<i class="fas fa-angle-right dropdown"></i></a>
-        <div class="sub-menu">
-          <a class="sub-item" href="/api/nhread/388177" target="_blank"><i>Nhentai Reader</i></a>
-          <a class="sub-item" href="/api/nhdetail?code=388177" target="_blank"><i>Nhentai Detail</i></a>
-          <a class="sub-item" href="/api/nhartist?artist=crimson&page=1" target="_blank"><i>Nhentai Artist</i></a>
-          <a class="sub-item" href="/api/nhtag?tag=yuri&page=1" target="_blank"><i>Nhentai Tag</i></a>
-          <a class="sub-item" href="/api/nhhome?page=1" target="_blank"><i>Nhentai Home</i></a>
-          <a class="sub-item" href="/api/nhsearch?query=hutao&page=1" target="_blank"><i>Nhentai Search</i></a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <section class="main">
-    <h1>WELCOME TO TNT API</h1>
-  </section>
+  <script>
+    function updateContinuousTime() {
+    // Lấy thời gian hiện tại
+    var currentTime = new Date();
 
-  <script type="text/javascript">
-    var loader = document.querySelector('.loader')
-    window.addEventListener("load", wush);
-    function wush(){
-      loader.classList.add("ilang");
-    }
-    $(document).ready(function(){
-      $('.sub-btn').click(function(){
-        $(this).next('.sub-menu').slideToggle();
-        $(this).find('.dropdown').toggleClass('rotate');
-      });
+    // Chuyển đổi thời gian thành định dạng giờ:phút:giây
+    var hours = currentTime.getHours();
+    var minutes = currentTime.getMinutes();
+    var seconds = currentTime.getSeconds();
 
-      $('.menu-btn').click(function(){
-        $('.side-bar').addClass('active');
-        $('.menu-btn').css("visibility", "hidden");
-      });
+    // Thêm số 0 đằng trước nếu cần
+    hours = (hours < 10 ? '0' : '') + hours;
+    minutes = (minutes < 10 ? '0' : '') + minutes;
+    seconds = (seconds < 10 ? '0' : '') + seconds;
 
-      $('.close-btn').click(function(){
-        $('.side-bar').removeClass('active');
-        $('.menu-btn').css("visibility", "visible");
-      });
-    });
-  </script>
+    // Hiển thị thời gian chuyển động liên tục trên trang web
+    document.getElementById('continuousTime').innerText = hours + ':' + minutes + ':' + seconds;
+}
+
+// Cập nhật thời gian sau mỗi giây
+setInterval(updateContinuousTime, 1000);
+       
+    
+</script>
 </body>
 </html>
