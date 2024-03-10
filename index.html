@@ -328,9 +328,60 @@
         font-family: Arial, sans-serif;
         height: 100vh; /* Để thấy rõ màu nền trên toàn bộ trang */
     }
+    <style>
+    .btn {
+  height: 30px;
+  width: 100px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#copy-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+  animation: fadeInOut 2s forwards;
+  z-index: 9999;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  25% { opacity: 1; }
+  75% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.hidden {
+  display: none;
+}
+    
+    </style>
+    </style>
     </style>
   </style>
 </head>
+  <script>
+  function copyToClipboard(text) {
+    const el = document.createElement('textarea');
+    el.value = text;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+    document.getElementById('copy-message').classList.remove('hidden');
+    setTimeout(function() {
+      document.getElementById('copy-message').classList.add('hidden');
+    }, 2000);
+  }
+  </script>
 <body>
       <div class="center">
       <h1 class="rainbow-text animated-rainbow">TNTXTRICK API</h1>
@@ -341,6 +392,14 @@
         <table>
             <hr>
         </table>
+
+  <div class="close-btn">
+    <i class="fas fa-times"></i>
+  </div>
+</header>
+       
+
+
         <h3 class="rainbow-text animated-rainbow">MENU API</h3>
         <table>
             <p id="continuousTime"></p>
@@ -355,158 +414,175 @@
                 <td>1</td>
                 <td>SC</td>
                 <td>GET</td>
-                <td><a href="/sc/download?text=">[ ➠ ]</a></td>
+                <td><div id="copy-message" class="hidden">Đã sao chép!</div>
+<button type="button" class="btn" onclick="copyToClipboard('https://api-7izq.onrender.com/sc/download?link=&apikey=')">COPY</button>
+</td>
             </tr>
             <tr>
                 <td>2</td>
                 <td>CapCut</td>
                 <td>GET</td>
-                <td><a href="/capcutdown?link=">[ ➠ ]</a></td>
+                <td><button type="button" class="btn" onclick="copyToClipboard('https://api-7izq.onrender.com/capcut?url=')">COPY</button></td>
             </tr>
             <tr>
                 <td>3</td>
-                <td>Facebook</td>
+                <td>Google</td>
                 <td>GET</td>
-                <td><a href="/fb/download?link=">[ ➠ ]</a></td>
+                <td><button type="button" class="btn" onclick="copyToClipboard('https://api-7izq.onrender.com/google/search?text=')">COPY</button></td>
             </tr>
             <tr>
                 <td>4</td>
                 <td>Instagram</td>
                 <td>GET</td>
-                <td><a href="/instagramdown?link=">[ ➠ ]</a></td>
+                <td><button type="button" class="btn" onclick="copyToClipboard('https://api-7izq.onrender.com/downinsta?link=')">COPY</button></td>
             </tr>
             <tr>
                 <td>5</td>
                 <td>TW</td>
                 <td>GET</td>
-                <td><a href="/tw/download?link=">[ ➠ ]</a></td>
+                <td><button type="button" class="btn" onclick="copyToClipboard('https://api-7izq.onrender.com/tw/download?link=&apikey=')">COPY</button></td>
             </tr>
             <tr>
                 <td>6</td>
-                <td>Tiktok</td>
+                <td>Tw search</td>
                 <td>GET</td>
-                <td><a href="/tiktok/downloadvideo?url=">[ ➠ ]</a></td>
+                <td><button type="button" class="btn" onclick="copyToClipboard('https://api-7izq.onrender.com/tw/search?key=&apikey=')">COPY</button></td>
             </tr>
           <tr>
               <td>7</td>
-              <td>Youtube</td>
+              <td>Youtube search</td>
               <td>GET</td>
-              <td><a href="/youtube/search?keywork=sontung">[ ➠ ]</a></td>
+              <td><button type="button" class="btn" onclick="copyToClipboard('https://api-7izq.onrender.com/youtube/search?keyword=')">COPY</button></td>
           </tr>
           <tr>
               <td>8</td>
-              <td>Pinterest</td>
+              <td>Pinterest down</td>
               <td>GET</td>
-              <td><a href="/pinterest/down?link=">[ ➠ ]</a></td>
+              <td><button type="button" class="btn" onclick="copyToClipboard('https://api-7izq.onrender.com/pinterest/down?link=')">COPY</button></td>
           </tr>
           <tr>
               <td>9</td>
-              <td>Down All</td>
+              <td>Down all in one</td>
               <td>GET</td>
-              <td><a href="/allinone?link=">[ ➠ ]</a></td>
+              <td><button type="button" class="btn" onclick="copyToClipboard('https://api-7izq.onrender.com/downall?link=&apikey=')">COPY</button></td>
           </tr>
           <tr>
               <td>10</td>
               <td>SC search</td>
               <td>GET</td>
-              <td><a href="/sc/search?text=">[ ➠ ]</a></td>
+              <td><button type="button" class="btn" onclick="copyToClipboard('https://api-7izq.onrender.com/sc/search?text=&apikey=')">COPY</button></td>
           </tr>
           <tr>
               <td>11</td>
               <td>SC info</td>
               <td>GET</td>
-              <td><a href="/sc/userinfo?text=">[ ➠ ]</a></td>
+              <td><button type="button" class="btn" onclick="copyToClipboard('https://api-7izq.onrender.com/sc/userinfo?text=&apikey=')">COPY</button></td>
           </tr>
           <tr>
               <td>12</td>
-              <td>Get Token 6v7</td>
+              <td>Tw info</td>
               <td>GET</td>
-              <td><a href="/token6v7?user=tnt?pass=123?twofa=">[ ➠ ]</a></td>
+              <td><button type="button" class="btn" onclick="copyToClipboard('https://api-7izq.onrender.com/twinfo?user=&apikey=')">COPY</button></td>
           </tr>
           <tr>
               <td>13</td>
-              <td>Thời tiết 1h</td>
+              <td>Youtube Short</td>
               <td>GET</td>
-              <td><a href="/weather1h?loca=hanoi">[ ➠ ]</a></td>
+              <td><button type="button" class="btn" onclick="copyToClipboard('https://api-7izq.onrender.com/ytbshort?link=&apikey=')">COPY</button></td>
           </tr>
           <tr>
               <td>14</td>
-              <td>Thời tiết 1d</td>
+              <td>Sc track</td>
               <td>GET</td>
-              <td><a href="/weather1d?loca=hanoi">[ ➠ ]</a></td>
+              <td><button type="button" class="btn" onclick="copyToClipboard('https://api-7izq.onrender.com/tracksc?keyword=')">COPY</button></td>
           </tr>
           <tr>
               <td>15</td>
-              <td>Down all in one</td>
+              <td>Insta search</td>
               <td>GET</td>
-              <td><a href="/downall?link=">[ ➠ ]</a></td>
-          </tr>
+              <td><button type="button" class="btn" onclick="copyToClipboard('https://api-7izq.onrender.com/instagram/searchig?ig=')">COPY</button></td>
           <tr>
               <td>16</td>
-              <td>CapCut</td>
+              <td>Insta info</td>
               <td>GET</td>
-              <td><a href="/capcut?url=">[ ➠ ]</a></td>
-          </tr>
+              <td><button type="button" class="btn" onclick="copyToClipboard('https://api-7izq.onrender.com/instagram/infouser?ig=')">COPY</button></td>
           <tr>
               <td>17</td>
               <td>Threads Down</td>
               <td>GET</td>
-              <td><a href="/threadsdown?link=">[ ➠ ]</a></td>
+              <td><button type="button" class="btn" onclick="copyToClipboard('https://api-7izq.onrender.com/threadsdown?link=&apikey=')">COPY</button></td>
           </tr>
           <tr>
               <td>18</td>
               <td>Id Threads</td>
-              <td>GET</td>
-              <td><a href="/threads/iduser?keyword=">[ ➠ ]</a></td>
+             <td>GET</td>
+              <td><button type="button" class="btn" onclick="copyToClipboard('https://api-7izq.onrender.com/threads/iduser?keyword=&apikey=')">COPY</button></td>
           </tr>
           <tr>
               <td>18</td>
-              <td>Threads Down</td>
+              <td>Cap Wall</td>
               <td>GET</td>
-              <td><a href="/threads/infouser?keyword=">[ ➠ ]</a></td>
+              <td><button type="button" class="btn" onclick="copyToClipboard('https://api-7izq.onrender.com/capwall/${uid}/${cookies}')">COPY</button></td>
          </tr>
          <tr>
              <td>19</td>
              <td>Pinterest User</td>
              <td>GET</td>
-             <td><a href="/pinterest/user?key=">[ ➠ ]</a></td>
+             <td><button type="button" class="btn" onclick="copyToClipboard('https://api-7izq.onrender.com/pinterest/user?key=')">COPY</button></td>
          </tr>
          <tr>
              <td>20</td>
              <td>Search GitHub</td>
              <td>GET</td>
-             <td><a href="/github/search?user=">[ ➠ ]</a></td>
+             <td><button type="button" class="btn" onclick="copyToClipboard('https://api-7izq.onrender.com/github/search?user=')">COPY</button></td>
         </tr>
         <tr>
              <td>21</td>
-             <td>Threads Down</td>
+             <td>Fb watch</td>
              <td>GET</td>
-             <td><a href="/threadsdown?link=">[ ➠ ]</a></td>
+             <td><button type="button" class="btn" onclick="copyToClipboard('https://api-7izq.onrender.com/fbwatch?link=')">COPY</button></td>
        </tr>
        <tr>
             <td>22</td>
-            <td>Youtube Short</td>
+            <td>Fb down</td>
             <td>GET</td>
-            <td><a href="/ytbshort?link=">[ ➠ ]</a></td>
-      </tr>
+            <td><button type="button" class="btn" onclick="copyToClipboard('https://api-7izq.onrender.com/fb/download?link=&apikey=')">COPY</button></td>
       <tr>
             <td>23</td>
             <td>Youtube Trending (mu/mo/n/g)</td>
             <td>GET</td>
-            <td><a href="/ytb/trending?keyword=mu">[ ➠ ]</a></td>
+            <td><button type="button" class="btn" onclick="copyToClipboard('https://api-7izq.onrender.com/ytb/trending?keyword=')">COPY</button></td>
       </tr>
       <tr>
             <td>24</td>
-            <td>Voice AI</td>
+            <td>SimSimi</td>
             <td>GET</td>
-            <td><a href="/voiceai?keyword=">[ ➠ ]</a></td>
+            <td><button type="button" class="btn" onclick="copyToClipboard('https://api-7izq.onrender.com/sim?ask=')">COPY</button></td>
       </tr>
       <tr>
             <td>25</td>
-            <td>Sreenshort</td>
+            <td>Bard</td>
             <td>GET</td>
-            <td><a href="/sreenshort/Uid/cookies">[ ➠ ]</a></td>
+            <td><button type="button" class="btn" onclick="copyToClipboard('https://api-7izq.onrender.com/bard?q=')">COPY</button></td>
       </tr>
+      <tr>
+            <td>26</td>
+            <td>Xnxx search</td>
+            <td>GET</td>
+            <td><button type="button" class="btn" onclick="copyToClipboard('https://api-7izq.onrender.com/xnxxsearch?keyword=')">COPY</button></td>
+     </tr>
+      <tr>
+            <td>27</td>
+            <td>Xnxx down</td>
+            <td>GET</td>
+            <td><button type="button" class="btn" onclick="copyToClipboard('https://api-7izq.onrender.com/xnxxdown?link=')">COPY</button></td>
+     </tr>
+     <tr>
+            <td>28</td>
+            <td>Ảnh gái</td>
+            <td>GET</td>
+            <td><button type="button" class="btn" onclick="copyToClipboard('https://api-7izq.onrender.com/images/gai')">COPY</button></td>
+     </tr>
         </table>     
         <br>
         <hr>
@@ -516,6 +592,11 @@
         </br>
         </hr>
     </div>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+
+
+          
   <script>
     function updateContinuousTime() {
     // Lấy thời gian hiện tại
