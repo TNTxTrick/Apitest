@@ -13,3 +13,12 @@ const options = {
   }
 };
 
+try {
+      const response = await axios.request(options);
+      console.log(response.data);
+      return res.json(response.data);
+    } catch (error) {
+      console.error(error);
+      return res.json({ error: 'Có lỗi xảy ra khi tải xuống dữ liệu từ Youtube' });
+    }
+  };
