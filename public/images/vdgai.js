@@ -1,11 +1,11 @@
 exports.name = '/images/vdgai';
 exports.index = async(req, res, next) => {
     try {
-        const gai = require('./data/json/gai.json');
-        var image = gai[Math.floor(Math.random() * gai.length)].trim();
+        const vdgai = require('./data/json/vdgai.json');
+        var image = vdgai[Math.floor(Math.random() * vdgai.length)].trim();
         res.jsonp({
             url: image,
-            count: gai.length,
+            count: vdgai.length,
             author: 'Tnt'
         });
     } catch (e) {
