@@ -7,17 +7,17 @@ exports.index = async (req, res, next) => {
 
   const axios = require('axios');
 
-  const options = {
-    method: 'GET',
-    url: 'https://instagram-downloader-download-instagram-videos-stories.p.rapidapi.com/index',
-    params: {
-      url: link
-    },
-    headers: {
-      'X-RapidAPI-Key': 'fd92cf57c9msh1f7b78b804353c7p1548f3jsn69db0304865d',
-      'X-RapidAPI-Host': 'instagram-downloader-download-instagram-videos-stories.p.rapidapi.com'
-    }
-  };
+const options = {
+  method: 'GET',
+  url: 'https://instagram-post-and-reels-downloader.p.rapidapi.com/',
+  params: {
+    url: 'https://www.instagram.com/reel/C0haD5YtZ4h/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=='
+  },
+  headers: {
+    'X-RapidAPI-Key': 'c677a2e9e3msh9944fd67c431ac3p1e4ca3jsn693a78eab94d',
+    'X-RapidAPI-Host': 'instagram-post-and-reels-downloader.p.rapidapi.com'
+  }
+};
 
   try {
     const response = await axios.request(options);
