@@ -4,16 +4,17 @@ exports.index = async (req, res, next) => {
   if (!link) return res.json({ error: 'Thiếu dữ liệu để khởi chạy chương trình ' });
   const axios = require('axios');
 
-  const options = {
-    method: 'POST',
-    url: 'https://all-video-downloader1.p.rapidapi.com/Instagram',
-    headers: {
-      'content-type': 'application/json',
-      'X-RapidAPI-Key': 'fd92cf57c9msh1f7b78b804353c7p1548f3jsn69db0304865d',
-      'X-RapidAPI-Host': 'all-video-downloader1.p.rapidapi.com'
-    },
-    data: { url: link }
-  };
+const options = {
+  method: 'GET',
+  url: 'https://instagram-story-downloader-media-downloader.p.rapidapi.com/index',
+  params: {
+    url: link
+  },
+  headers: {
+    'X-RapidAPI-Key': 'c677a2e9e3msh9944fd67c431ac3p1e4ca3jsn693a78eab94d',
+    'X-RapidAPI-Host': 'instagram-story-downloader-media-downloader.p.rapidapi.com'
+  }
+};
 
   try {
     const response = await axios.request(options);
