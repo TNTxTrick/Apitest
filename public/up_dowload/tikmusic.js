@@ -9,7 +9,7 @@ const options = {
   method: 'GET',
   url: 'https://tiktok-api15.p.rapidapi.com/index/Tiktok/getMusicInfo',
   params: {
-    url: 'https://vt.tiktok.com/ZSFuwqBC7/'
+    url: link
   },
   headers: {
     'X-RapidAPI-Key': 'd0ab76bc06msh5032ca2f6f3baf9p15f9d8jsn024d834a55cb',
