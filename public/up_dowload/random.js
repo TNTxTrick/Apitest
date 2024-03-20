@@ -52,7 +52,25 @@ exports.index = async (req, res, next) => {
     "https://vt.tiktok.com/ZSF5ygMhr/", 
     "https://vt.tiktok.com/ZSF5ymLRr/", 
     "https://vt.tiktok.com/ZSF5yXtn1/", 
-    "https://vt.tiktok.com/ZSF5w7AwF/"
+    "https://vt.tiktok.com/ZSF5w7AwF/", 
+    "https://vt.tiktok.com/ZSFuw1pN7/", 
+    "https://vt.tiktok.com/ZSFuTtPeM/", 
+    "https://vt.tiktok.com/ZSFuTGPRM/", 
+    "https://vt.tiktok.com/ZSFuTcS98/", 
+    "https://vt.tiktok.com/ZSFuTKsh4/", 
+    "https://vt.tiktok.com/ZSFuwx3X8/", 
+    "https://vt.tiktok.com/ZSFuwkVHD/", 
+    "https://vt.tiktok.com/ZSFuwrL2U/", 
+    "https://vt.tiktok.com/ZSFuwQ8CN/", 
+    "https://vt.tiktok.com/ZSFuwamxC/", 
+    "https://vt.tiktok.com/ZSFuwav1S/", 
+    "https://vt.tiktok.com/ZSFuwuPNG/", 
+    "https://vt.tiktok.com/ZSFuwAgWF/", 
+    "https://vt.tiktok.com/ZSFuwujGq/", 
+    "https://vt.tiktok.com/ZSFuwScnP/", 
+    "https://vt.tiktok.com/ZSFuwQBs2/", 
+    "https://vt.tiktok.com/ZSFuwmg79/", 
+    "https://vt.tiktok.com/ZSFuwUuPq/"
 
   ];
 
