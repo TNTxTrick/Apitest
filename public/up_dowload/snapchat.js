@@ -14,7 +14,7 @@ const options = {
     url: link
   },
   headers: {
-    'X-RapidAPI-Key': getRandomKey()
+    'X-RapidAPI-Key': getRandomKey(), 
     'X-RapidAPI-Host': 'download-snapchat-video-spotlight-online.p.rapidapi.com'
   }
 };
