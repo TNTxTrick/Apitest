@@ -1,4 +1,4 @@
-const keyAPi = ['d0ab76bc06msh5032ca2f6f3baf9p15f9d8jsn024d834a55cb','c677a2e9e3msh9944fd67c431ac3p1e4ca3jsn693a78eab94d'];
+const keyAPi = ['94208fec7fmsh64b5be7c2bdd72dp17ce8cjsna3e04d56dbc7',''];
 const getRandomKey = () => keyAPi[Math.floor(Math.random() * keyAPi.length)];
 
 exports.name = '/snapchat';
