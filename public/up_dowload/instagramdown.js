@@ -11,7 +11,7 @@ const options = {
     url: link
   },
   headers: {
-    'X-RapidAPI-Key': '843052fc5cmsh208d39312244a7dp186c7fjsn9a3bd5296dbd',
+    'X-RapidAPI-Key': '47a23919a4msh78b95d902d5a830p12dcddjsnf8bcbe88ed59',
     'X-RapidAPI-Host': 'instagram-story-downloader-media-downloader.p.rapidapi.com'
   }
 };
