@@ -12,7 +12,7 @@ const options = {
     url: link
   },
   headers: {
-    'X-RapidAPI-Key': 'd0ab76bc06msh5032ca2f6f3baf9p15f9d8jsn024d834a55cb',
+    'X-RapidAPI-Key': '843052fc5cmsh208d39312244a7dp186c7fjsn9a3bd5296dbd',
     'X-RapidAPI-Host': 'tiktok-api15.p.rapidapi.com'
   }
 };
