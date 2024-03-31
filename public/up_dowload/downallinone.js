@@ -10,7 +10,7 @@ exports.index = async (req, res, next) => {
     url: 'https://social-download-all-in-one.p.rapidapi.com/v1/social/autolink',
     headers: {
       'content-type': 'application/json',
-      'X-RapidAPI-Key': '3630a660f7msh5928760034ca557p1a6373jsnf2ebaa2cc40e',
+      'X-RapidAPI-Key': '7a3c7b4a88msh665caba240ae78cp18d85djsnba48fadcb98a',
       'X-RapidAPI-Host': 'social-download-all-in-one.p.rapidapi.com'
     },
     data: {
