@@ -18,7 +18,6 @@ exports.index = async(req, res, next) => {
                 images[random_2-1],
                 images[random_3-1]
             ],
-            author: 'D-Jukie'
         })
     } catch(e) {
         res.json({ 
