@@ -3,7 +3,7 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 
 exports.index = async (req, res, next) => {
-    const characterUrl = 'https://kimetsu-no-yaiba.fandom.com/info/';
+    const characterUrl = 'https://kimetsu-no-yaiba.fandom.com/wiki/';
     const url = characterUrl + req.params.character;
     const titles = [];
     const details = [];
