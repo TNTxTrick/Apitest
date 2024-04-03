@@ -12,7 +12,7 @@ exports.index = async (req, res, next) => {
                 const name = $(element).find("a").attr("title");
                 const url = $(element).find("a").attr("href");
                 const image = $(element).find("a > img").attr("data-src");
-                const cleanUrl = "https://api-7izq.onrender.com" + url.substring(url.indexOf("/wiki"));
+                const cleanUrl = "https://api-7izq.onrender.com" + url.substring(url.indexOf("/info"));
                 thumbnails.push({ name, url: cleanUrl, image });
             });
             if (limit && limit > 0) {
