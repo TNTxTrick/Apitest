@@ -1,4 +1,4 @@
-exports.name = '/test/:character';
+exports.name = '/info/:character';
 const axios = require('axios');
 const cheerio = require('cheerio');
 
