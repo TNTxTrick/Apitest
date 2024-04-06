@@ -1,0 +1,1784 @@
+[
+      {
+              "ID":0,
+              "name":"Jean",
+              "va":"SAITO Chiwa",
+              "story":"Là con gái của Frederica Gunnhildr và Seamus Pegg, chị gái của Barbara và là hậu duệ của Gia Tộc Gunnhildr danh giá, Jean là quyền Đội Trưởng của Đội Kỵ Sĩ Tây Phong.",
+              "element": "Phong",
+              "birthday": "14/03",
+              "countryside": "Mondstadt",
+              "sex": "Nữ",
+              "belong": "Đội Kỵ Sĩ Tây Phong (trong hồ sơ), Tứ Phong Thủ Hộ, Gia Tộc Gunnhildr",
+              "audio": "https://webstatic.mihoyo.com/upload/op-public/2020/08/28/d755b67bac85c1f72dca98c30c08972e_4988360399647226190.mp3",
+              "image":"https://i.ibb.co/mCKWhKw/images.jpg",
+        "data":[
+            [ 
+                "https://i.imgur.com/Yw68LfQ.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":1,
+      "name":"Xiao",
+      "va":"MATSUOKA Yoshitsugu",
+      "story":"Là một trong Tam Nhãn Ngũ Hiển Tiên Nhân, giữ vai trò bảo vệ Liyue, Xiao sở hữu vẻ ngoài là một chàng thiếu niên nhưng lại có hàng ngàn năm tiêu diệt yêu ma quỷ quái để bảo vệ an toàn cho loại người.",
+      "element": "Phong",
+      "birthday": "17/04",
+      "countryside": "Liyua",
+      "sex": "Nam",
+      "belong": "Tiên Nhân (trong hồ sơ), Dạ Xoa",
+      "audio": "https://webstatic.mihoyo.com/upload/op-public/2020/02/20/402c89fffc5886be0ecf3e5200b3f999_1094831223737937120.mp3",
+      "image":"https://i.ibb.co/WnD6yr9/images-1.jpg",
+        "data":[
+            [
+                "https://i.imgur.com/HCYJtkR.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":2,
+      "name":"KAMISATO AYAKA",
+      "va":"HAYAMI Saori",
+      "story":"Ayaka là một cô gái xinh đẹp, thanh lịch và được người dân Inazuma yêu mến. Ayaka là đại tiểu thư của gia tộc Kamisato, và được xem là một hình mẫu lý tưởng của người dân trong vùng. Cô là người nghiêm túc trong công việc, luôn hoàn thành mọi thứ một cách hoàn hảo nhất.",
+      "element": "Băng",
+      "birthday": "28/09",
+      "countryside": "Inazuma",
+      "sex": "Nữ",
+      "belong": "Hiệp Hội Yashiro (trong hồ sơ), Gia tộc Kamisato",
+      "audio": "https://webstatic.mihoyo.com/upload/op-public/2021/07/15/00eec241c95002cd8c57ce920f5b98e8_6639265316892732065.mp3",
+      "image":"https://i.ibb.co/85wMDcr/images-2.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/3WPcpj1/8.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":3,
+      "name":"TIGHNARI",
+      "va":"KOBAYASHI Sanae",
+      "story":"Tighnari là vị Đội Trưởng nghiêm khắc của Đội Kiểm Lâm và là thầy giáo của Collei. Dù bản thân sở hữu tài năng và trí tuệ, Tighnari lại muốn nương mình chốn rừng sâu hơn là nơi giáo viện nguy nga.",
+      "element": "Thảo",
+      "birthday": "29/12",
+      "countryside": "Sumeru",
+      "sex": "Nam",
+      "belong": "Làng Gandharva (trong hồ sơ), Đội Kiểm Lâm, Amurta (tốt nghiệp)",
+      "audio": "https://webstatic.hoyoverse.com/upload/contentweb/2022/08/21/ba87f7994707f47afa8afaaea4856f74_3113664698781347638.mp3",
+      "image":"https://i.ibb.co/Y3SqGBN/tighnari-genshin.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/PM2xR7v/1.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":4,
+      "name":"LYNEY",
+      "va":"SHIMONO Hiro",
+      "story":"Lyney là ảo thuật gia đại tài, cả trong công việc lẫn cuộc đời. Dù vậy, mục đích của việc diễn xuất là vì sự tín nhiệm và bảo vệ em gái, nên anh sẽ vẫn tiếp tục đắm mình trong những lời dối trá.",
+      "element": "Hỏa",
+      "birthday": "02/02",
+      "countryside": "Fontaine",
+      "sex": "Nữ",
+      "belong": "Khách Sạn Bouffes d'ete",
+      "audio": "https://webstatic.hoyoverse.com/upload/op-public/2023/08/15/b6aabb522438dfb65aa8021fb79444b4_4413342217576896471.mp3",
+      "image":"https://i.ibb.co/c6dmCDj/lyney.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/ctskQJD/61.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":5,
+      "name":"LYNETTE",
+      "va":"SASAHARA Yu",
+      "story":"Cô là trợ lý ảo thuật kiệm lời và rất kín tiếng của anh trai Lyney. Sau khi cha mẹ qua đời, phải ra đời mưu sinh và được Cha cứu khỏi tên quý tộc độc ác mang danh nhận nuôi, Lynette trở thành tai và mắt cho Căn Nhà Hơi Ấm.",
+      "element": "Phong",
+      "birthday": "02/02",
+      "countryside": "Fontaine",
+      "sex": "Nữ",
+      "belong": "Khách Sạn Bouffes d'ete (trong hồ sơ), Căn Nhà Hơi Ấm",
+      "audio": "https://webstatic.hoyoverse.com/upload/op-public/2023/08/15/73d2511d6b077d351ed30a6accd85f55_5866349071008911126.mp3",
+      "image":"https://i.ibb.co/RHQ2qn3/9fbc65ff363e996fb8ac639e0e96854a-4883564921927606415.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/HVWKFcn/9.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":6,
+      "name":"FREMINET",
+      "va":"TOKI Shunichi",
+      "story":"Cho dù Freminet là thợ lặn kinh nghiệm có tiếng, cậu không thích thú gì khi hòa vào những lời tán dương của mọi người, mà thích hòa vào dòng nước và tìm kiếm yên bình bên Hoa Romaritime và Tidalga.",
+      "element": "Băng",
+      "birthday": "24/09",
+      "countryside": "Fontaine",
+      "sex": "Nữ",
+      "belong": "Khách Sạn Bouffes d'ete (trong hồ sơ), Căn Nhà Hơi Ấm",
+      "audio": "https://webstatic.hoyoverse.com/upload/op-public/2023/08/15/fd859d8b92ec3fd8096ca1137c07fdfa_8830619891179920779.mp3",
+      "image":"https://i.ibb.co/HPpxw6m/genshin-impact-huong-dan-build-freminet-2.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/qsPJPPm/7.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":7,
+      "name":"NEUVILLETTE",
+      "va":"KAMIYA Hiroshi",
+      "story":"Neuvillette là Thẩm Phán Tối Cao của Fontaine và là người quản lý Fontaine sau khi Thủy Thần Furina từ chức. Ngài tái sinh từ Thủy Long Vương, mang trong mình sự thật về quyền năng nguyên tố và quyền cai trị với thế giới.",
+      "element": "Thủy",
+      "birthday": "18/12",
+      "countryside": "Fontaine",
+      "sex": "Nam",
+      "belong": "Đại Sảnh Fontaine (trong hồ sơ), Palais Mermonia, Đội Hắc Ảnh Marechaussee, Thất Vương",
+      "audio": "https://webstatic.hoyoverse.com/upload/op-public/2023/09/21/4e52f6b2332c2ca1ea638148a8703865_745344279131051500.mp3",
+      "image":"https://i.ibb.co/3sTccnj/genshin-impact-huong-dan-build-neuvillette-8.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/5Ym1dvL/5.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":8,
+      "name":"WRIOTHESLEY",
+      "va":"ONO Daisuke",
+      "story":"Từ một phạm nhân trong Pháo Đài Meropide, anh tiến lên vị trí quản ngục, thiết lập luật lệ để quản lý trật tự nơi đây.",
+      "element": "Băng",
+      "birthday": "23/11",
+      "countryside": "Fontaine",
+      "sex": "Nam",
+      "belong": "Pháo Đài Meropide",
+      "audio": "https://webstatic.hoyoverse.com/upload/op-public/2023/09/22/88d16411e8637b52cb43948fb62f1e26_1061667661873779251.mp3",
+      "image":"https://i.ibb.co/V2QL1Q1/e0bf467840baa7cc5783b81d9127a5a7-4038271439954870339.jpg",
+        "data":[     
+            [  
+                "https://i.ibb.co/5Ym1dvL/5.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":9,
+      "name":"CHARLOTTE",
+      "va":"WAKI Azumi",
+      "story":"Charlotte là phóng viên tờ báo Chim Hơi Nước, luôn tìm mọi cách để moi được thông tin độc quyền. Cô kiếm tìm tin tức không ngừng nghỉ và không biết mệt nhọc, cốt để tìm ra chân tướng, ngay cả khi bản thân rơi vào hiểm cảnh.",
+      "element": "Băng",
+      "birthday": "10/04",
+      "countryside": "Fontaine",
+      "sex": "Nữ",
+      "belong": "Chim hơi nước",
+      "audio": "https://fastcdn.hoyoverse.com/content-v2/hk4e/113448/76fd35fee65725ca8cb338fe02027a87_4040255107351404693.mp3",
+      "image":"https://i.ibb.co/51sx8hP/f3895cfc7171075a6f1f92b95f78c303-1463702257302634482.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/Ms6hj9b/5.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":10,
+      "name":"FURINA",
+      "va":"MINASE Inori",
+      "story":"Ấn tượng ban đầu cho thấy cô là một Thủy Thần đầy khoa trương và kiêu ngạo, nhưng hóa ra đó chỉ là một nhân cách giả do kỹ năng sân khấu của Furina tạo nên.",
+      "element": "Thủy",
+      "birthday": "13/10",
+      "countryside": "Fontaine",
+      "sex": "Nữ",
+      "belong": "Đại Sảnh Fontaine (trong hồ sơ), Viện Ca Kịch Epiclese (trước kia), Bảy Vị Thần (với tư cách đại diện, trước kia)",
+      "audio": "https://fastcdn.hoyoverse.com/content-v2/hk4e/113447/853dfb3a0e3fcc3dd96288843119de07_4570378317595834942.mp3",
+      "image":"https://i.ibb.co/NSqmZ16/71fe9d9cfff16f6f97771533550cfd3f-1977544197774680573.jpg",
+        "data":[
+            [   
+                "https://i.ibb.co/M2m7tV5/9.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":11,
+      "name":"NAVIA",
+      "va":"TOYOSAKI Aki",
+      "story":"Cô là hội trưởng hiện tại của Spina di Rosula, hội trưởng đời trước là người cha quá cố Callas của cô.",
+      "element": "Nham",
+      "birthday": "16/08",
+      "countryside": "Fontaine",
+      "sex": "Nữ",
+      "belong": "Spina di Rosula",
+      "audio": "https://fastcdn.hoyoverse.com/content-v2/hk4e/113799/d31df39f7be156e56d53b92e3ae6a78f_5666948741822247393.mp3",
+      "image":"https://i.ibb.co/kgM4wnj/gearvn-build-do-manh-cho-navia-genshin-impact-7-fa66ebdda13e4be8af3feb0d2bd06d70-master.webp",
+        "data":[
+            [
+                "https://i.ibb.co/QFRTcCM/22.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":12,
+      "name":"CHEVREUSE",
+      "va":"SHIMOJI Shino",
+      "story":"Cô là đội trưởng Đội Tuần Tra Đặc Biệt của Sảnh Chấp Pháp.",
+      "element": "Hỏa",
+      "birthday": "10/01",
+      "countryside": "Fontaine",
+      "sex": "Nữ",
+      "belong": "Đội Tuần Tra Đặc Biệt",
+      "audio": "https://fastcdn.hoyoverse.com/content-v2/hk4e/113800/c7e88ab6c4409e68c182f5ed6099e96a_4748435202096261831.mp3",
+      "image":"https://i.ibb.co/mScFz6W/80993ecac98a5b2339adc6f84c1cdc4c-3141340877483156523.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/VjVd8xR/9.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":13,
+      "name":"CHIORI",
+      "va":"TAKETATSU Ayana",
+      "story":"Chiori là một nhà thiết kế nổi tiếng đến từ Inazuma, hiện tại cô đang quản lý Tiệm Thời Trang Chioriya tại Fontaine và là một trong những khách hàng quen thuộc của Công Ty Chuyển Phát Komaniya. Cô rời Inazuma khi Lệnh Truy Lùng Vision và Lệnh Bế Quan Tỏa Cảng diễn ra, kể từ lúc đó cô chưa từng trở về quê nhà lần nào.",
+      "element": "Nham",
+      "birthday": "17/08",
+      "countryside": "Fontaine",
+      "sex": "Nữ",
+      "belong": "Lãnh thổ, Inazuma (trong game), Fontaine",
+      "audio": "https://fastcdn.hoyoverse.com/content-v2/hk4e/122720/82e34459018de331502e686d0cfc05d6_6263891723181607389.mp3",
+      "image":"https://i.ibb.co/58kG4Cg/e01a9899a3c635dd50ba453c6b346214-976948264365086306.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/tM24ST3/5.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":14,
+      "name":"DILUC",
+      "va":"ONO Kenshou",
+      "story":"Sinh ra trong Gia Tộc Ragnvindr giàu có, Diluc là chủ sở hữu hiện tại của Tửu Trang Dawn và là một quý tộc cao quý trong xã hội Mondstadt. Sau biến cố trong quá khứ, anh tách khỏi Đội Kỵ Sĩ Tây Phong nhưng vẫn tiếp tục bảo vệ Mondstadt theo cách của mình.",
+      "element": "Hỏa",
+      "birthday": "30/04",
+      "countryside": "Mondstadt",
+      "sex": "Nam",
+      "belong": "Tửu Trang Dawn (trong hồ sơ), Tổ Chức Tình Báo Không Tên, Đội Kỵ Sĩ Tây Phong (trước kia)",
+      "audio": "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20191009/2019100915365912786.mp3",
+      "image":"https://i.ibb.co/zrCNxqS/thumb-800x450.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/27B5tZF/4.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":15,
+      "name":"COLLEI",
+      "va":"MAEKAWA Ryoko",
+      "story":"Cô là nạn nhân của thí nghiệm từ Fatui lên cơ thể con người, sau đó lang thang khắp nơi cho đến khi gặp được Amber ở Mondstadt. Từ đó, cuộc đời Collei bước sang trang mới.",
+      "element": "Thảo",
+      "birthday": "08/05",
+      "countryside": "Sumeru",
+      "sex": "Nữ",
+      "belong": "Làng Gandharva (trong hồ sơ), Đội Kiểm Lâm",
+      "audio": "https://fastcdn.hoyoverse.com/content-v2/hk4e/122720/82e34459018de331502e686d0cfc05d6_6263891723181607389.mp3",
+      "image":"https://i.ibb.co/yQmwdnt/d89d03517d36ea24715977d11435cfe3-37307390770672498.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/dLDx3p6/9.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":16,
+      "name":"DORI",
+      "va":"KANEDA Tomoko",
+      "story":"Dori là chủ nhân Cung Điện Alcazarzaray, thương nhân nức tiếng với khả năng đem lại bất cứ thứ gì mà người ta cần, miễn có đủ Mora để trả cái giá chát chúa mà ngài thương nhân này đưa ra.",
+      "element": "Lôi",
+      "birthday": "21/12",
+      "countryside": "Sumeru",
+      "sex": "Nữ",
+      "belong": "Cung Điện Alcazarzaray",
+      "audio": "https://webstatic.hoyoverse.com/upload/contentweb/2022/08/30/06a9c6c73a62364d4f4197d3024f5ce6_2506738424078182566.mp3",
+      "image":"https://i.ibb.co/YL8SdXz/dd9a9e6a365d972278ac358fd445e73e-460924264397976700.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/BqjFLxS/3.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":17,
+      "name":"CYNO",
+      "va":"IRINO Miyu",
+      "story":"Anh là Tổng Quản Mahamatra, người đứng đầu các Matra và gây khiếp sợ cho những hiền giả ở Giáo Viện Sumeru vì sự nghiêm khắc trong công việc.",
+      "element": "Lôi",
+      "birthday": "23/06",
+      "countryside": "Sumeru",
+      "sex": "Nam",
+      "belong": "Cung Điện Trầm Lặng (trong hồ sơ), Giáo Viện Sumeru, Spantamad",
+      "audio": "https://webstatic.hoyoverse.com/upload/contentweb/2022/09/21/38032c7c233cab5b34c0a9c1fa689eec_1627692487294193777.mp3",
+      "image":"https://i.ibb.co/mqX9XXb/4bed5e7ac3d752e9dcbd94474e66f408-3067687462443301192.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/K2XpKDB/9.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":18,
+      "name":"CANDAKE",
+      "va":"YUZUKI Ryoka",
+      "story":"Hậu duệ của Al-Ahmar và là người thủ hộ Làng Aaru, Candace mang thiện ý tuyệt đối với những du khách tới thăm, nhưng sẽ không khoan nhượng trước những kẻ làm điều phi pháp tại ngôi làng nơi cô bảo vệ.",
+      "element": "Thủy",
+      "birthday": "03/05",
+      "countryside": "Sumeru",
+      "sex": "Nữ",
+      "belong": "Làng Aaru",
+      "audio": "https://webstatic.hoyoverse.com/upload/contentweb/2022/09/22/b962b61f30a4eb8d034b408b86fbacaa_4844465311665240233.mp3",
+      "image":"https://i.ibb.co/h1CfCq2/53a5d887817350102adef6e5a41a0fab-8203331826605335518.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/FVzt8yG/7.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":19,
+      "name":"NILOU",
+      "va":"KANEMOTO Hisako",
+      "story":"Nhà hát nhỏ đó thì có gì hay chứ, nếu như theo tôi đi lưu diễn khắp Teyvat thì muốn kiếm bao nhiêu Mora mà chẳng được... Haiz, cô ấy ngây thơ quá, ngây thơ đến mức không hề biết đến giá trị của bản thân.",
+      "element": "Thủy",
+      "birthday": "03/12",
+      "countryside": "Sumeru",
+      "sex": "Nữ",
+      "belong": "Nhà Hát Zubayr",
+      "audio": "https://webstatic.hoyoverse.com/upload/contentweb/2022/09/28/f7f4f80a38d5b1b7f46248e5a9695f34_4803705810652768542.mp3",
+      "image":"https://i.ibb.co/TKZZthh/89ef05348ca4c71e5d64faae9380032b-1318417783252213757.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/przL8MW/4.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":20,
+      "name":"NAHIDA",
+      "va":"TAMURA Yukari",
+      "story":"Tiểu Vương Kusanali sống trong Thánh Địa Surasthana, không được xem trọng và cũng ít người nhắc đến.Cô ấy gánh vác trách nhiệm nặng nề, nhưng dù cô ấy có trải qua sự cô đơn, và mặc dù bóng tối là tất cả những gì cô ấy nhìn thấy trước mắt, cô ấy cũng không ngừng tiến về phía trước.",
+      "element": "Thảo",
+      "birthday": "27/10",
+      "countryside": "Sumeru",
+      "sex": "Nữ",
+      "belong": "Thành Sumeru (trong hồ sơ), Bảy Vị Thần",
+      "audio": "https://webstatic.hoyoverse.com/upload/contentweb/2022/10/24/eb4c0258435ff86ce4425cc60ec2193a_2102608887695909153.mp3",
+      "image":"https://i.ibb.co/gwzcXZy/bf64dcd9014aa13134a5e382ebd00a42-8135222430076412086.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/55GQXnm/3.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":21,
+      "name":"LAYLA",
+      "va":"TOMITA Miyu",
+      "story":"Layla là học viên của Học Viện Rtawahist, chuyên nghiên cứu Lý Luận Tinh Tượng Học, vẽ tinh đồ và viết luận văn cả ngày lẫn đêm. Nhưng do được các giáo viên kỳ vọng quá nhiều, trên bàn cô ấy luôn chất đống các đề tài, dù làm thế nào đi nữa cũng làm không hết.",
+      "element": "Băng",
+      "birthday": "19/12",
+      "countryside": "Sumeru",
+      "sex": "Nữ",
+      "belong": "Giáo Viện Sumeru (trong hồ sơ), Học Viện Rtawahist",
+      "audio": "https://webstatic.hoyoverse.com/upload/contentweb/2022/11/07/036a6ac338126dbfe59bc7bf78bc2336_880088226584117972.mp3",
+      "image":"https://i.ibb.co/9ZDDct4/Genshin-Impact-Layla-ngu-gat.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/2YmMCf5/5.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":22,
+      "name":"WANDERER",
+      "va":"KAKIHARA Tetsuya",
+      "story":"Kẻ Lang Thang là một cá nhân duy nhất, vì anh ta tồn tại thay cho hóa thân kiếp trước của mình sau khi xóa tên gọi trước đó và lịch sử của anh ta khỏi Cây Thế Giới. Mang trong mình những ký ức của con người trước đây sau khi tự nguyện lấy lại chúng, Giờ đây, Kẻ Lang Thang lang thang khắp Teyvat mà không có điểm đến.",
+      "element": "Phong",
+      "birthday": "03/01",
+      "countryside": "Sumeru",
+      "sex": "Nam",
+      "belong": "Không (trong hồ sơ), Vahumana (với tư cách là Nón Tròn)",
+      "audio": "https://webstatic.hoyoverse.com/upload/contentweb/2022/11/28/deaee4e6f00c5f1b1e0f258ce65b27ce_6912363040173116689.mp3",
+      "image":"https://i.ibb.co/QQbnk5G/genshin-impact-huong-dan-build-team-ke-lang-thang-6.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/D8TStTr/10.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":23,
+      "name":"FARUZAN",
+      "va":"HORIE Yui",
+      "story":"Cô là học giả kiệt xuất của Giáo Viện Sumeru, thuộc học viện Haravatat. Trăm năm trước, cô tiếp xúc phải sức mạnh từ Xích Vương, khiến cô có thể sống được tới hiện tại.",
+      "element": "Phong",
+      "birthday": "20/08",
+      "countryside": "Sumeru",
+      "sex": "Nữ",
+      "belong": "Học viện Haravatat",
+      "audio": "https://webstatic.hoyoverse.com/upload/contentweb/2022/12/01/c110ff47605bb3a7eb16f551ab2fc70e_3360777012671655267.mp3",
+      "image":"https://i.ibb.co/NnVMpHw/1a0e331a984e482f84433eac47cd5e3b-691411053450865692.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/r7SmWh0/9.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":24,
+      "name":"ALHAITHAM",
+      "va":"UMEHARA Yuuichirou",
+      "story":"Alhaitham thuộc học phái Haravatat của Giáo Viện Sumeru và là Quan Thư Ký của Giáo Viện Sumeru, chịu trách nhiệm sắp xếp tài liệu và sắc lệnh.",
+      "element": "Thảo",
+      "birthday": "11/02",
+      "countryside": "Sumeru",
+      "sex": "Nam",
+      "belong": "Giáo Viện Sumeru (trong hồ sơ), Haravatat",
+      "audio": "https://webstatic.hoyoverse.com/upload/op-public/2023/01/11/c20bf233c409a33973fba2e081f954df_3186209960256254495.mp3",
+      "image":"https://i.ibb.co/47VMx5Y/genshin-alhaitham-thumb.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/tL564v4/9.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":25,
+      "name":"DEHYA",
+      "va":"FUKUHARA Ayaka",
+      "story":"Sư Tử Lửa Dehya là nàng chiến binh mạnh mẽ và cũng là huyền thoại của hội Eremite, một đội quân lính đánh thuê riêng lẻ tung hoành trong sa mạc Sumeru. Cô ấy dũng cảm, mạnh mẽ và có danh tiếng nổi bật bậc nhất trong giới lính đánh thuê.",
+      "element": "Hỏa",
+      "birthday": "07/04",
+      "countryside": "Sumeru",
+      "sex": "Nữ",
+      "belong": "Lữ Đoàn 30 (trước kia), Eremite",
+      "audio": "https://webstatic.hoyoverse.com/upload/op-public/2023/02/16/d5a2d6d91669eab018cca5cdde0f28f9_5651507830582955428.mp3",
+      "image":"https://i.ibb.co/5jktWt2/maxresdefault-1-800x450.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/wyTQX0R/4.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":26,
+      "name":"KAVEH",
+      "va":"UCHIDA Yama",
+      "story":"Kaveh là người thuộc học phái Kshahrewar của Giáo Viện Sumeru và đã tốt nghiệp, tiếng tăm về tài năng của anh lan khắp Giáo Viện. Anh cũng là người đứng đằng sau sự lộng lẫy của Cung Điện Alcazarzaray, nhưng vì dự án này mà anh nợ nần chồng chất và bị phá sản.",
+      "element": "Thảo",
+      "birthday": "09/07",
+      "countryside": "Sumeru",
+      "sex": "Nam",
+      "belong": "Văn Phòng Thiết Kế Độc Lập (trong hồ sơ), Kshahrewar",
+      "audio": "https://webstatic.hoyoverse.com/upload/op-public/2023/03/27/cd0e7b35ef960fcc9fe0bd8ec3143b0e_225414720646043164.mp3",
+      "image":"https://i.ibb.co/G9C1rW6/maxresdefault.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/B3Dqkkg/60.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":27,
+      "name":"KAEDEHARA KAZUHA",
+      "va":"SHIMAZAKI Nobunaga",
+      "story":"Kaedehara Kazuha (hay Phong Nguyên Vạn Diệp) là thành viên của gia tộc Kaedehara, một gia tộc samurai từng một thời vang dội ở Inazuma. Tuy nhiên đó đã là quá khứ, bởi vào thời điểm Kazuha được sinh ra, gia tộc này đã suy tàn và chẳng còn tài sản lẫn danh vọng.",
+      "element": "Phong",
+      "birthday": "29/10",
+      "countryside": "Inazuma",
+      "sex": "Nam",
+      "belong": "Đội Thuyền Nam Thập Tự (trong hồ sơ),Gia Tộc Kaedehara, Quân Đội Watatsumi (trước đó)",
+      "audio": "https://webstatic.mihoyo.com/upload/op-public/2021/06/22/b08b2fb2429cfc5e7c4ecbe799cd91af_1630233163992269662.mp3",
+      "image":"https://i.ibb.co/JCc3NXX/kazuha-genshin-impact-thump.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/W24fFMR/1.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":28,
+      "name":"YOIMIYA",
+      "va":"UEDA Kana",
+      "story":"Cô là chủ hiện tại của Tiệm Pháo Hoa Naganohara; với những màn pháo hoa rực rỡ sắc màu cùng tính cách cởi mở của mình, Yoimiya được mọi người trên Đảo Narukami vô cùng quý mến. Cô còn được mọi người mệnh danh là Nữ Hoàng Lễ Hội Hè, vì họ cho rằng mùa hè sẽ không được trọn vẹn nếu không có cô.",
+      "element": "Hỏa",
+      "birthday": "21/06",
+      "countryside": "Inazuma",
+      "sex": "Nữ",
+      "belong": "Tiệm Pháo Hoa Naganohara",
+      "audio": "https://webstatic.mihoyo.com/upload/op-public/2021/07/30/efecae4cd41cdcf75abaca03808c4ac7_3164008267777726199.mp3",
+      "image":"https://i.ibb.co/HpwkSL0/genshin-impact-cach-build-yoimiya-1.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/R6KYZ79/5.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":29,
+      "name":"SAYU",
+      "va":"SUZAKI Aya",
+      "story":"Sayu là một cô gái nhỏ bé mặc trang phục Mujina, khiến mọi người nhầm lẫn là tanuki. Mặc dù sở hữu vóc dáng nhỏ bé, cô có thể sử dụng Trọng Kiếm cao hơn mình, chủ yếu là do sức mạnh của Vision Phong. Theo Sayu, nếu không có Vision, cô sẽ không thể nâng nó kể cả khi sử dụng nhẫn thuật của mình.",
+      "element": "Phong",
+      "birthday": "19/10",
+      "countryside": "Inazuma",
+      "sex": "Nữ",
+      "belong": "Shiyuumatsuban",
+      "audio": "https://webstatic.mihoyo.com/upload/op-public/2021/07/30/1cc43cfb98da910e5e687b7af5f67f21_9034681646771877173.mp3",
+      "image":"https://i.ibb.co/d4JYwr6/genshin-impact-sayu.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/9bNymZt/9.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":30,
+      "name":"RAIDEN SHOGUN",
+      "va":"SAWASHIRO Miyuki",
+      "story":"Raiden Shogun là tôn chủ Narukami Ogosho đại nhân - Lôi Thần, là người đưa người dân Inazuma hướng đến sự vĩnh hằng, trường sinh bất diệt. Cô luôn được người dân tôn trọng và yêu quý, là tính ngưỡng của người dân nơi đây.",
+      "element": "Lôi",
+      "birthday": "26/06",
+      "countryside": "Inazuma",
+      "sex": "Nữ",
+      "belong": "Thành Inazuma (trong hồ sơ), Inazuma Shogunate, Bảy Vị Thần",
+      "audio": "https://webstatic.mihoyo.com/upload/op-public/2021/08/18/d8c33103e302c3822b001ed0b2bbdbd0_6913641200556529114.mp3",
+      "image":"https://i.ibb.co/TKLz1Ym/photo-1-16310152604821794731420.webp",
+        "data":[
+            [
+                "https://i.ibb.co/rt0b9wm/8.jpg",
+                "https://i.ibb.co/Gtg6W8T/9.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":31,
+      "name":"KUJOU SARA",
+      "va":"SETO Asami",
+      "story":"Kujou Sara là thành viên và là con gái nuôi của Gia tộc Kujou, người phục vụ dưới trướng của Raiden Shogun. Cô ủng hộ Lệnh Truy Lùng Vision và chỉ đạo việc thu hồi Vision. Kujou Sara được mô tả là Tengu với đôi cánh đen tuyền như quạ.",
+      "element": "Lôi",
+      "birthday": "14/07",
+      "countryside": "Inazuma",
+      "sex": "Nữ",
+      "belong": "Hiệp Hội Tenryou",
+      "audio": "https://webstatic.mihoyo.com/upload/op-public/2021/08/18/76cb313990d85d2321a2433105985f6d_2561393966500234042.mp3",
+      "image":"https://i.ibb.co/dPh718Q/2021082900055392409.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/6JQ7WG2/113.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":32,
+      "name":"SANGONOMIYA KOKOMI",
+      "va":"MIMORI Suzuko",
+      "story":"Cô là một chiến lược gia đại tài, một quân sư binh pháp, một nhà chính trị gia tài giỏi trong việc đối nội đối ngoại. Cô đã dẫn dắt binh lính Kháng chiến để chống lại Lệnh Truy lùng Vision của Raiden Shogun.",
+      "element": "Thủy",
+      "birthday": "22/02",
+      "countryside": "Inazuma",
+      "sex": "Nữ",
+      "belong": "Đảo Watatsumi (trong hồ sơ), Quân Sangonomiya, Quân Kháng Chiến Sangonomiya",
+      "audio": "https://webstatic.mihoyo.com/upload/op-public/2021/09/09/d93c128ddca45384390b9f15d09b24b7_2084139676702932458.mp3",
+      "image":"https://i.ibb.co/xMPh5rp/2021091718032244283.png",
+        "data":[
+            [
+                "https://i.ibb.co/1btjpgK/6.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":33,
+      "name":"THOMA",
+      "va":"MORITA Masakazu",
+      "story":"Sinh ra ở Mondstadt, hiện tại Thoma đang làm quản gia ở Phủ Kamisato. Anh cũng là thổ địa ở Inazuma.",
+      "element": "Hỏa",
+      "birthday": "09/01",
+      "countryside": "Inazuma",
+      "sex": "Nam",
+      "belong": "Hiệp Hội Yashiro (trong hồ sơ), Gia Tộc Kamisato",
+      "audio": "https://webstatic.mihoyo.com/upload/op-public/2021/10/21/535ac1e015ad4959e2123db743ae7364_2460137664808385324.mp3",
+      "image":"https://i.ibb.co/GsZ2GyW/maxresdefault-3.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/YdXjTbt/2.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":34,
+      "name":"ARATAKI ITTO",
+      "va":"NISHIKAWA Takanori",
+      "story":"Arataki Itto là thủ lĩnh đời đầu của bang Bang Arataki tại Hanamizak. Itto mang nguyên tố Nham, là một vị tướng mới trong Genshin Impact có dòng máu quỷ tộc. Anh được đánh giá là người hào sảng, mãnh liệt như gió, và sáng chói như sấm sét.",
+      "element": "Nham",
+      "birthday": "01/06",
+      "countryside": "Inazuma",
+      "sex": "Nam",
+      "belong": "Bang Arataki",
+      "audio": "https://webstatic.mihoyo.com/upload/op-public/2021/12/06/61a99fc2b021979ef8b871c6e5d95ed5_3047422790514876221.mp3",
+      "image":"https://i.ibb.co/8271SrR/2021121018295793501.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/HhvJq9s/7.jpg",
+                "https://i.ibb.co/4dVL6Rf/9.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":35,
+      "name":"GOROU",
+      "va":"HATANAKA Tasuku",
+      "story":"Gorou là đại tướng của quân Watatsumi, có danh vọng rất cao trong quân ngũ, được thuộc hạ hết mực yêu mến. Trong thời gian Lệnh Truy Lùng Vision diễn ra, Gorou đã nhiều lần dẫn dắt quân Watatsumi chống lại quân Shogunate, dù cho điều kiện hạn hẹp nhưng vẫn thành công giữ vững phòng tuyến.",
+      "element": "Nham",
+      "birthday": "18/05",
+      "countryside": "Inazuma",
+      "sex": "Nam",
+      "belong": "Quân Watatsumi",
+      "audio": "https://webstatic.mihoyo.com/upload/op-public/2021/12/06/ffbb3aa38dc6cbb0dc2906448ea5fd39_4358605768420873069.mp3",
+      "image":"https://i.ibb.co/LxzL7bH/2021120916262011818.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/XXhcpKd/81.jpg",
+                "https://i.ibb.co/rdzS4Qp/86.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":36,
+      "name":"YAE MIKO",
+      "va":"SAKURA Ayane",
+      "story":"Yae Miko là một pháp sư đứng đầu Đền Narukami. Cô nàng còn được biết đến với vai trò là hậu duệ của Kitsune và là bằng hữu thân thiết với cô nàng Raiden Shogun.",
+      "element": "Lôi",
+      "birthday": "27/06",
+      "countryside": "Inazuma",
+      "sex": "Nữ",
+      "belong": "Đền Narukami (trong hồ sơ), Youkai",
+"audio":"https://webstatic.hoyoverse.com/upload/contentweb/2022/02/09/5e408235063f7f7aebbe6772d2384922_5891244261992346493.mp3",
+      "image":"https://i.ibb.co/30QNQym/0306-tong-quan-ve-nhan-vat-yae-miko-genshin-impact.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/J7SNs0j/9.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":37,
+      "name":"KAMISATO AYATO",
+      "va":"ISHIDA Akira",
+      "story":"Anh hiện là gia chủ của nhà Kamisato, anh trai của Kamisato Ayaka và là đại nhân của Hiệp Hội Yashiro. Trong hai anh em nhà Kamisato, Ayato đảm nhận chuyện chính sự, em gái Ayaka đảm nhận chuyện ngoại giao, cho nên Ayato rất ít xuất hiện trước công chúng như em gái mình.",
+      "element": "Thủy",
+      "birthday": "26/03",
+      "countryside": "Inazuma",
+      "sex": "Nam",
+      "belong": "Gia Tộc Kamisato (trong hồ sơ), Hiệp Hội Yashiro, Shuumatsuban",
+"audio":"https://webstatic.hoyoverse.com/upload/contentweb/2022/03/22/ac2b1d6ebb74148a1ceaee34a47a07ce_3933923855174033942.mp3",
+      "image":"https://i.ibb.co/H77wp1r/9c58dbe63bb4653368f7f2b8692b0774-3771072471821308276.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/S0wk0wZ/8.jpg",
+                "https://i.ibb.co/tzjb2Tp/3.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":38,
+      "name":"KUKI SHINOBU",
+      "va":"MIZUHASHI Kaori",
+      "story":"Cô là phụ tá của Arataki Itto kiêm luôn quản lý Bang Arataki.",
+      "element": "Lôi",
+      "birthday": "27/07",
+      "countryside": "Inazuma",
+      "sex": "Nữ",
+      "belong": "Gia Tộc Kuki (trong hồ sơ), Bang Arataki, Đền Narukami (trước kia)",
+      "audio": "https://webstatic.hoyoverse.com/upload/contentweb/2022/06/16/844141a42da03d025532e2acb6754731_3723953092046199833.mp3",
+      "image":"https://i.ibb.co/QCmY8Wt/0ba500e7f4debe785e2deba630c8297e-2035444801078432989.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/k56WDfk/6.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":39,
+      "name":"SHIKANONI HEIZOU",
+      "va":"IGUCHI Yuichi",
+      "story":"Anh là một thám tử người Inazuma và làm việc cho Hiệp Hội Tenryou. Anh được nhắc đến lần đầu trong lồng tiếng của Kamisato Ayaka và bởi người em họ xa của mình Kano Nana, sau đó được nhắc đến bởi các nhân vật khác và trong bảng thông báo của Inazuma.",
+      "element": "Phong",
+      "birthday": "24/07",
+      "countryside": "Inazuma",
+      "sex": "Nam",
+      "belong": "Hiệp Hội Tenryou",
+      "audio": "https://webstatic.hoyoverse.com/upload/contentweb/2022/07/07/cd6e518bbecbb988f19bb2f72f9b9a2a_2381203154583528978.mp3",
+      "image":"https://i.ibb.co/rms883M/Genshin-Impact-Celebrates-Version-28-Release-With-Shikanoin-Heizou-Gameplay-800x480.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/XCCsZrT/27.jpg",
+                "https://i.ibb.co/K2hpfnF/34.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":40,
+      "name":"KIRARA",
+      "va":"SUZUSHIRO Sazumi",
+      "story":"Kirara là một youkai, là Nhân Viên Chuyển Phát Số Một tại Công Ty Chuyển Phát Nhanh Komaniya ở Inazuma. Cái danh ấy đến từ sự tận tụy và chính xác đến từng đơn hàng trong tay Kirara, và Kirara cũng tận hưởng công việc giao hàng của mình.",
+      "element": "Thảo",
+      "birthday": "22/01",
+      "countryside": "Inazuma",
+      "sex": "Nữ",
+      "belong": "Công Ty Chuyển Phát Komaniya (trong hồ sơ), Youkai",
+      "audio": "https://webstatic.hoyoverse.com/upload/op-public/2023/05/11/3df8e03b4f9fadf1d4bf2aa6ffa3c2b6_4618382671198573465.mp3",
+      "image":"https://i.ibb.co/84y9GmJ/493074dede3a745e9a125a0852cd86d4-5956489603916714123.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/XC77Y62/35.jpg",
+                "https://i.ibb.co/FbHc7yw/36.jpg",
+                "https://i.ibb.co/BcyPLjC/37.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":41,
+      "name":"BEIDOU",
+      "va":"KOSHIMIZU Ami",
+      "story":"Cô là thủ lĩnh của Nam Thập Tự, một đội thuyền nổi tiếng ở Liyue. Bên cạnh khả năng của một thủ lĩnh và sức mạnh to lớn, nhiều người ở Liyue biết đến cô vì cô không sợ với Thiên Quyền của Thất Tinh Liyue.",
+      "element": "Lôi",
+      "birthday": "14/02",
+      "countryside": "Liyue",
+      "sex": "Nữ",
+      "belong": "Nam Thập Tự (trong hồ sơ), Đội thuyền Nam Thập Tự",
+      "audio": "https://webstatic.mihoyo.com/upload/op-public/2020/02/27/8147fa13c0dcfb6e402967c55c2b9ecc_7343111540189611178.mp3",
+      "image":"https://i.ibb.co/yPgJdG8/638104093442220649-1130501.png",
+        "data":[
+            [
+                "https://i.ibb.co/GcrdJyY/27.jpg",
+                "https://i.ibb.co/rGHyFVn/28.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":42,
+      "name":"NINGGUANG",
+      "va":"OHARA Sayaka",
+      "story":"Ningguang là Thiên Quyền trong Thất Tinh Liyue, giàu có nổi tiếng, khắp đại lục Teyvat khó ai sánh bằng. chủ nhân của Quần Ngọc Các.",
+      "element": "Nham",
+      "birthday": "26/08",
+      "countryside": "Liyue",
+      "sex": "Nữ",
+      "belong": "Thất Tinh Liyue",
+      "audio": "https://webstatic.mihoyo.com/upload/op-public/2020/03/05/17f08f78af0f2ea2684de750ad6cba0b_5678544076476104598.mp3",
+      "image":"https://i.ibb.co/BNS1Pnb/icon-640x360-5.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/f822ksZ/9.jpg",
+                "https://i.ibb.co/3SBv1VR/17.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":43,
+      "name":"XIANGLING",
+      "va":"OZAWA Ari",
+      "story":"Cô là đầu bếp kiêm bồi bàn tại nhà hàng Vạn Dân Đường, cùng cha là Thầy Mao quản lý nhà hàng. Là một đầu bếp, Xiangling không ngần ngại thử những công thức nấu ăn khác nhau hay những nguyên liệu kỳ lạ, khiến món ăn của cô đôi khi trở nên khá độc đáo.",
+      "element": "Hỏa",
+      "birthday": "02/11",
+      "countryside": "Liyue",
+      "sex": "Nữ",
+      "belong": "Vạn Dân Đường (trong hồ sơ), Thuyền Nam Thập Tự",
+      "audio": "https://webstatic.mihoyo.com/upload/op-public/2020/03/17/394996dd7a5dc2dff4e1db07515da098_7982328413479946925.mp3",
+      "image":"https://i.ibb.co/ZKPvyrS/icon-640x360-6.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/Tgj907p/9.jpg",
+                "https://i.ibb.co/KmVNrMZ/13.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":44,
+      "name":"XINGQIU",
+      "va":"MINAGAWA Junko",
+      "story":"Cô là nhị thiếu gia của Thương hội Phi Vân ở cảng Liyue,một hội có ảnh hưởng ở Liyue, và cũng là người tự xưng thành thạo môn võ Phải Cổ Hoa.",
+      "element": "Thủy",
+      "birthday": "09/10",
+      "countryside": "Liyue",
+      "sex": "Nữ",
+      "belong": "Thương Hộ Phi Vân (trong hồ sơ), Phái Cổ Hoa",
+      "audio": "https://webstatic.mihoyo.com/upload/op-public/2020/06/11/60b6242087e561f887131b6f31bc53b7_172145867243005676.mp3",
+      "image":"https://i.ibb.co/hVp8T87/genshin-impact-huong-dan-build-xingqiu-1.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/28R6FF0/18.jpg",
+                "https://i.ibb.co/tP4K5MG/22.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":45,
+      "name":"CHONGYUN",
+      "va":"SAITO Soma",
+      "story":"Chongyun xuất thân từ một gia đình trừ tà nổi tiếng ở Liyue, từ nhỏ đến lớn được “thuần dương chi thể” bảo vệ, có thể xua đuổi ma quái quấy nhiễu. Với phương pháp trừ tà đặc biệt, Chongyun chỉ cần ngồi yên cũng đủ làm quỷ dữ tiêu tán. Tuy hành nghề đã lâu, nhưng anh chưa bao giờ tận mắt nhìn thấy yêu ma.",
+      "element": "Băng",
+      "birthday": "07/09",
+      "countryside": "Liyue",
+      "sex": "Nam",
+      "belong": "Cảng liyue",
+      "audio": "https://webstatic.mihoyo.com/upload/op-public/2020/06/02/602d5d7cbc2e93130a18188b4af7a51d_4081218662440864466.mp3",
+      "image":"https://i.ibb.co/415gbbp/thumb-800x450-55.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/23Jc9Js/27.jpg",
+                "https://i.ibb.co/yBKBwxM/34.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":46,
+      "name":"QIQI",
+      "va":"TAMURA Yukari",
+      "story":"Sau khi được tiên nhân hồi sinh thành cương thi, cô ấy nhận được sự chăm sóc của Baizhu và làm việc tại Hiệu thuốc Bubu ở Cảng Liyue.",
+      "element": "Băng",
+      "birthday": "03/03",
+      "countryside": "Liyue",
+      "sex": "Nữ",
+      "belong": "Nhà Thuốc Bubu (trong hồ sơ), Tiên Nhân",
+      "audio": "https://webstatic.mihoyo.com/upload/op-public/2020/08/28/eb39c364e60e8be7493cd5ebcbd498f1_1690512059894578712.mp3",
+      "image":"https://i.ibb.co/Jv9GFF1/maxresdefault-2.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/x6nvVgg/001.jpg",
+                "https://i.ibb.co/KDsDSt9/8.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":47,
+      "name":"KEQING",
+      "va":"KITAMURA Eri",
+      "story":"Là Ngọc Hành Tinh,một trong 7 Thất Tinh Liyue, cô ấy là người luôn tìm kiếm câu trả lời cho riêng mình thay vì cứ để tình trạng hỗn loạn hoành hành ở Liyue.",
+      "element": "Lôi",
+      "birthday": "20/11",
+      "countryside": "Liyue",
+      "sex": "Nữ",
+      "belong": "Thất Tinh Liyue",
+      "audio": "https://webstatic.mihoyo.com/upload/op-public/2020/08/28/079d5b19ed55af90c2af745db8354176_270060025253172630.mp3",
+      "image":"https://i.ibb.co/cJY09YZ/thumb-800x450-1.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/QYqSKBG/18.jpg",
+                "https://i.ibb.co/0hmLQgz/19.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":48,
+      "name":"TARTAGLIA",
+      "va":"KIMURA Ryohei",
+      "story":"Tartaglia, với mật danh Childe, đứng thứ 11 trong 11 Quan Chấp Hành của Fatui. Mỗi lần anh tới là mỗi lần sóng gió ập đến, vì anh luôn phấn khích kiếm tìm cơ hội để chiến đấu. Bởi vậy, dù là Quan Chấp Hành trẻ tuổi nhất, anh ta là một kẻ nguy hiểm.",
+      "element": "Thủy",
+      "birthday": "20/07",
+      "countryside": "Liyue",
+      "sex": "Nam",
+      "belong": "Fatui",
+      "audio": "https://webstatic.mihoyo.com/upload/op-public/2020/11/03/af757bf6a1f86c9727c503325b0c4698_2378720270954342934.mp3",
+      "image":"https://i.ibb.co/MDthxMp/icon-640x360-21.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/vwV8YD5/18.jpg",
+                "https://i.ibb.co/nDqzfZN/19.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":49,
+      "name":"ZHONGLI",
+      "va":"MAENO Tomoaki",
+      "story":"Zhongli vốn là Nham Thần Morax, hiện tại đang dùng thân phận cố vấn của Vãng Sinh Đường với mong muốn trải nghiệm cuộc sống của người phàm.",
+      "element": "Nham",
+      "birthday": "31/12",
+      "countryside": "Liyue",
+      "sex": "Nam",
+      "belong": "Cảng Liyue (trong hồ sơ), Vãng Sinh Đường, Bảy Vị Thần, Tiên Nhân",
+      "audio": "https://webstatic.mihoyo.com/upload/op-public/2020/11/20/177fd76054a08aa2d82b10497f45fba8_5402827144498701290.mp3",
+      "image":"https://i.ibb.co/WksBnD9/icon-640x360-18.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/8cvXp5m/27.jpg",
+                "https://i.ibb.co/g6WYmK4/31.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":50,
+      "name":"XINYAN",
+      "va":"TAKAHASHI Chiaki",
+      "story":"Rock&Roll là thể loại âm nhạc tương đối mới ở Liyue,được du nhập từ Fontaine. Xinyan, một người yêu âm nhạc — đang dần có cho mình một lượng người hâm mộ của riêng mình khi biểu diễn ở Cảng Liyue.",
+      "element": "Hỏa",
+      "birthday": "16/10",
+      "countryside": "Liyue",
+      "sex": "Nữ",
+      "belong": "Cảng Liyue",
+      "audio": "https://webstatic.mihoyo.com/upload/op-public/2020/11/25/f5ebdc3aa2852da587147600ddf6fa57_9057008431620929245.mp3",
+      "image":"https://i.ibb.co/HHzCVMD/maxresdefault-1.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/p3dWDy3/27.jpg",
+                "https://i.ibb.co/GT0CR5q/32.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":51,
+      "name":"GANYU",
+      "va":"UEDA Reina",
+      "story":"Cô là một Tiên Nhân bán Kỳ Lân đang trong khế ước với Nham Thần Morax và giữ chức tổng thư ký của Thất Tinh Liyue.",
+      "element": "Băng",
+      "birthday": "02/12",
+      "countryside": "Liyue",
+      "sex": "Nữ",
+      "belong": "Nguyệt Hải Đình (trong hồ sơ), Nhân Viên Thất Tinh Liyue, Tiên Nhân",
+      "audio": "https://webstatic.mihoyo.com/upload/op-public/2021/01/04/3f86a0d295717787bc667f8c9bdf08fb_1803119177844401844.mp3",
+      "image":"https://i.ibb.co/0CVs2f8/1-10.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/82j6Grh/001.jpg",
+                "https://i.ibb.co/25gYwNS/8.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":52,
+      "name":"HU TAO",
+      "va":"TAKAHASHI Rie",
+      "story":"Cô có thiên phú thơ văn và luôn khoác lên mình vẻ ngoài khôi hài, lập dị. Tuy vậy, đằng sau vẻ ngoài ấy là trọng trách của một đường chủ thứ 77 của Vãng Sinh Đường, luôn phải cử hành nghi lễ đưa người say giấc ngàn thu xuống suối vàng bằng tất cả sự thành kính và nghiêm trang.",
+      "element": "Hỏa",
+      "birthday": "15/07",
+      "countryside": "Liyue",
+      "sex": "Nữ",
+      "belong": "Vãng Sinh Đường (trong hồ sơ), Gia Tộc Hu",
+      "audio": "https://webstatic.mihoyo.com/upload/op-public/2021/02/24/68dcea032ff8f0991f28f4f1b401cb5f_6446063929687735981.mp3",
+      "image":"https://i.ibb.co/H2jjLf7/genshin-impact-1020240311143919.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/1Mhd6K2/18.jpg",
+                "https://i.ibb.co/0VJ10Nd/26.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":53,
+      "name":"YANFEI",
+      "va":"HANAMORI Yumiri",
+      "story":"Cha cô ấy là Tiên và mẹ là người phàm. Sau khi lớn, cha mẹ cô bỏ đi phiêu lưu, để lại cho Bình Lão Lão chăm sóc cô. Cô cư trú tại Liyue, làm nhà cố vấn luật cho người dân.",
+      "element": "Hỏa",
+      "birthday": "28/07",
+      "countryside": "Liyue",
+      "sex": "Nữ",
+      "belong": "Cảng Liyue (trong hồ sơ), Tiên Nhân",
+      "audio": "https://webstatic.mihoyo.com/upload/op-public/2021/04/21/12903bbbf167ba3eb1ba7347d93e33f2_568730014088450384.mp3",
+      "image":"https://i.ibb.co/HKCBsdv/2021042720430676756.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/vvvqFcW/27.jpg",
+                "https://i.ibb.co/HKfLshd/28.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":54,
+      "name":"SHENHE",
+      "va":"KAWASUMI Ayako",
+      "story":"Con gái của một cặp vợ chồng trừ ma giấu tên,Shenhe được Lưu Vân Tá Phong Chân Quân thu làm đệ tử sau một biến cố thời thơ ấu của cô.",
+      "element": "Băng",
+      "birthday": "10/03",
+      "countryside": "Liyue",
+      "sex": "Nữ",
+      "belong": "Cảng Liyue",
+      "audio": "https://webstatic.mihoyo.com/upload/op-public/2021/12/26/74806a55052e2a4507e666d66039ca73_131576019089999989.mp3",
+      "image":"https://i.ibb.co/rmVJ4wX/build-shenhe-ho-tro-moi-nhat-trong-genshin-impact-3-5-230320040555.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/5MxXZQv/17.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":55,
+      "name":"YUN JIN",
+      "va":"KOIWAI Kotori & Yang Yang",
+      "story":"Cô là một nghệ sĩ kịch nổi danh tại Liyue, đồng thời là đương gia hiện tại của Vân Hàn Xã. Ngoài diễn kịch, cô cũng biết viết kịch, những vở kịch mới gần đây của Vân Hàn Xã đều do cô tự mình chấp bút, trong đó có cả kết cục mới cho vở Thần Nữ Hủy Diệt.",
+      "element": "Nham",
+      "birthday": "21/05",
+      "countryside": "Liyue",
+      "sex": "Nữ",
+      "belong": "Vân Hàn Xã (trong hồ sơ), Hòa Dụ Trà Quán, Nhà Yun",
+      "audio": "https://webstatic.mihoyo.com/upload/op-public/2021/12/26/056844683ca23dbe3b58cab410ef9be0_6752832293725307648.mp3",
+      "image":"https://i.ibb.co/94dkwMs/yelan-genshin.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/z4D05Nq/24.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":56,
+      "name":"YELAN",
+      "va":"ENDO Aya",
+      "story":"Cô là nhân sĩ thần bí tự xưng làm việc cho Tổng Vụ. Dưới thân phận bà chủ của Tiệm Trà Trên Đá, cô hoạt động bí mật dưới trướng Thiên Quyền Ningguang.",
+      "element": "Thủy",
+      "birthday": "20/04",
+      "countryside": "Liyue",
+      "sex": "Nữ",
+      "belong": "Tiệm Trà Trên Đá (trong hồ sơ), Tổng Vụ",
+      "audio": "https://webstatic.hoyoverse.com/upload/contentweb/2022/05/18/79c661ddfe175553880997fed69d33a0_4475263708553663092.mp3",
+      "image":"https://i.ibb.co/94dkwMs/yelan-genshin.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/QcB9h3h/18.jpg",
+                "https://i.ibb.co/vPYFBcQ/22.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":57,
+      "name":"LISA",
+      "va":"TANAKA Rie",
+      "story":"Cô là Ma Đạo Sư mạnh mẽ và được công nhận là thiên tài xuất sắc trong 200 năm của Giáo Viện Sumeru, Lisa trở về Mondstadt trở thành Thủ Thư khiêm tốn của Đội Kỵ Sĩ Tây Phong.",
+      "element": "Lôi",
+      "birthday": "09/06",
+      "countryside": "Mondstadt",
+      "sex": "Nữ",
+      "belong": "Đội Kỵ Sĩ Tây Phong (trong hồ sơ), Spantamad (trước kia)",
+      "audio": "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20191009/2019100915134493475.mp3",
+      "image":"https://i.ibb.co/8DN0pxg/cot-truyen-genshin-impact-lisa-phan-1-5.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/sqnHKgL/25.jpg"
+            ]
+        ]
+    },
+    {
+      "ID":58,
+      "name":"KLEE",
+      "va":"KUNO Mishaki",
+      "story":"Con gái của nhà thám hiểm gan dạ và hay phá hoại Alice, Klee giống mẹ ở nhất nhiều điểm, nhất là về việc phá hoại Đội Kỵ Sĩ Tây Phong, nơi được giao phó chăm sóc trong khi Alice đang trên cuộc phiêu lưu của mình.",
+      "element": "Hỏa",
+      "birthday": "27/07",
+      "countryside": "Mondstadt",
+      "sex": "Nữ",
+      "belong": "Đội Kỵ Sĩ Tây Phong",
+      "audio": "https://webstatic.mihoyo.com/upload/op-public/2020/06/03/5c23edd1addc595091696af98f1fa9b5_1883663104510035371.mp3",
+      "image":"https://i.ibb.co/9w1DttG/kd-PLVg-Rv-maxresdefault.jpg",
+        "data":[
+            [
+                "https://i.ibb.co/hcDGnh7/21.jpg"
+            ]
+        ]
+    },
+    {
+        "ID":59,
+        "name":"JD Kanojo NTR AV Kyousei Shutsuen",
+        "author":"Imamo Too",
+        "des":null,
+        "data":[
+            [
+                "https://i.ibb.co/X5tgDC1/005.jpg",
+                "https://i.ibb.co/ZSnqrsd/1.jpg",
+                "https://i.ibb.co/tbk2ytk/2.jpg",
+                "https://i.ibb.co/259jQrh/3.jpg",
+                "https://i.ibb.co/25R5tGp/4.jpg",
+                "https://i.ibb.co/d0PLLcc/5.jpg",
+                "https://i.ibb.co/kBRm5T4/6.jpg",
+                "https://i.ibb.co/R0SQ5GW/7.jpg",
+                "https://i.ibb.co/LSNBnyG/8.jpg"
+            ],
+            [
+                "https://i.ibb.co/G3R5NBL/9.jpg",
+                "https://i.ibb.co/N3wPwBh/10.jpg",
+                "https://i.ibb.co/GTqFzQk/11.jpg",
+                "https://i.ibb.co/cFYp1Zx/12.jpg",
+                "https://i.ibb.co/BfSSqdF/13.jpg",
+                "https://i.ibb.co/Vx4NNfV/14.jpg",
+                "https://i.ibb.co/VjsCxk5/15.jpg",
+                "https://i.ibb.co/mDD0jxB/16.jpg",
+                "https://i.ibb.co/xFNgPK4/17.jpg"
+            ],
+            [
+                "https://i.ibb.co/YWQP6XY/18.jpg",
+                "https://i.ibb.co/Rg1Mshs/19.jpg",
+                "https://i.ibb.co/MMwB1XW/20.jpg",
+                "https://i.ibb.co/cr5fYTJ/21.jpg",
+                "https://i.ibb.co/ZGdgF4Y/22.jpg",
+                "https://i.ibb.co/y61m9cD/23.jpg",
+                "https://i.ibb.co/4F9hybW/24.jpg",
+                "https://i.ibb.co/bF4GWRY/25.jpg",
+                "https://i.ibb.co/8drTD2y/26.jpg"
+            ],
+            [
+                "https://i.ibb.co/XXbTxvw/27.jpg",
+                "https://i.ibb.co/98nNDSN/28.jpg",
+                "https://i.ibb.co/x16QK49/29.jpg",
+                "https://i.ibb.co/mcnVTFn/30.jpg",
+                "https://i.ibb.co/LkbrJNh/31.jpg",
+                "https://i.ibb.co/LPPQyVQ/32.jpg",
+                "https://i.ibb.co/MkW6PC0/33.jpg",
+                "https://i.ibb.co/890bB53/34.jpg",
+                "https://i.ibb.co/QjF9RZg/35.jpg"
+            ],
+            [
+                "https://i.ibb.co/tMBPTcT/36.jpg",
+                "https://i.ibb.co/LNB7mfq/37.jpg",
+                "https://i.ibb.co/JBr6xj3/38.jpg",
+                "https://i.ibb.co/09rmVfr/39.jpg",
+                "https://i.ibb.co/J2DpPXK/40.jpg",
+                "https://i.ibb.co/dkx4s34/41.jpg",
+                "https://i.ibb.co/2t4yfdg/42.jpg"
+            ]
+        ]
+    },
+    {
+        "ID":60,
+        "name":"Tôi là người duy nhất không được chịch trong nhà",
+        "author":"Benimura Karu",
+        "des":"Boku dake ga Sex Dekinai Ie/I‘m the Only One That Can’t Get Laid in This House",
+        "data":[
+            [
+                "https://i.ibb.co/hHWGZ9J/001.jpg",
+                "https://i.ibb.co/SsPr18f/1.jpg",
+                "https://i.ibb.co/1Z6LV3Y/2.jpg",
+                "https://i.ibb.co/bRQ3Lnk/3.jpg",
+                "https://i.ibb.co/9v7DQX0/4.jpg",
+                "https://i.ibb.co/0MgDBdT/5.jpg",
+                "https://i.ibb.co/86M3Kk5/6.jpg",
+                "https://i.ibb.co/7nnW8bn/7.jpg",
+                "https://i.ibb.co/MZLYrSq/8.jpg"
+            ],
+            [
+                "https://i.ibb.co/FzY9Vmc/9.jpg",
+                "https://i.ibb.co/MPJvXBm/10.jpg",
+                "https://i.ibb.co/vmQ4N9G/11.jpg",
+                "https://i.ibb.co/TrLpmCp/12.jpg",
+                "https://i.ibb.co/94dxxqN/13.jpg",
+                "https://i.ibb.co/mSttZTB/14.jpg",
+                "https://i.ibb.co/Prnsy3G/15.jpg",
+                "https://i.ibb.co/dDNkCtG/16.jpg",
+                "https://i.ibb.co/G0ptD6N/17.jpg"
+            ],
+            [
+                "https://i.ibb.co/VgFrC6n/18.jpg",
+                "https://i.ibb.co/3CbMcM0/19.jpg",
+                "https://i.ibb.co/v4sH5C4/20.jpg",
+                "https://i.ibb.co/BgYB8Hs/21.jpg",
+                "https://i.ibb.co/kg2XSyb/22.jpg",
+                "https://i.ibb.co/23XyXHC/23.jpg",
+                "https://i.ibb.co/wg3Nt7W/24.jpg",
+                "https://i.ibb.co/whN9tvc/25.jpg",
+                "https://i.ibb.co/zZSj6pr/26.jpg"
+            ],
+            [
+                "https://i.ibb.co/ZJBZnDZ/27.jpg",
+                "https://i.ibb.co/0snJL00/28.jpg",
+                "https://i.ibb.co/CJPt6wv/29.jpg",
+                "https://i.ibb.co/WP8cKGB/30.jpg",
+                "https://i.ibb.co/JH7DZDr/31.jpg",
+                "https://i.ibb.co/1KDkSS8/32.jpg",
+                "https://i.ibb.co/2yk6Fgn/33.jpg",
+                "https://i.ibb.co/ftq4By1/34.jpg",
+                "https://i.ibb.co/6RgfNGn/35.jpg"
+            ],
+            [
+                "https://i.ibb.co/VHcKcHr/36.jpg",
+                "https://i.ibb.co/XyQdBXr/37.jpg",
+                "https://i.ibb.co/TKcvKWQ/38.jpg",
+                "https://i.ibb.co/mTQwbBn/39.jpg",
+                "https://i.ibb.co/D4QQ5CK/40.jpg",
+                "https://i.ibb.co/gF3D0kL/41.jpg",
+                "https://i.ibb.co/vLyZn3Y/42.jpg",
+                "https://i.ibb.co/1J0MkKH/43.jpg",
+                "https://i.ibb.co/KDVzStX/44.jpg"
+            ],
+            [
+                "https://i.ibb.co/2Mjdz7V/45.jpg",
+                "https://i.ibb.co/JF6Z3GJ/46.jpg",
+                "https://i.ibb.co/2P3Y1Zr/47.jpg",
+                "https://i.ibb.co/kybTc6H/48.jpg",
+                "https://i.ibb.co/DtqBwHg/49.jpg",
+                "https://i.ibb.co/Vjf7kDX/50.jpg",
+                "https://i.ibb.co/0B1Wv5H/51.jpg",
+                "https://i.ibb.co/B2t5sL7/52.jpg",
+                "https://i.ibb.co/LzBsLxp/53.jpg"
+            ],
+            [
+                "https://i.ibb.co/5cVDRkS/54.jpg",
+                "https://i.ibb.co/G3Xv0zb/55.jpg",
+                "https://i.ibb.co/L1KpNKV/56.jpg",
+                "https://i.ibb.co/SrnYscF/57.jpg"
+            ]
+        ]
+    },
+    {
+        "ID":61,
+        "name":"Khi khúc Hayashi kết thúc",
+        "author":"Bota Mochito",
+        "des":"Ato no Matsuribayashi/あとの祭囃子",
+        "data":[
+            [
+                "https://i.ibb.co/xJSQbdf/002.jpg",
+                "https://i.ibb.co/Sf5Fhy6/1.jpg",
+                "https://i.ibb.co/DMpr59W/2.jpg",
+                "https://i.ibb.co/bb0vsvk/3.jpg",
+                "https://i.ibb.co/3phNCht/4.jpg",
+                "https://i.ibb.co/Jqc2XfC/5.jpg",
+                "https://i.ibb.co/wcsLcQd/6.jpg",
+                "https://i.ibb.co/x6hx72n/7.jpg",
+                "https://i.ibb.co/0qsZSxG/8.jpg"
+            ],
+            [
+                "https://i.ibb.co/vLtzm3h/9.jpg",
+                "https://i.ibb.co/Prf1nCG/10.jpg",
+                "https://i.ibb.co/PQvdsnX/11.jpg",
+                "https://i.ibb.co/xFDzLmB/12.jpg",
+                "https://i.ibb.co/ZH57zQg/13.jpg",
+                "https://i.ibb.co/Tcn8C6W/14.jpg",
+                "https://i.ibb.co/k1rxGYM/15.jpg",
+                "https://i.ibb.co/wQNw9Ds/16.jpg",
+                "https://i.ibb.co/x8vt07G/17.jpg"
+            ]
+        ]
+    },
+    {
+        "ID":62,
+        "name":"Atsui Natsu, Oba no Ie de...",
+        "author":"Namaribou Nayonayo",
+        "des":"暑い夏、叔母の家で… 〜ふんどし祝い〜",
+        "data":[
+            [
+                "https://i.ibb.co/N3G5DHc/001.jpg",
+                "https://i.ibb.co/DRWfHcV/1.jpg",
+                "https://i.ibb.co/KrCnKDD/2.jpg",
+                "https://i.ibb.co/8dbQ1p1/3.jpg",
+                "https://i.ibb.co/qrX4d1y/4.jpg",
+                "https://i.ibb.co/MBHz5qF/5.jpg",
+                "https://i.ibb.co/0G3p8ZJ/6.jpg",
+                "https://i.ibb.co/F8hGz96/7.jpg",
+                "https://i.ibb.co/Ltky1kL/8.jpg"
+            ],
+            [
+                "https://i.ibb.co/VmcWZm0/9.jpg",
+                "https://i.ibb.co/jf0Jf1D/10.jpg",
+                "https://i.ibb.co/xhJmvkD/11.jpg",
+                "https://i.ibb.co/y4gC144/12.jpg",
+                "https://i.ibb.co/3m008wS/13.jpg",
+                "https://i.ibb.co/pJPp5q6/14.jpg",
+                "https://i.ibb.co/TP4RVWJ/15.jpg",
+                "https://i.ibb.co/R2d6qG8/16.jpg",
+                "https://i.ibb.co/F5KNYRh/17.jpg"
+            ],
+            [
+                "https://i.ibb.co/q01kB86/18.jpg",
+                "https://i.ibb.co/rfdrTw8/19.jpg",
+                "https://i.ibb.co/b3NQh4x/20.jpg"
+            ]
+        ]
+    },
+    {
+        "ID":63,
+        "name":"Sự Thất Bại của Kẻ Nổi Loạn",
+        "author":"Tatsumak & Cheeryowo",
+        "des":null,
+        "data":[
+            [
+                "https://i.ibb.co/kQhrX0F/002.jpg",
+                "https://i.ibb.co/nRZ7RgC/1.jpg",
+                "https://i.ibb.co/QkwGBdQ/2.jpg",
+                "https://i.ibb.co/GdYkTX3/3.jpg",
+                "https://i.ibb.co/wyKFLWR/4.jpg",
+                "https://i.ibb.co/jyKwvDX/5.jpg",
+                "https://i.ibb.co/c1cZK4L/6.jpg",
+                "https://i.ibb.co/YBjtSvF/7.jpg",
+                "https://i.ibb.co/5LJf1SS/8.jpg"
+            ],
+            [
+                "https://i.ibb.co/FH2D4d1/9.jpg",
+                "https://i.ibb.co/HdMvNkL/10.jpg",
+                "https://i.ibb.co/wWZwDR3/11.jpg",
+                "https://i.ibb.co/d4dZ7wY/12.jpg",
+                "https://i.ibb.co/Ptf45qM/13.jpg",
+                "https://i.ibb.co/yRFG06Y/14.jpg",
+                "https://i.ibb.co/0tpv6ZK/15.jpg",
+                "https://i.ibb.co/0mvsY95/16.jpg",
+                "https://i.ibb.co/fqPZ5Vp/17.jpg"
+            ],
+            [
+                "https://i.ibb.co/nnh7wxg/18.jpg",
+                "https://i.ibb.co/C1TC1nS/19.jpg",
+                "https://i.ibb.co/nBPHjKd/20.jpg",
+                "https://i.ibb.co/Nj1RyKQ/21.jpg"
+            ]
+        ]
+    },
+    {
+        "ID":64,
+        "name":"Tiếng gọi bạn tình",
+        "author":"Nekomata Naomi",
+        "des":null,
+        "data":[
+            [
+                "https://i.ibb.co/yV5zk2L/005.jpg",
+                "https://i.ibb.co/GtGvj7z/1.jpg",
+                "https://i.ibb.co/3sxtXTs/2.jpg",
+                "https://i.ibb.co/FBF6VTn/3.jpg",
+                "https://i.ibb.co/cF8fB6w/4.jpg",
+                "https://i.ibb.co/XxV3DcX/5.jpg",
+                "https://i.ibb.co/85Mp1hh/6.jpg",
+                "https://i.ibb.co/nMxnz1q/7.jpg",
+                "https://i.ibb.co/KrV82H9/8.jpg"
+            ],
+            [
+                "https://i.ibb.co/5KVx9cH/9.jpg",
+                "https://i.ibb.co/ggRXbNc/10.jpg",
+                "https://i.ibb.co/GCsmJhf/11.jpg",
+                "https://i.ibb.co/Q6HjDPm/12.jpg",
+                "https://i.ibb.co/vHBRXL7/13.jpg",
+                "https://i.ibb.co/YNw5rPC/14.jpg",
+                "https://i.ibb.co/2Mb1pvb/15.jpg",
+                "https://i.ibb.co/CMkHTMt/16.jpg",
+                "https://i.ibb.co/bL20WcZ/17.jpg"
+            ],
+            [
+                "https://i.ibb.co/yQ7k8tS/18.jpg",
+                "https://i.ibb.co/x8bjDY9/19.jpg"
+            ]
+        ]
+    },
+    {
+        "ID":65,
+        "name":"Á đù hóa ra lời đồn là thế sao... bủh",
+        "author":"Touno Itsuki",
+        "des":null,
+        "data":[
+            [
+                "https://i.ibb.co/pn1K5Rv/001.jpg",
+                "https://i.ibb.co/H2SpBnL/1.jpg",
+                "https://i.ibb.co/CKwtQ10/2.jpg",
+                "https://i.ibb.co/kgFGw9X/3.jpg",
+                "https://i.ibb.co/PT04G0H/4.jpg",
+                "https://i.ibb.co/G3zL50x/5.jpg",
+                "https://i.ibb.co/Ry8CD9h/6.jpg",
+                "https://i.ibb.co/tc9ctZr/7.jpg",
+                "https://i.ibb.co/p1xjS1F/8.jpg"
+            ],
+            [
+                "https://i.ibb.co/5ngnskG/9.jpg",
+                "https://i.ibb.co/1T50dBM/10.jpg",
+                "https://i.ibb.co/WVXKmRb/11.jpg",
+                "https://i.ibb.co/D1Hp6tX/12.jpg",
+                "https://i.ibb.co/xXmdfkz/13.jpg",
+                "https://i.ibb.co/x3pxHz1/14.jpg",
+                "https://i.ibb.co/6Wrg5TZ/15.jpg",
+                "https://i.ibb.co/NNgyt1D/16.jpg",
+                "https://i.ibb.co/gjs5SJt/17.jpg"
+            ],
+            [
+                "https://i.ibb.co/hZLj2q4/18.jpg",
+                "https://i.ibb.co/YjkGsXF/19.jpg",
+                "https://i.ibb.co/4Yqfk97/20.jpg",
+                "https://i.ibb.co/y4kMmdR/21.jpg",
+                "https://i.ibb.co/WyS887K/22.jpg",
+                "https://i.ibb.co/hVfZb22/23.jpg",
+                "https://i.ibb.co/zJjrNBs/24.jpg"
+            ]
+        ]
+    },
+    {
+        "ID":66,
+        "name":"Vận động viên sa ngã",
+        "author":"Nanae",
+        "des":null,
+        "data":[
+            [
+                "https://i.ibb.co/0Mv23DX/005.jpg",
+                "https://i.ibb.co/RQFvMbT/1.jpg",
+                "https://i.ibb.co/MPh9ZK0/2.jpg",
+                "https://i.ibb.co/mcwcyfS/3.jpg",
+                "https://i.ibb.co/GVbxLVx/4.jpg",
+                "https://i.ibb.co/6ykq06X/5.jpg",
+                "https://i.ibb.co/YyKzVjS/6.jpg",
+                "https://i.ibb.co/r23wM40/7.jpg",
+                "https://i.ibb.co/3NJcgPg/8.jpg"
+            ],
+            [
+                "https://i.ibb.co/4MwrKYC/9.jpg",
+                "https://i.ibb.co/WgLqd5g/10.jpg",
+                "https://i.ibb.co/CKQy1SN/11.jpg",
+                "https://i.ibb.co/W6xqyy7/12.jpg",
+                "https://i.ibb.co/bBggXLr/13.jpg",
+                "https://i.ibb.co/CQzd7hz/14.jpg",
+                "https://i.ibb.co/ts7Mqph/15.jpg",
+                "https://i.ibb.co/vh33c3g/16.jpg",
+                "https://i.ibb.co/28wk64k/17.jpg"
+            ],
+            [
+                "https://i.ibb.co/QjC1Qqq/18.jpg",
+                "https://i.ibb.co/nrJ2PqV/19.jpg",
+                "https://i.ibb.co/FnQrCvx/20.jpg",
+                "https://i.ibb.co/hZPGcXm/21.jpg",
+                "https://i.ibb.co/SwSwC50/22.jpg",
+                "https://i.ibb.co/cLvNdSm/23.jpg"
+            ]
+        ]
+    },
+    {
+        "ID":67,
+        "name":"Bản phác thảo đầu tiên",
+        "author":"Nekomata Naomi",
+        "des":null,
+        "data":[
+            [
+                "https://i.ibb.co/wRmKtJD/005.jpg",
+                "https://i.ibb.co/Js1VPg2/1.jpg",
+                "https://i.ibb.co/hyWVWb9/2.jpg",
+                "https://i.ibb.co/By3f7CM/3.jpg",
+                "https://i.ibb.co/b2zjwNR/4.jpg",
+                "https://i.ibb.co/pPRD4rx/5.jpg",
+                "https://i.ibb.co/TT5v6hv/6.jpg",
+                "https://i.ibb.co/FnFKTzs/7.jpg",
+                "https://i.ibb.co/sPBWsYJ/8.jpg"
+            ],
+            [
+                "https://i.ibb.co/ZHmpJHv/9.jpg",
+                "https://i.ibb.co/Mpp3Tbh/10.jpg",
+                "https://i.ibb.co/JHwczR6/11.jpg",
+                "https://i.ibb.co/yRzbYpp/12.jpg",
+                "https://i.ibb.co/CHPyNWX/13.jpg",
+                "https://i.ibb.co/KVsL3WB/14.jpg",
+                "https://i.ibb.co/znXh3SM/15.jpg",
+                "https://i.ibb.co/rc0MVb6/16.jpg",
+                "https://i.ibb.co/brQSKvT/17.jpg"
+            ],
+            [
+                "https://i.ibb.co/YphGp4t/18.jpg",
+                "https://i.ibb.co/GtSXqm8/19.jpg",
+                "https://i.ibb.co/Z1W8Znv/20.jpg",
+                "https://i.ibb.co/smH4dGP/21.jpg"
+            ]
+        ]
+    },
+    {
+        "ID":68,
+        "name":"Tình yêu nảy nở vào một buổi đêm yên tĩnh",
+        "author":"Nicoby",
+        "des":null,
+        "data":[
+            [
+                "https://i.ibb.co/d7jD6xN/005.jpg",
+                "https://i.ibb.co/M8sGLzD/1.jpg",
+                "https://i.ibb.co/c2sSD8g/2.jpg",
+                "https://i.ibb.co/Zf92M91/3.jpg",
+                "https://i.ibb.co/wMPKy4v/4.jpg",
+                "https://i.ibb.co/3h8MMFd/5.jpg",
+                "https://i.ibb.co/b1xGM4v/6.jpg",
+                "https://i.ibb.co/Z85wkvy/7.jpg",
+                "https://i.ibb.co/BP8c5rJ/8.jpg"
+            ],
+            [
+                "https://i.ibb.co/rtSJcfH/9.jpg",
+                "https://i.ibb.co/2K8npn0/10.jpg",
+                "https://i.ibb.co/RDQ5Y4m/11.jpg",
+                "https://i.ibb.co/PTPfFh9/12.jpg",
+                "https://i.ibb.co/v1Zh4mp/13.jpg",
+                "https://i.ibb.co/QkCkgTB/14.jpg",
+                "https://i.ibb.co/9pZ0QLF/15.jpg",
+                "https://i.ibb.co/9GLZ4kh/16.jpg",
+                "https://i.ibb.co/SJ5ZZyZ/17.jpg"
+            ],
+            [
+                "https://i.ibb.co/4jzXGvW/18.jpg",
+                "https://i.ibb.co/Y8CBL06/19.jpg",
+                "https://i.ibb.co/JKPZqbP/20.jpg",
+                "https://i.ibb.co/tQLZDm1/21.jpg"
+            ]
+        ]
+    },
+    {
+        "ID":69,
+        "name":"Giờ nghỉ thì chơi gì~",
+        "author":"Mogg",
+        "des":null,
+        "data":[
+            [
+                "https://i.ibb.co/ygDfv2v/001.jpg",
+                "https://i.ibb.co/1GFNtGg/1.jpg",
+                "https://i.ibb.co/g6RmRFq/2.jpg",
+                "https://i.ibb.co/wKybKry/3.jpg",
+                "https://i.ibb.co/2vfjNQW/4.jpg",
+                "https://i.ibb.co/4KQN2QJ/5.jpg",
+                "https://i.ibb.co/j3hPZfj/6.jpg",
+                "https://i.ibb.co/5YtnfJ9/7.jpg",
+                "https://i.ibb.co/QHh9t1m/8.jpg"
+            ],
+            [
+                "https://i.ibb.co/smV69rv/9.jpg",
+                "https://i.ibb.co/TtvjJ28/10.jpg",
+                "https://i.ibb.co/Wys9R8C/11.jpg",
+                "https://i.ibb.co/PxbcG8G/12.jpg",
+                "https://i.ibb.co/WWs2Dy1/13.jpg",
+                "https://i.ibb.co/rv21gb2/14.jpg",
+                "https://i.ibb.co/cQfSZX0/15.jpg",
+                "https://i.ibb.co/7gmWnXB/16.jpg",
+                "https://i.ibb.co/BjgM3G4/17.jpg"
+            ]
+        ]
+    },
+    {
+        "ID":70,
+        "name":"Eating Mother",
+        "author":"Murasame Masumi",
+        "des":null,
+        "data":[
+            [
+                "https://i.ibb.co/M86MpR5/1632245954-05.jpg",
+                "https://i.ibb.co/nfTgR4D/1.jpg",
+                "https://i.ibb.co/TMYx3Yg/2.jpg",
+                "https://i.ibb.co/BgB05r9/3.jpg",
+                "https://i.ibb.co/S6cdnXr/4.jpg",
+                "https://i.ibb.co/YjXdd2R/5.jpg",
+                "https://i.ibb.co/jHxN9LB/6.jpg",
+                "https://i.ibb.co/p3m3ygT/7.jpg",
+                "https://i.ibb.co/B3Z4Vmp/8.jpg"
+            ],
+            [
+                "https://i.ibb.co/9qrQgN8/9.jpg",
+                "https://i.ibb.co/bRC6vdD/10.jpg",
+                "https://i.ibb.co/QCsjf4D/11.jpg",
+                "https://i.ibb.co/Jprrz2k/12.jpg",
+                "https://i.ibb.co/XtmXDd6/13.jpg",
+                "https://i.ibb.co/4KS6k5L/14.jpg",
+                "https://i.ibb.co/BHJ80TX/15.jpg",
+                "https://i.ibb.co/4tY0zX3/16.jpg",
+                "https://i.ibb.co/6WLRs4S/17.jpg"
+            ],
+            [
+                "https://i.ibb.co/1dLQd85/18.jpg",
+                "https://i.ibb.co/QrVkYQn/19.jpg",
+                "https://i.ibb.co/SnbrbM9/20.jpg",
+                "https://i.ibb.co/Wg8XQLK/21.jpg",
+                "https://i.ibb.co/hFHDq6V/22.jpg",
+                "https://i.ibb.co/G7RnMcr/23.jpg",
+                "https://i.ibb.co/02pF4C5/24.jpg",
+                "https://i.ibb.co/qn61MYT/25.jpg",
+                "https://i.ibb.co/jTpYRJK/26.jpg"
+            ],
+            [
+                "https://i.ibb.co/tJczMrS/27.jpg",
+                "https://i.ibb.co/YTNWNcw/28.jpg",
+                "https://i.ibb.co/zQDyqcJ/29.jpg",
+                "https://i.ibb.co/cYVF3Xh/30.jpg",
+                "https://i.ibb.co/mGCfGBM/31.jpg",
+                "https://i.ibb.co/tMxHqDC/32.jpg",
+                "https://i.ibb.co/pLhnKvg/33.jpg",
+                "https://i.ibb.co/vDyjY3C/34.jpg",
+                "https://i.ibb.co/ngbrBt3/35.jpg"
+            ],
+            [
+                "https://i.ibb.co/gt14gwF/36.jpg",
+                "https://i.ibb.co/xfXB3hT/37.jpg",
+                "https://i.ibb.co/0FdKMZz/38.jpg",
+                "https://i.ibb.co/k9rRtHg/39.jpg",
+                "https://i.ibb.co/QcqGXzJ/40.jpg",
+                "https://i.ibb.co/r5FCFHJ/41.jpg",
+                "https://i.ibb.co/WkGNWkW/42.jpg",
+                "https://i.ibb.co/VwZnz0W/43.jpg",
+                "https://i.ibb.co/DGPM2cc/44.jpg"
+            ],
+            [
+                "https://i.ibb.co/zHBgFKy/45.jpg",
+                "https://i.ibb.co/1sb76qd/46.jpg",
+                "https://i.ibb.co/7JBDCqm/47.jpg",
+                "https://i.ibb.co/bNC5tgQ/48.jpg",
+                "https://i.ibb.co/f425QyD/49.jpg",
+                "https://i.ibb.co/x6ZNY8j/50.jpg",
+                "https://i.ibb.co/ys7mz7h/51.jpg",
+                "https://i.ibb.co/0rQDQm4/52.jpg",
+                "https://i.ibb.co/XXq3SCx/53.jpg"
+            ],
+            [
+                "https://i.ibb.co/zPzGgw1/54.jpg",
+                "https://i.ibb.co/KzzVnWk/55.jpg",
+                "https://i.ibb.co/yYGPfLh/56.jpg",
+                "https://i.ibb.co/G0cQRGc/57.jpg",
+                "https://i.ibb.co/DD9k8Jm/58.jpg",
+                "https://i.ibb.co/1L9TwGW/59.jpg",
+                "https://i.ibb.co/DYH9f70/60.jpg",
+                "https://i.ibb.co/9b3f4S1/61.jpg",
+                "https://i.ibb.co/SQ4xx2R/62.jpg"
+            ],
+            [
+                "https://i.ibb.co/q0wkNTt/63.jpg",
+                "https://i.ibb.co/Gx96bJV/64.jpg",
+                "https://i.ibb.co/FwvG2jh/65.jpg",
+                "https://i.ibb.co/9r8TwYZ/66.jpg",
+                "https://i.ibb.co/bvHN6Rr/67.jpg",
+                "https://i.ibb.co/198vMKr/68.jpg",
+                "https://i.ibb.co/4pTzYp9/69.jpg",
+                "https://i.ibb.co/qRsdm7w/70.jpg",
+                "https://i.ibb.co/X7fBQby/71.jpg"
+            ],
+            [
+                "https://i.ibb.co/D70yD98/72.jpg",
+                "https://i.ibb.co/G0nXRmw/73.jpg",
+                "https://i.ibb.co/CQzhD9j/74.jpg",
+                "https://i.ibb.co/G5DNgL5/75.jpg",
+                "https://i.ibb.co/7zQ1NVQ/76.jpg",
+                "https://i.ibb.co/NZhydvL/77.jpg",
+                "https://i.ibb.co/0F7nd80/1632246295-29.jpg",
+                "https://i.ibb.co/F4G9NgY/79.jpg",
+                "https://i.ibb.co/HF7whGn/2.jpg"
+            ],
+            [
+                "https://i.ibb.co/f8tM5S7/3.jpg",
+                "https://i.ibb.co/kM64vP3/4.jpg",
+                "https://i.ibb.co/nzKx7nV/83.jpg",
+                "https://i.ibb.co/VH7xzcb/84.jpg",
+                "https://i.ibb.co/LvL72TR/7.jpg",
+                "https://i.ibb.co/JmfZfDc/86.jpg",
+                "https://i.ibb.co/HPyWbyS/9.jpg",
+                "https://i.ibb.co/n8yNFFg/10.jpg",
+                "https://i.ibb.co/0Vr0f5p/11.jpg"
+            ],
+            [
+                "https://i.ibb.co/02pF4C5/24.jpg",
+                "https://i.ibb.co/z5L6QsQ/13.jpg",
+                "https://i.ibb.co/k8N5qq8/14.jpg",
+                "https://i.ibb.co/ypcGv1k/15.jpg",
+                "https://i.ibb.co/bWs2JJ1/16.jpg",
+                "https://i.ibb.co/BNhB4yX/17.jpg",
+                "https://i.ibb.co/0Vv7yHr/18.jpg",
+                "https://i.ibb.co/QKWHKYd/19.jpg",
+                "https://i.ibb.co/z60tqLd/20.jpg"
+            ],
+            [
+                "https://i.ibb.co/sgDDwNf/99.jpg",
+                "https://i.ibb.co/qnMCmwS/22.jpg",
+                "https://i.ibb.co/897t9bn/23.jpg",
+                "https://i.ibb.co/JKPVMVg/24.jpg",
+                "https://i.ibb.co/XpHq3Nz/25.jpg",
+                "https://i.ibb.co/drtdxF4/26.jpg",
+                "https://i.ibb.co/kmJVRnP/27.jpg",
+                "https://i.ibb.co/PcdhTRN/28.jpg",
+                "https://i.ibb.co/JqqN43K/29.jpg"
+            ],
+            [
+                "https://i.ibb.co/0GtQYHz/108.jpg",
+                "https://i.ibb.co/71y3cht/31.jpg",
+                "https://i.ibb.co/vPCtfgV/32.jpg",
+                "https://i.ibb.co/LpzpDXB/33.jpg",
+                "https://i.ibb.co/bPPtxyP/112.jpg",
+                "https://i.ibb.co/wyG3WK6/113.jpg",
+                "https://i.ibb.co/k6Kbpn3/164.jpg",
+                "https://i.ibb.co/qrQb86Q/37.jpg",
+                "https://i.ibb.co/0DyYSLm/38.jpg"
+            ],
+            [
+                "https://i.ibb.co/yFd1BNf/39.jpg",
+                "https://i.ibb.co/NLWpdDQ/40.jpg",
+                "https://i.ibb.co/xGJ5Jj8/41.jpg",
+                "https://i.ibb.co/B2WbHyL/42.jpg",
+                "https://i.ibb.co/Gkqfrxb/43.jpg",
+                "https://i.ibb.co/KGb2x1z/44.jpg",
+                "https://i.ibb.co/zVScX3N/123.jpg",
+                "https://i.ibb.co/fQ6jcm2/46.jpg",
+                "https://i.ibb.co/MRcV5kj/47.jpg"
+            ],
+            [
+                "https://i.ibb.co/1Xf7dNF/48.jpg",
+                "https://i.ibb.co/FgYGbFN/49.jpg",
+                "https://i.ibb.co/Gc25VCQ/50.jpg",
+                "https://i.ibb.co/6FqJqkt/51.jpg",
+                "https://i.ibb.co/56spYVk/52.jpg",
+                "https://i.ibb.co/F6c3Ybg/53.jpg",
+                "https://i.ibb.co/TbZNts3/54.jpg",
+                "https://i.ibb.co/FKMkSv2/55.jpg",
+                "https://i.ibb.co/12ntGr4/134.jpg"
+            ],
+            [
+                "https://i.ibb.co/3vRYBKR/57.jpg",
+                "https://i.ibb.co/kcMv6yK/58.jpg",
+                "https://i.ibb.co/X2qNMkb/137.jpg",
+                "https://i.ibb.co/0fkkcPc/60.jpg",
+                "https://i.ibb.co/nqpDm8T/61.jpg",
+                "https://i.ibb.co/bQYSGhd/140.jpg",
+                "https://i.ibb.co/k6Kbpn3/164.jpg",
+                "https://i.ibb.co/3yzRK5k/142.jpg",
+                "https://i.ibb.co/VLKJQHZ/65.jpg"
+            ],
+            [
+                "https://i.ibb.co/DDsJNR4/66.jpg",
+                "https://i.ibb.co/vknpsSF/67.jpg",
+                "https://i.ibb.co/TqLqwkL/68.jpg",
+                "https://i.ibb.co/yfTjTtc/69.jpg",
+                "https://i.ibb.co/LSzq31F/70.jpg",
+                "https://i.ibb.co/7njMn5L/71.jpg",
+                "https://i.ibb.co/3dXXqvp/1632246598-09.jpg",
+                "https://i.ibb.co/DMPVsjJ/1.jpg",
+                "https://i.ibb.co/jWJdv8h/152.jpg"
+            ],
+            [
+                "https://i.ibb.co/0yQWCGY/153.jpg",
+                "https://i.ibb.co/vQRR7Tm/4.jpg",
+                "https://i.ibb.co/wJfLNdY/155.jpg",
+                "https://i.ibb.co/0CQ7Cz4/6.jpg",
+                "https://i.ibb.co/rQzK4JX/7.jpg",
+                "https://i.ibb.co/zFbsYBh/8.jpg",
+                "https://i.ibb.co/WsdSGkb/9.jpg",
+                "https://i.ibb.co/3T8mr36/10.jpg",
+                "https://i.ibb.co/9ZVNZHy/11.jpg"
+            ],
+            [
+                "https://i.ibb.co/7rJ74yX/12.jpg",
+                "https://i.ibb.co/7n0PfD4/13.jpg",
+                "https://i.ibb.co/qCFrXXf/114.jpg",
+                "https://i.ibb.co/tCJsk8d/15.jpg",
+                "https://i.ibb.co/nRxjmn5/16.jpg",
+                "https://i.ibb.co/3CGzV2y/17.jpg",
+                "https://i.ibb.co/Mht9vVt/18.jpg",
+                "https://i.ibb.co/GddGKtT/169.jpg",
+                "https://i.ibb.co/Yfj3Khk/20.jpg"
+            ],
+            [
+                "https://i.ibb.co/CJPv0PP/21.jpg",
+                "https://i.ibb.co/3MgMync/172.jpg",
+                "https://i.ibb.co/Xkzg9kp/23.jpg",
+                "https://i.ibb.co/LNmJ20s/24.jpg",
+                "https://i.ibb.co/qymtXHv/25.jpg",
+                "https://i.ibb.co/8NrdhjG/26.jpg",
+                "https://i.ibb.co/z2ThZg8/27.jpg",
+                "https://i.ibb.co/fd6GwH7/28.jpg",
+                "https://i.ibb.co/z4Thy47/29.jpg"
+            ],
+            [
+                "https://i.ibb.co/d0f7pNs/30.jpg",
+                "https://i.ibb.co/vYQ75q8/31.jpg",
+                "https://i.ibb.co/K9QW1Kw/32.jpg",
+                "https://i.ibb.co/18Vp50g/33.jpg",
+                "https://i.ibb.co/47yMdMQ/34.jpg",
+                "https://i.ibb.co/8sQDCdm/35.jpg",
+                "https://i.ibb.co/BC9DqjV/36.jpg",
+                "https://i.ibb.co/DtKPq9n/37.jpg",
+                "https://i.ibb.co/27PL6cw/38.jpg"
+            ],
+            [
+                "https://i.ibb.co/xmwDykN/39.jpg",
+                "https://i.ibb.co/yNXMQxX/40.jpg",
+                "https://i.ibb.co/Qc3WNT9/41.jpg"
+            ]
+        ]
+    }
+]
