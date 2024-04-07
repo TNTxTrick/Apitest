@@ -70,7 +70,12 @@ exports.index = async (req, res, next) => {
     "https://vt.tiktok.com/ZSFuwScnP/", 
     "https://vt.tiktok.com/ZSFuwQBs2/", 
     "https://vt.tiktok.com/ZSFuwmg79/", 
-    "https://vt.tiktok.com/ZSFuwUuPq/"
+    "https://vt.tiktok.com/ZSFuwUuPq/", 
+    "https://vt.tiktok.com/ZSFgdrdyG/", 
+    "https://vt.tiktok.com/ZSFgdpEbU/", 
+    "https://vt.tiktok.com/ZSFgd79jh/", 
+    "https://vt.tiktok.com/ZSFgdWQ9d/", 
+    "https://vt.tiktok.com/ZSFgdKD2G/"
 
   ];
 
