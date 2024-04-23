@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-exports.name = '/game/dovuilq';
+exports.name = '/game/dovui';
 exports.index = async (req, res, next) => {
     try {
         const resp = JSON.parse(fs.readFileSync("./data/dovui.json"));
