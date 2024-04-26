@@ -12,7 +12,7 @@ const options = {
     url: link
   },
   headers: {
-    'X-RapidAPI-Key': '540aa903bdmsh0a33f8b6f825e2bp125b81jsn17e1c26d383f',
+    'X-RapidAPI-Key': 'b1b134d34cmsh9196ad10efa01eap12279cjsn01b3c727f546',
     'X-RapidAPI-Host': 'facebook-video-and-reel-downloader.p.rapidapi.com'
   }
 };
