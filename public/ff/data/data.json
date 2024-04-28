@@ -1,0 +1,516 @@
+[
+  {
+    "ID": "0",
+    "name": "Ignis",
+    "biographi": "Ignis là một thiếu niên sinh ra với siêu năng lực tự bốc cháy. Mặc dù đôi khi sức mạnh của cậu còn gây ra những rắc rối không nhỏ, nhưng cậu vẫn đứng lên đấu tranh chống tội phạm và bảo vệ công lý.",
+    "age": "16",
+    "birthday": "17/07",
+    "gender": "Nam",
+    "skill": "Ngọn lửa chưa được chế ngự",
+    "image": "https://dl.dir.freefiremobile.com/common/web_event/official2.ff.garena.all/20241/81d8692360da2bde3255b116333341bf.jpg"
+  },
+  {
+    "ID": "1",
+    "name": "Ryden",
+    "biographi": "Là thiên tài sáng tạo 16 tuổi, trí thông minh và kiến ​​thức của Ryden đều vượt trội so với các bạn cùng lứa. Cậu bé từng ngồi dưới đôi cánh của chị gái Suzy giờ đây đang chinh phục chiến trường. Những phát minh tài năng của anh ấy sẽ mở đường cho anh ấy.",
+    "age": "16",
+    "birthday": "07/09",
+    "gender": "Nam",
+    "skill": "Bẫy nhện",
+    "image": "https://dl.dir.freefiremobile.com/common/web_event/official2.ff.garena.all/20241/81d8692360da2bde3255b116333341bf.jpg"
+  },
+  {
+    "ID": "2",
+    "name": "Sonia",
+    "biographi": "Sonia là một nhà khoa học nano biến đổi gen với trí thông minh và chuyên môn đặc biệt về công nghệ sinh học nano.",
+    "age": "20",
+    "birthday": "04/08",
+    "gender": "Nữ",
+    "skill": "Khiên cứu sinh nano",
+    "image": "https://dl.dir.freefiremobile.com/common/web_event/official2.ff.garena.all/20238/458c9cb6ca4f52432988f37760e7414e.jpg"
+  },
+  {
+    "ID": "3",
+    "name": "Orion",
+    "biographi": "Orion, một con thú báo thù chuyên sử dụng Năng lượng Crimson trong chiến đấu.",
+    "age": "22",
+    "birthday": "13/08",
+    "gender": "Nam",
+    "skill": "Lòng đỏ thẫm",
+    "image": "https://dl.dir.freefiremobile.com/common/web_event/official2.ff.garena.all/20238/dd43cb7b1268c5b2a12aa7e8ce371f64.jpg"
+  },
+  {
+    "ID": "4",
+    "name": "Santino",
+    "biographi": "Sinh ra trong hoàn cảnh nghèo khó, Santino yêu thích nghệ thuật từ khi còn nhỏ. Anh học tại một trường nghệ thuật nổi tiếng, nơi tài năng thiết kế của anh phát triển mạnh mẽ. Sau khi tốt nghiệp, Santino thành lập thương hiệu thời trang của mình, Angelic, và trở thành một người nổi tiếng với con mắt tiếp thị nhạy bén. Với thành công vang dội trong lĩnh vực này, anh luôn là tâm điểm chú ý của giới thời trang.",
+    "age": "34",
+    "birthday": "14/10",
+    "gender": "Nam",
+    "skill": "Bộ chia hình dạng",
+    "image": "https://dl.dir.freefiremobile.com/common/web_event/official2.ff.garena.all/20233/e443b76dd3f92621e346ed14d950b560.jpg"
+  },
+  {
+    "ID": "5",
+    "name": "Luna",
+    "biographi": "Luna là con gái của một người đàn ông phức tạp với quá khứ phức tạp. Cô trưởng thành sớm khi đối mặt với sự liều lĩnh của anh và sự liều lĩnh của những người lớn xung quanh cô. Khi quyền lãnh đạo của cha cô trong Hội bị thách thức và cuối cùng bị bắt cóc, Luna phải đứng lên và tạo dựng bước chân của riêng mình để phụ trách nhóm và lập lại trật tự cho cộng đồng.",
+    "age": "28",
+    "birthday": "18/03",
+    "gender": "Nữ",
+    "skill": "Chiến hay chạy",
+    "image": "https://dl.dir.freefiremobile.com/common/web_event/official2.ff.garena.all/202211/e9b293bc036ebde9696323a117e9a6fe.jpg"
+  },
+  {
+    "ID": "6",
+    "name": "Tatsuya",
+    "biographi": "Tatsuya bị giằng xé giữa cảm giác bị phản bội và tình yêu dành cho gia đình. Anh ấy không biết làm thế nào để đối phó với sự phân đôi cảm xúc này và sẵn sàng cho phép mình bị kéo vào rắc rối. Chỉ sau khi anh và anh trai mình, Shirou, cần hợp tác để giải quyết một âm mưu, anh mới nhận ra mình không đơn độc trên thế giới và có sức mạnh để thay đổi môi trường của mình tốt hơn.",
+    "age": "16",
+    "birthday": "20/12",
+    "gender": "Nam",
+    "skill": "Cuộc nổi loạn",
+    "image": "https://dl.dir.freefiremobile.com/common/web_event/official2.ff.garena.all/20229/d81fa4eb3f566d3a0d37975b8102d0b8.jpg"
+  },
+  {
+    "ID": "7",
+    "name": "Wolfrahh",
+    "biographi": "Trong suốt thời thơ ấu, Wolfrahh trốn tránh thế giới sau một sự kiện đau buồn. Sau khi đối mặt với nỗi sợ hãi của mình, anh ấy đã có thể vượt qua một số vấn đề ảnh hưởng đến sự tự tin của mình nhưng vẫn gặp khó khăn trong việc tìm ra chính mình. Anh ấy đã được mời tham dự cuộc thi trò chơi VR ngầm lớn nhất trên lục địa để thể hiện kỹ năng. Tuy nhiên, trong quá trình đó, anh đã khám phá ra những bí mật - những lựa chọn xung quanh những bí mật đó sẽ quyết định cuộc đời anh.",
+    "age": "19",
+    "birthday": "29/04",
+    "gender": "Nam",
+    "skill": "Livestream",
+    "image": "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/44c99e7ef628a6a9c2ef78e068bb21c5.jpg"
+  },
+  {
+    "ID": "8",
+    "name": "Clu",
+    "biographi": "Clu lớn lên ở vùng ngoại ô của một thành phố lớn. Cha mẹ cô đều giàu có nên cô chưa từng phải lo lắng về cuộc sống hàng ngày và cô có một tuổi thơ đầy tình yêu thương. Khi cô còn là một thiếu niên, cha cô đã được yêu cầu nhập ngũ và tham gia chiến tranh. Chiến tranh kết thúc sau 1 năm nhưng ông không bao giờ trở về nhà nữa. Không ai biết tung tích gì của ông. Clu trở thành thám tử tư sau khi tốt nghiệp trung học với hy vọng tìm hiểu thêm về vụ mất tích của cha cô.",
+    "age": "24",
+    "birthday": "28/02",
+    "gender": "Nữ",
+    "skill": "Truy vết",
+    "image": "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/27f3fcac56ea8e3d5857557d552e85a3.jpg"
+  },
+  {
+    "ID": "9",
+    "name": "Jota",
+    "biographi": "Jota lớn lên trong một gia đình trung lưu, là một học sinh trung bình và có một gia đình yêu thương anh. Nhìn chung, một cuộc sống khá bình thường - nhưng anh ấy cảm thấy bị mắc kẹt và luôn muốn làm điều gì đó khác biệt hơn nữa. Anh sống trong một thành phố với những tòa nhà chọc trời che lấp đường chân trời và những ngọn núi, vì thế mà anh đã quyết định leo núi và tìm kiếm những vùng trời mới.",
+    "age": "31",
+    "birthday": "23/06",
+    "gender": "Nam",
+    "skill": "Đột kíck",
+    "image": "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/31714be23c0eb21bc51ceb10e506e074.jpg"
+  },
+  {
+    "ID": "10",
+    "name": "Kapella",
+    "biographi": "Kapella mồ côi từ nhỏ và được ông trùm công nghệ Joseph nhận nuôi. Người phụ nữ trẻ năng động này cực kỳ tinh ý và có trực giác nhạy bén. Cô trở thành ca sĩ nổi tiếng thế giới và là thành viên của Mambas. Tính cách của cô ấy chắc chắn đóng một vai trò quan trọng trong thành công của cô, nhưng tất nhiên, một ngôi sao không được sinh ra một mình. Khi Alvaro, một mảnh ghép trong quá khứ của cô, xuất hiện trở lại, cô phải quyết định điều gì là quan trọng nhất trong cuộc đời mình.",
+    "age": "21",
+    "birthday": "17/07",
+    "gender": "Nữ",
+    "skill": "Khúc cao trào",
+    "image": "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/949807e8d0ea8b57d50119a904b9027b.jpg"
+  },
+  {
+    "ID": "11",
+    "name": "Steffie",
+    "biographi": "Steffie là một người theo chủ nghĩa tự do. Từ nhỏ, cô đã bộc lộ năng khiếu nghệ thuật đáng ngạc nhiên. Sau chiến tranh, Steffie nhìn thấy sự trỗi dậy của tổ chức Chân trời tương lai trong đất nước của cô và cách họ săn lùng các nghệ sĩ trên danh nghĩa là vì một tương lai tốt đẹp hơn. Cô ấy đã trở thành một kẻ nổi loạn nổi tiếng, để lại những bức vẽ graffiti tuyệt vời trong thành phố nhằm cười nhạo sự hèn nhát của họ. Để mang lại tự do cho thế giới này, cô đã gia nhập Cibernetica với tư cách là thành viên không phải là hacker đầu tiên của họ.",
+    "age": "23",
+    "birthday": "22/03",
+    "gender": "Nữ",
+    "skill": "Không gian sắc màu",
+    "image": "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/4cce3ed1f859ed9f83302139f25327fa.jpg"
+  },
+  {
+    "ID": "12",
+    "name": "Shani",
+    "biographi": "Shani là một kỹ sư tự lập. Cha mẹ cô đã thiệt mạng trong một vụ nổ tòa nhà khi cô 18 tuổi và cô mất tất cả những gì mình có. Cô lang thang trong vài năm làm những công việc lặt vặt để kiếm sống, khi một người chủ bãi phế liệu nhận cô vào và cho cô một nơi để gọi là nhà. Ở đó, cô có thể làm ra những sản phẩm nhỏ bằng cả trái tim của mình.",
+    "age": "30",
+    "birthday": "15/06",
+    "gender": "Nữ",
+    "skill": "Giáp vĩnh cữu",
+    "image": "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/ba89841a88733cecf034c59bff5e1f2b.jpg"
+  },
+  {
+    "ID": "13",
+    "name": "Notora",
+    "biographi": "Là con gái của một gia đình băng đảng đua xe, Notora chưa bao giờ có nhiều tiếng nói về lối sống của mình. Mặc dù cô rất mạnh mẽ và cứng rắn, sâu thẳm trong lòng cô ấy vẫn ẩn chứa sự chán ghét đối với bạo lực vô nghĩa. Toàn bộ đội của cô đã bị xóa sổ trong một cuộc cạnh tranh băng đảng tàn bạo. May mắn thay, một lần nữa thần chết lại làm ngơ cô. Notora sẽ sớm nhận ra, khi cô bị bắt sống và đày đến đảo Bermuda, rằng không phải may mắn đã đưa cô đến đó.",
+    "age": "27",
+    "birthday": "22/03",
+    "gender": "Nữ",
+    "skill": "Phước lành đường đua",
+    "image": "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/c09c2d028ce09afa986e236c045860ab.jpg"
+  },
+  {
+    "ID": "14",
+    "name": "Joseph",
+    "biographi": "Sau khi tốt nghiệp loại xuất sắc trong học viện quân sự, Joseph tìm thấy niềm đam mê và tài năng của mình trong lĩnh vực kỹ thuật. Với mục tiêu vượt qua giới hạn của con người, anh đã thành lập Nerve Labs, một trong những công ty công nghệ có lợi nhuận cao nhất từng tồn tại.",
+    "age": "45",
+    "birthday": "14/02",
+    "gender": "Nam",
+    "skill": "Điên cuồng",
+    "image": "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/a58ac31de8b779765a26db514d4cb10a.jpg"
+  },
+  {
+    "ID": "15",
+    "name": "Alvaro",
+    "biographi": "Alvaro là một chàng trai trẻ có tính cách bùng nổ. Một tai nạn thời thơ ấu đã ban tặng cho anh ta sức mạnh phát nổ đặc biệt, với cái giá phải trả là ký ức của anh ta. Anh ta bị lạc trong một vòng tuần hoàn liên tục: tìm kiếm ký ức của mình và cần phải sử dụng sức mạnh của mình để cứu những người anh yêu quý. Hằng số duy nhất mà anh tìm thấy trong cuộc đời mình là Kapella, người bạn thân thời thơ ấu của anh, người mà anh không còn nhớ nữa.",
+    "age": "26",
+    "birthday": "28/05",
+    "gender": "Nam",
+    "skill": "Nghê thuật phá hủy",
+    "image": "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/f844f90030efbd3db809d06dd38a2c17.jpg"
+  },
+  {
+    "ID": "16",
+    "name": "Alok",
+    "biographi": "Sử dụng sức mạnh của âm nhạc, Alok rời Brazil và đi khắp thế giới. Tên của anh ấy có nghĩa là ánh sáng. Anh ấy đã ký hợp đồng và một buổi hòa nhạc kín sẽ diễn ra trên đảo chiến trường của Free Fire cho một số khách VIP!",
+    "age": "28",
+    "birthday": "26/08",
+    "gender": "Nam",
+    "skill": "Giai điệu sinh mệnh",
+    "image": "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/a0fba5fd9863437e79823aac3b1e1147.jpg"
+  },
+  {
+    "ID": "17",
+    "name": "Ford",
+    "biographi": "Ford đã từng là thuyền trưởng. Hiện nay anh đang dành hết tâm sức để xây dựng một nơi trú ẩn an toàn cho những người tị nạn. Anh ấy là “người chú khôn ngoan và đáng tin cậy” của tất cả mọi người và là người biết rõ các tuyến đường thủy ra vào Bermuda. Đã quá rõ rằng sự phản bội sẽ gây ra đau đớn như thế nào, Ford luôn cố gắng cân bằng giữa sự tin tưởng và sự thận trọng. Anh nghĩ ý chí của mình là không thể phá hủy, đó là cho đến khi anh gặp Olivia ...",
+    "age": "31",
+    "birthday": "01/01",
+    "gender": "Nam",
+    "skill": "Sắt đá",
+    "image": "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/5042ec888947b6c3751727f876de000a.jpg"
+  },
+  {
+    "ID": "18",
+    "name": "Olivia",
+    "biographi": "Sau một ca phẫu thuật từ một tai nạn thời thơ ấu, Olivia đã có một khả năng đặc biệt, đó là chữa lành và hồi sinh. Chỉ với một cú chạm thần kỳ, cô ấy có thể xoa dịu nỗi đau và thúc đẩy quá trình chữa lành vết thương. Mặc dù có tuổi thơ nhiều đau thương, Olivia đã lớn lên trở thành một trong những người có lòng nhân ái và bao dung nhất trong số các bạn cùng trang lứa. Tuy nhiên, cô ấy có rất ít giao lưu với xã hội bên ngoài vùng an toàn của Ford.",
+    "age": "29",
+    "birthday": "01/01",
+    "gender": "Nữ",
+    "skill": "Hồi phục",
+    "image": "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/5042ec888947b6c3751727f876de000a.jpg"
+  },
+  {
+    "ID": "19",
+    "name": "Andrew",
+    "biographi": "Andrew đã từng là một sĩ quan cảnh sát. Với một mong muốn được thực thi công lý, anh đã dành toàn bộ thời gian của mình để truy đuổi tội phạm. Anh ấy coi chiếc áo yêu thích của mình như là bùa may mắn, anh ấy không thể đếm nổi số lần mà mình đã thoát chết khi mặc chiếc áo này. Tìm kiếm sự thật là nghĩa vụ của anh ấy.",
+    "age": "42",
+    "birthday": "01/01",
+    "gender": "Nam",
+    "skill": "Siêu áo giáp",
+    "awake": "Tăng giáp, cộng dồn khi đồng đội cũng mang kỹ năng này",
+    "image": "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/02ac7fa86058a85d45e985147907d4f8.jpg"
+  },
+  {
+    "ID": "20",
+    "name": "Kelly",
+    "biographi": "Kelly là một vận động viên điền kinh. Cô ấy còn được biết đến với tên Shimada Kiriko. Cô ấy rất thích chạy và thường xuyên tập luyện trên sân tập chạy. Ý nghĩ luôn chạy về phía trước đã được in sâu trong tâm trí và cơ thể của cô ấy. Không kể những khó khăn gì đứng phía trước, cô ấy sẽ luôn chạy về phía trước. Đừng bao giờ dùng lại! KIRIKO!",
+    "age": "17",
+    "birthday": "01/01",
+    "gender": "Nữ",
+    "skill": "Vận động viên điền kinh",
+    "awake": "Phát đạn đầu tiên trúng mục tiêu sẽ được tăng sát thương",
+    "image": "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/fc9672311d9c20402327577fb20f0c30.jpg"
+  },
+  {
+    "ID": "21",
+    "name": "Nikata",
+    "biographi": "Nhiệm vụ quan trọng nhất của cô ấy là bảo vệ Caroline, con gái của Phó chủ tịch Horizon. Tốt nghiệp với tư cách là thiện xạ hàng đầu từ trường quân sự, Nikita chắc chắn có tham vọng lớn hơn là hộ tống một cô gái tuổi teen, nhưng có vẻ như cô ấy hài lòng với tình hình hiện tại. Người ta phải tự hỏi liệu cô ấy có những mục tiêu riêng của mình, những mục tiêu xung đột với lợi ích của Horizon.",
+    "age": "22",
+    "birthday": "01/01",
+    "gender": "Nữ",
+    "skill": "Chuyên gia vũ khí",
+    "image": "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/5042ec888947b6c3751727f876de000a.jpg"
+  },
+  {
+    "ID": "22",
+    "name": "Misha",
+    "biographi": "Misha là một tay đua cực kỳ tài năng. Với thái độ chưa từng khuất phục và kỹ năng lái xe đáng kinh ngạc, cô đã được giới đua xe mệnh danh là Nữ hoàng đường đua. Nhờ không ngần ngại đương đầu thử thách, cô ấy nhanh chóng trở nên nổi tiếng khi thi đấu ở các giải đấu khác nhau. Đối với Misha, không có đường vòng nào cả, cứ tiến thẳng về phía trước.",
+    "age": "19",
+    "birthday": "01/01",
+    "gender": "Nữ",
+    "skill": "Bùng nổ",
+    "image": "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/12ad0076ac781d0ee4e12e6673b9e379.jpg"
+  },
+  {
+    "ID": "23",
+    "name": "Maxim",
+    "biographi": "Maxim rất thích stream khi đang ăn. Với một cái dạ dày khổng lồ, anh ấy không bao giờ nói không với đồ ăn. Anh ấy đã chiến thắng nhiều cuộc thi ăn uống, kể cả khi anh ấy phải thi đấu với những người to con hơn mình rất nhiều. Sinh ra với một tính cách luôn hòa đồng và vui vẻ, Maxim luôn được mọi người xung quanh yêu mến.",
+    "age": "17",
+    "birthday": "01/01",
+    "gender": "Nam",
+    "skill": "Ham ăn",
+    "image": "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/9faf9a9dba56453bf641a61d8671e04f.jpg"
+  },
+  {
+    "ID": "24",
+    "name": "Kla",
+    "biographi": "Kla từng là một võ sĩ Muay Thai được trọng vọng. Một vài năm trước, anh biến mất và không ai có biết được tung tích gì. Khi Kla xuất hiện trở lại, anh ấy không còn là Kla mà mọi người từng biết nữa. Anh ấy bây giờ là một kẻ báo thù và không khoang nhượng với bất kỳ ai. Cẩn thận với nắm đấm của anh ấy vì nó có thể phá phá hủy tất cả mọi người và tất cả mọi vật.",
+    "age": "27",
+    "birthday": "01/01",
+    "gender": "Nam",
+    "skill": "Muay thai",
+    "image": "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/b58227537142c213cbc85eb62cd1bcf7.jpg"
+  },
+  {
+    "ID": "25",
+    "name": "Paloma",
+    "biographi": "Tất cả những ai biết đến Paloma, theo cách này hay cách khác đều kính trọng cô ấy. Một bông hoa dại nở trong một khu ổ chuột nghèo nàn. Điều này đôi khi xuất phát từ sự tự tin không thể lay chuyển của cô ấy, khiến mọi người bị thu hút khi cô ấy nói về sự an toàn và tầm nhìn trong tương lai. Điều duy nhất có thể làm cô sao lãng khỏi tầm nhìn của chính mình về tương lai là tình yêu của đời cô, Antonio.",
+    "age": "28",
+    "birthday": "01/01",
+    "gender": "Nữ",
+    "skill": "Trùm vũ khí",
+    "image": "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/2698d5d7406bd950f61f3a9c395b3506.jpg"
+  },
+  {
+    "ID": "26",
+    "name": "Miguel",
+    "biographi": "Cống hiến cuộc sống của mình cho luật pháp và công lý, Miguel đã dẫn dắt đội của mình trải qua vô số nhiệm vụ chống tội phạm với tỷ lệ thành công là 100%. Đội của anh ấy nổi tiếng với việc giải quyết những nhiệm vụ bất khả thi, đó là lý do tại sao không ai ngờ được sự cố thương tâm xảy ra 6 tháng trước. Miguel sẽ sớm nhận ra rằng, sự tổn thương và tức giận sau một nhiệm vụ thất bại chẳng là gì so với sự phản bội của một người bạn.",
+    "age": "26",
+    "birthday": "01/01",
+    "gender": "Nam",
+    "skill": "Kẻ cuồng sát",
+    "image": "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/ba53293b738cee63687e3e6070ae67ab.jpg"
+  },
+  {
+    "ID": "27",
+    "name": "Caroline",
+    "biographi": "Caroline, cô gái lớn lên trong một gia đình cực kỳ giàu có. Cô ấy luôn được các vệ sĩ đi cùng mọi lúc mọi nơi. Cô ấy có đủ fan để lấp đầy một sân vận động. Cô ấy chắc chắn là nữ sinh hot nhất trường! Bố và bạn bè của cô ấy - đó là những thứ quý giá nhất trên đời.",
+    "age": "17",
+    "birthday": "01/01",
+    "gender": "Nữ",
+    "skill": "Dẻo dai",
+    "image": "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/2e94805083faace92f45d5876c867898.jpg"
+  },
+  {
+    "ID": "28",
+    "name": "Antoni",
+    "biographi": "Antonio là kiểu người mà mọi người cố gắng tránh giao tiếp bằng mắt. Trông như thể anh ấy sẽ đấm vào mặt bạn nếu bạn chạm mắt anh ấy quá lâu. Trên thực tế, bên dưới vẻ ngoài xã hội đen đó, anh ta là người nhút nhát và nhạy cảm. Lớn lên trong các cuộc chiến băng đảng ở địa phương, anh ta không bao giờ sử dụng bạo lực mà không có lý do, anh ta chỉ bảo vệ bản thân và những người thân yêu: vợ, gia đình và chú chó Chihuahua tên Poncho của anh ta.",
+    "age": "30",
+    "birthday": "01/01",
+    "gender": "Nam",
+    "skill": "Ông trùm xã hội đen",
+    "image": "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/cd4552270b4ac0570d4032b57a4fe746.jpg"
+  },
+  {
+    "ID": "29",
+    "name": "Ngộ không",
+    "biographi": "Một con khỉ trông hệt con người, nhưng vẫn rất thích chuối",
+    "age": "-1",
+    "birthday": "01/01",
+    "gender": "Nam",
+    "skill": "Ảo ảnh",
+    "image": "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/7f6f319c99ab4bbf219f69b041d75d2d.jpg"
+  },
+  {
+    "ID": "30",
+    "name": "Moco",
+    "biographi": "Moco, huyền thoại của Thế giới mạng. Moco còn được gọi là chat noir vì kỹ năng và trí thông minh tuyệt vời. Cô ấy có thể xâm nhập vào bất kỳ máy tính nào cô ấy muốn mà không bị ai phát hiện. Sau khi có được thông tin cần thiết, cô ấy biến mất không để lại 1 dấu vết.",
+    "age": "20",
+    "birthday": "01/01",
+    "gender": "Nữ",
+    "skill": "Kính phù thủy công nghệ",
+    "awake": "Đánh dấu trên kẻ thù trúng đòn lâi hơn khi kẻ thù di chuyển",
+    "image": "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/793d93d6bbc50ada91ea4d8bd3827804.jpg"
+  },
+  {
+    "ID": "31",
+    "name": "Hayato",
+    "biographi": "Hayato, một đứa trẻ trong một gia đình Samurai huyền thoại. Là con một nên Hayato cần phải tiếp nối truyền thống và lời nguyền gia tộc... Anh chàng Samurai trẻ tuổi này có một bí mật không thể tiết lộ với bất kỳ ai... Vì điều này, Hayato sẵn sàng từ bỏ cuộc sống của mình.",
+    "age": "20",
+    "birthday": "01/01",
+    "gender": "Nam",
+    "skill": "Xuyên giáp",
+    "awake": "Giảm sát thương khi nhận vào từ phía trước khi máu thấp",
+    "image": "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/f29319b9e6e695dc2e1a5967efb9c42e.jpg"
+  },
+  {
+    "ID": "32",
+    "name": "Laura",
+    "biographi": "Laura là một mật vụ siêu đẳng. Cô ấy đã là một vận động viên bắn súng tài năng kể từ khi còn là một đứa trẻ. Laura muốn mang lại công lý cho thế giới.",
+    "age": "24",
+    "birthday": "01/01",
+    "gender": "Nữ",
+    "skill": "Siêu xạ thủ",
+    "image": "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/0dd71ea2ab196277e8e38ebf14075b9a.jpg"
+  },
+  {
+    "ID": "33",
+    "name": "Rafael",
+    "biographi": "Rafael là một kẻ giết người không ghê tay. Mục tiêu của anh ấy là mang lại công lý cho thế giới.",
+    "age": "31",
+    "birthday": "09/09",
+    "gender": "Nam",
+    "skill": "Câm lặng",
+    "image": "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/741ebb4999c4628d2792d794ae43a6f7.jpg"
+  },
+  {
+    "ID": "34",
+    "name": "A124",
+    "biographi": "Được sinh ra để phục vụ một mục đích duy nhất, A124 được lập trình để trở thành một cỗ máy giết người. Cô ấy chắc chắn không được làm ra để thực hiện tương tác giữa người với người và có những cảm xúc phức tạp, nhưng ai có thể ngăn một tâm hồn trẻ trung cố gắng? Với những kỹ năng chiến đấu thượng thừa và trí tò mò mãnh liệt, vô vàn cơ hội mở ra trước mắt cô ấy.",
+    "age": "18",
+    "birthday": "01/01",
+    "gender": "Nữ",
+    "skill": "Sức nóng chiến trường",
+    "image": "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/9277140b371805c69d9b23677e220671.jpg"
+  },
+  {
+    "ID": "35",
+    "name": "Luqueta",
+    "biographi": "Luqueta là một du học sinh theo dạng trao đổi. Anh ấy phải chuyển trường vì công việc của bố. Bố anh ấy muốn anh ấy theo bước chân của mình, lấy bằng Thạc sĩ quản trị kinh doanh và sau đó bắt đầu công việc kinh doanh. Nhưng Luqueta đã chứng kiến cuộc sống của cha mình và không muốn trở thành một phiên bản khác của ông. Anh luôn là một đứa trẻ giỏi thể thao. Khi chuyển đến, anh ấy bắt đầu chơi bóng đá cho trường.",
+    "age": "20",
+    "birthday": "10/06",
+    "gender": "Nam",
+    "skill": "Hat trick",
+    "image": "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/3a65dc351f0fc282b1e64ebc852893f5.jpg"
+  },
+  {
+    "ID": "36",
+    "name": "K",
+    "biographi": "K là một đứa trẻ thông minh, nhưng giống như hầu hết những đứa trẻ khác cùng lứa tuổi, anh không học hành nghiêm túc. Anh bị tai nạn ô tô và bị thương cột sống, các bác sĩ nói với anh ấy rằng anh ấy sẽ không bao giờ có thể đi lại được nữa. Nhưng anh ấy không chịu từ bỏ - đây sẽ không phải là kết thúc. Anh đã đi làm vật lý trị liệu, và tìm một huấn luyện viên để giúp anh tiến xa hơn. Trong một năm anh ấy đã có thể đi bộ trở lại; trong hai năm anh ấy đã có thể chơi thể thao.",
+    "age": "31",
+    "birthday": "06/10",
+    "gender": "Nam",
+    "skill": "Bậc thầy",
+    "image": "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/31b539d9bef3450e6ad28f2795fca110.jpg"
+  },
+  {
+    "ID": "37",
+    "name": "Dasha",
+    "biographi": "Dasha là một đứa trẻ rất vui vẻ và chăm chỉ nhưng sau đó một loạt những sự kiện không may ập tới. Cha mẹ cô qua đời, người bạn thân nhất của cô chuyển đi, gia đình nhận nuôi cô đối xử với cô thật tồi tệ và đất nước của cô đang trên bờ vực chiến tranh. Cô cảm thấy bị những người xung quanh phản bội, ngược đãi và lạm dụng.",
+    "age": "25",
+    "birthday": "08/12",
+    "gender": "Nữ",
+    "skill": "Quẩy lên",
+    "image": "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/97b3091a4c80777445698d6580975e84.jpg"
+  },
+  {
+    "ID": "38",
+    "name": "Thiva",
+    "biographi": "Thiva là em trai của Dimitri. Anh có tài năng bẩm sinh và đã bắt đầu chơi nhạc từ nhỏ. Anh rất muốn giúp thế giới trở thành một nơi tốt đẹp hơn và cải thiện cuộc sống của mọi người, và anh tin chắc rằng cách tốt nhất để làm điều đó là đạt tới trái tim người nghe với thông điệp truyền tải trong âm nhạc.",
+    "age": "25",
+    "birthday": "02/12",
+    "gender": "Nam",
+    "skill": "Giai điệu sinh tồn",
+    "image": "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/5cbdba2d326bee4f27ea240fe9d5b76a.jpg"
+  },
+  {
+    "ID": "39",
+    "name": "Suzy",
+    "biographi": "Là một thợ săn tiền thưởng, Suzy điềm tĩnh và quyết đoán, đồng thời cô ấy rất xuất sắc trong việc lập kế hoạch và thực hiện các nhiệm vụ của mình.",
+    "age": "19",
+    "birthday": "10/08",
+    "gender": "Nữ",
+    "skill": "Thợ săn tiền thưởng",
+    "image": "https://dl.dir.freefiremobile.com/common/web_event/official2.ff.garena.all/20238/80d6750cb0fa67ae24061a7ec90242ac.jpg"
+  },
+  {
+    "ID": "40",
+    "name": "A-Patroa",
+    "biographi": "A-Patroa là một người phụ nữ mạnh mẽ, tự tin, quản lý cửa hàng âm nhạc ở giữa khu phố có nhiều cạm bẫy và bất ổn. Cửa hàng của cô ấy đóng vai trò như một nơi trú ẩn an toàn, bất cứ ai cũng có thể tìm đến cô ấy để được giúp đỡ. Trên hết, cô ấy sử dụng âm nhạc của mình để giúp mọi người tận hưởng cuộc sống theo những cách khác biệt và mới lạ hơn.",
+    "age": "28",
+    "birthday": "30/03",
+    "gender": "Nữ",
+    "skill": "_",
+    "image": "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/0734c0a2b269f2d1defbe8c68b325db5.jpg"
+  },
+  {
+    "ID": "41",
+    "name": "Iris",
+    "biographi": "Bằng tầm nhìn nhạy bén của mình, Iris rất giỏi trong việc dự đoán hành động của kẻ thù để nắm bắt cơ hội giành chiến thắng. Nếu bạn lo lắng rằng sự khoa trương, lạc quan không cần đầu óc và chủ nghĩa cá nhân quá đà của cô ấy sẽ ảnh hưởng đến sự hợp tác của bạn, thì đừng lo. Iris không bao giờ hợp tác với bất kỳ ai - ngoại trừ Homer, người chấp nhận cô ấy một cách vô điều kiện và dọn dẹp mọi mớ hỗn độn mà cô ấy tạo ra.",
+    "age": "30",
+    "birthday": "01/10",
+    "gender": "Nữ",
+    "skill": "Xuyên tường",
+    "image": "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/2d5a1b439cd606d95c9747b7c5430844.jpg"
+  },
+  {
+    "ID": "42",
+    "name": "J.Biebs",
+    "biographi": "J Biebs là một người đàn ông muốn gắn kết một thế giới bị rạn nứt. Qua trải nghiệm thời thơ ấu của mình, anh ấy học được rằng câu trả lời cho các vấn đề của con người không phải là tiền bạc hay quyền lực mà là mối liên hệ thực sự giữa con người với nhau. Anh ấy đã quyết định sử dụng khả năng ca hát để cống hiến cuộc sống của mình và thống nhất thế giới.",
+    "age": "28",
+    "birthday": "01/03",
+    "gender": "Nam",
+    "skill": "Hỗ trợ câm lặng",
+    "image": "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/c3618993f3453d155cdf48256b3b21d7.jpg"
+  },
+  {
+    "ID": "43",
+    "name": "Homer",
+    "biographi": "Homer là không chỉ là một sát thủ mù mà còn là người sáng lập ra băng đảng công nghệ đang phát triển mạnh ở Griza. Tuy nhiên, Homer, người đã mất dần quyền lực trong những năm gần đây, giờ chỉ muốn dốc sức tìm ra chân tướng căn bệnh đã làm anh ta bị mù từ thời thơ ấu, viện nghiên cứu bí ẩn mà anh ta đã gọi là trường học và khoáng chất đất hiếm liên quan đến tất cả.",
+    "age": "30",
+    "birthday": "01/06",
+    "gender": "Nam",
+    "skill": "Bom tầm xa",
+    "image": "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/704016c0296831ffa37ffc33ca5ba436.jpg"
+  },
+  {
+    "ID": "44",
+    "name": "Kenta",
+    "biographi": "Kenta từng là vệ sĩ và thợ rèn kiếm cho gia đình Hayato Yagami trong nhiều năm. Anh ấy là một người đàn ông kiệm lời nhưng luôn bảo vệ chủ nhân trẻ tuổi của mình trong bất kỳ tình huống nào. Anh ấy có những mong muốn của riêng mình, nhưng anh ấy đã đặt chúng sang một bên khi phục vụ Hayato trong thời gian gia đình Yagami gặp nguy hiểm.",
+    "age": "38",
+    "birthday": "05/05",
+    "gender": "Nam",
+    "skill": "Khiên thịnh nộ",
+    "image": "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/9318e1b82f748af2af33b3f8a4a5da5a.jpg"
+  },
+  {
+    "ID": "45",
+    "name": "Nairi",
+    "biographi": "Nairi bắt đầu quan tâm đến thời tiết lúc còn nhỏ, khi anh buộc phải rời xa khí hậu lạnh giá. Nhưng tình yêu của anh ấy dành cho tuyết đã khiến anh ấy phải tìm cách trở lại đó. Anh đã phát triển công nghệ khí hậu điều hòa vi mô để cho phép anh ta tồn tại trong những môi trường khắc nghiệt nhất. Giờ đây, anh dành thời gian leo núi, đi bộ đường dài và đuổi theo những cơn bão để tìm kiếm câu trả lời cho việc dự đoán khí hậu.",
+    "age": "23",
+    "birthday": "01/11",
+    "gender": "Nam",
+    "skill": "Keo bất tử",
+    "image": "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/b83b16dd97ea6e7f9d04481b9ae54aab.jpg"
+  },
+  {
+    "ID": "46",
+    "name": "Otho",
+    "biographi": "Otho có một bộ óc giàu trí tưởng tượng nhưng rất thực tế. Anh sợ hãi đến chết đi sống lại khi quên đi những ký ức trong quá khứ và đang cố gắng tìm mọi cách để lưu giữ quá khứ. Anh ấy đang tiến gần hơn mỗi ngày và trong quá trình này, anh ấy đã phát triển một thiết bị cho phép anh ấy nhìn thấy suy nghĩ của người khác. Khi không nghiên cứu thêm các cơ chế ghi nhớ, anh ấy đi chơi với bạn bè và dành thời gian mơ mộng với chú chó của mình.",
+    "age": "21",
+    "birthday": "01/11",
+    "gender": "Nam",
+    "skill": "Vén màn bí ẩn",
+    "image": "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/cd0c041f7af1ef79633b8b986de3129f.jpg"
+  },
+  {
+    "ID": "47",
+    "name": "Leon",
+    "biographi": "Leon là một sinh viên đại học có kỹ năng bóng rổ cực tốt và không ngại thể hiện chúng. Anh ta có thể nhảy cao hơn bất kỳ người nào anh ta biết với sự trợ giúp của đôi chân sinh học. Anh ấy có niềm yêu thích điện tử và biết cách sửa chữa, mày mò chiếc chân của mình khi nó gặp trục trặc. Anh ấy có vẻ như chỉ quan tâm đến bóng rổ, nhưng anh ấy sử dụng môn thể thao này không chỉ để hỗ trợ gia đình mà còn cho bạn bè của mình.",
+    "age": "20",
+    "birthday": "30/09",
+    "gender": "Nam",
+    "skill": "Ghi điểm phút chót",
+    "image": "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/1c206c3510893c334c2a4d31a9108266.jpg"
+  },
+  {
+    "ID": "48",
+    "name": "Dimitri",
+    "biographi": "Dimitri là anh trai của Thiva. Hằng ngày, anh ấy dành phần lớn thời gian tại phòng thí nghiệm để phát triển các công nghệ âm thanh mới. Sau khi tìm thấy niềm đam mê trong âm nhạc, anh ấy nhận ra rằng việc giúp thế giới trở thành một nơi tốt đẹp hơn và cải thiện cuộc sống của mọi người thông qua các sáng tạo khoa học kỹ thuật chính là một trong những ước mơ của anh ấy.",
+    "age": "26",
+    "birthday": "16/05",
+    "gender": "Nam",
+    "skill": "Nhịp điệu hồi sinh",
+    "image": "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/5cbdba2d326bee4f27ea240fe9d5b76a.jpg"
+  },
+  {
+    "ID": "49",
+    "name": "D-bee",
+    "biographi": "D-bee có tính cách hướng ngoại và rất thích gặp gỡ những người bạn mới. Anh ấy tin rằng ý nghĩa của cuộc sống là sự kiến tạo, và đó cũng chính là lý do tại sao anh ấy trở thành một người sáng tác. Anh ấy cũng bị mê hoặc bởi vũ điệu và âm nhạc.",
+    "age": "19",
+    "birthday": "23/09",
+    "gender": "Nam",
+    "skill": "Đạn xuyên âm",
+    "image": "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/65a3bfb118ba90a51ba3188ab356025a.jpg"
+  },
+  {
+    "ID": "50",
+    "name": "Skyler",
+    "biographi": "Skyler nổi tiếng với tư cách là ca sĩ kiêm vũ công nhạc pop hot nhất cả nước, hiện anh là chủ tịch của công ty giải trí lớn nhất Việt Nam. Ước mơ của anh là trở thành nghệ sĩ tài năng nhất trong ngành công nghiệp giải trí và tìm kiếm các tài năng mới. Anh ấy không thích thua cuộc và tin rằng sự sáng tạo giúp cho mọi người nhìn thấy những điều tốt đẹp trên thế giới này thay vì những thứ tiêu cực.",
+    "age": "26",
+    "birthday": "05/07",
+    "gender": "Nam",
+    "skill": "Hủy diệt băng thành",
+    "image": "https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/4bbe8c3168e41cadf39ea6aeecca9d92.jpg"
+  }
+]
