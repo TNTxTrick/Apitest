@@ -8,7 +8,7 @@ const options = {
   method: 'GET',
   url: 'https://tiktok-download-video1.p.rapidapi.com/getVideo',
   params: {
-    url: 'link',
+    url: link,
     hd: '1'
   },
   headers: {
