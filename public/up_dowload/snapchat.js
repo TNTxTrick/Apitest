@@ -1,6 +1,3 @@
-const keyAPi = ['843052fc5cmsh208d39312244a7dp186c7fjsn9a3bd5296dbd','94208fec7fmsh64b5be7c2bdd72dp17ce8cjsna3e04d56dbc7','02ad1e368emsh6ab614c75885f35p173664jsn692af787e902'];
-const getRandomKey = () => keyAPi[Math.floor(Math.random() * keyAPi.length)];
-
 exports.name = '/snapchat';
 exports.index = async(req, res, next) => {
 const link = req.query.link;
@@ -14,7 +11,7 @@ const options = {
     url: link
   },
   headers: {
-    'X-RapidAPI-Key': getRandomKey(), 
+    'X-RapidAPI-Key': '15375c47d5msh3698cbdb105ac9bp167948jsn5ac92ee40cca', 
     'X-RapidAPI-Host': 'download-snapchat-video-spotlight-online.p.rapidapi.com'
   }
 };
