@@ -5,7 +5,7 @@ if (!link) return res.json({ error: 'Thiếu dữ liệu để khởi chạy ch�
 var axios = require('axios');
 axios({
     method: 'post',
-    url: 'https://api.doutu.be/api/video/?author=' + link,
+    url: 'https://api.doutu.be/api/video/feed_recent/?&skips=0&limit=' + link,
     data: {    
 	url: link
 	}
