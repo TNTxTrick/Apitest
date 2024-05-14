@@ -1,13 +1,13 @@
-exports.name = '/douyin/video';
+exports.name = '/doutube/info';
 exports.index = async(req, res, next) => {
-var link = req.query.link;
-if (!link) return res.json({ error: 'Thiếu dữ liệu để khởi chạy chương trình ' });
+var id = req.query.id;
+if (!id) return res.json({ error: 'Thiếu dữ liệu để khởi chạy chương trình ' });
 var axios = require('axios');
 axios({
     method: 'post',
-    url: 'https://api.douyin.wtf/api/hybrid/video_data?url=' + link,
+    url: 'https://api.doutu.be/api/video/?author=' + id + '&skips=0&limit=1',
     data: {    
-	url: link
+	url: id
 	}
 })
 .then(function (response) {
