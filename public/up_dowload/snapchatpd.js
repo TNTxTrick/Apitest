@@ -25,4 +25,4 @@ const url = req.query.url;
   } catch (error) {
     res.status(500).send('Error occurred while scraping');
   }
-});
+};
