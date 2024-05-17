@@ -1,4 +1,9 @@
-const url = req.query.url;
+const axios = require('axios');
+const cheerio = require('cheerio');
+
+exports.name = '/tiktokpd';
+exports.index = async (req, res, next) => {
+  const url = req.query.url;
   if (!url) {
     return res.status(400).send('Please provide a URL as a query parameter');
   }
@@ -8,7 +13,7 @@ const url = req.query.url;
     const $ = cheerio.load(data);
     let scrapedData = [];
 
-    // Scraping the video source URL
+    
     $('video source').each((index, element) => {
       const videoUrl = $(element).attr('src');
       scrapedData.push({ videoUrl });
@@ -18,4 +23,5 @@ const url = req.query.url;
   } catch (error) {
     res.status(500).send('Error occurred while scraping');
   }
-});
+};
+
