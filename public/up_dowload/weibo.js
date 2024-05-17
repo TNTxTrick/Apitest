@@ -1,3 +1,7 @@
+const axios = require('axios');
+
+exports.name = '/weibo';
+exports.index = async (req, res, next) => {
 const url = req.query.url;
   if (!url) {
     return res.status(400).send('Please provide a URL as a query parameter');
