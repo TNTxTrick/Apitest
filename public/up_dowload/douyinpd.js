@@ -10,10 +10,10 @@ exports.index = async (req, res, next) => {
 
   try {
     const { data } = await axios.get(`https://dlpanda.com/vi?token=G7eRpMaa&url=${encodeURIComponent(url)}`);
+    
     const $ = cheerio.load(data);
     let scrapedData = [];
 
-    
     $('video source').each((index, element) => {
       const videoUrl = $(element).attr('src');
       scrapedData.push({ videoUrl });
