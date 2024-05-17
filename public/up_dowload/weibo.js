@@ -1,8 +1,9 @@
 const axios = require('axios');
+const cheerio = require('cheerio');
 
 exports.name = '/weibo';
 exports.index = async (req, res, next) => {
-const url = req.query.url;
+  const url = req.query.url;
   if (!url) {
     return res.status(400).send('Please provide a URL as a query parameter');
   }
@@ -12,11 +13,10 @@ const url = req.query.url;
     const $ = cheerio.load(data);
     let imgSrc = [];
 
-    // Scraping the image src URL from a specific class
     $('.col-md-12.col-lg-6 img').each((index, element) => {
       const src = $(element).attr('src');
       if (src) {
-        imgSrc.push(src); // Thêm đường dẫn ảnh vào mảng
+        imgSrc.push(src); 
       }
     });
 
@@ -24,4 +24,4 @@ const url = req.query.url;
   } catch (error) {
     res.status(500).send('Error occurred while scraping');
   }
-});
+};
