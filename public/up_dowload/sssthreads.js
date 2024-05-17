@@ -1,4 +1,4 @@
-exports.name = '/threads';
+exports.name = '/thread';
 exports.index = async(req, res, next) => {
 var link = req.query.link;
 if (!link) return res.json({ error: 'Thiếu dữ liệu để khởi chạy chương trình ' });
