@@ -11,7 +11,15 @@ exports.index = async (req, res, next) => {
   try {
     const apiUrl = `https://godownloader.com/api/tiktok-no-watermark-free?key=godownloader.com&url=${encodeURIComponent(link)}`;
     console.log(`Requesting URL: ${apiUrl}`);
-    const response = await axios.get(apiUrl);
+    
+    // Making the GET request
+    const response = await axios.get(apiUrl, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+      }
+    });
+
+    // Returning the response data
     return res.json(response.data);
   } catch (error) {
     console.error('Error fetching data from API:', error.message);
