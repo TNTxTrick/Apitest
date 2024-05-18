@@ -1,21 +1,13 @@
+// doutu.js
+const axios = require('axios');
+
 exports.name = '/douyin';
-exports.index = async(req, res, next) => {
-var link = req.query.link;
-if (!link) return res.json({ error: 'Thiếu dữ liệu để khởi chạy chương trình ' });
-var axios = require('axios');
-axios({
-    method: 'post',
-    url: 'https://godownloader.com/api/tiktok-no-watermark-free?key=godownloader.com&url=' + link,
-    data: {    
-	url: link
-	}
-})
-.then(function (response) {
-    var data = response.data
-    console.log(data)
-    return res.json(data)
-})
-.catch(function (error) {
-    return res.json({ error });
-});
-}
+exports.index = async (req, res, next) => {
+  const link = req.query.link; // Get the id from query parameters
+  try {
+    const response = await axios.get(`https://godownloader.com/api/tiktok-no-watermark-free?key=godownloader.com&url=${link}`);
+    res.json(response.data);
+  } catch (error) {
+    res.status(500).send(error.toString());
+  }
+};
