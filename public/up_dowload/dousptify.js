@@ -10,7 +10,6 @@ exports.index = async (req, res, next) => {
       responseType: 'stream'  // Ensure response is in stream format
     });
 
-    res.setHeader('Content-Disposition', 'attachment; filename=track.mp3');
     res.setHeader('Content-Type', 'audio/mpeg');
 
     response.data.pipe(res);  // Pipe the stream directly to the response
