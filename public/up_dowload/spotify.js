@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-exports.name = '/search/track';
+exports.name = '/search/tracks';
 exports.index = async (req, res, next) => {
   const q = req.query.q; 
   try {
