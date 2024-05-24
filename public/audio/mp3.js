@@ -1,11 +1,11 @@
-exports.name = '/audio';
+exports.name = '/mp3';
 exports.index = async(req, res, next) => {
     try {
-        const audio = require('./data/audio.json');
-        var audio = audio[Math.floor(Math.random() * audio.length)].trim();
+        const mp3 = require('./data/audio.json');
+        var audio = mp3[Math.floor(Math.random() * mp3.length)].trim();
         res.jsonp({
             url: audio,
-            count: audio.length,
+            count: mp3.length,
             author: 'Tnt'
         });
     } catch (e) {
