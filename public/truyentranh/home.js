@@ -1,9 +1,12 @@
-const axios = reqiure("axios")
+const axios = require("axios");
 
-try {
+exports.name = '/truyen/home';
+
+exports.index = async (req, res, next) => {
+  try {
     const response = await axios.get('https://otruyenapi.com/v1/api/home');
-    console.log(response.data); // Log the entire response to inspect its structure
-    const params = response.data.data.params
+
+    const params = response.data.data.params;
     const items = response.data.data.items.map(item => ({
       _id: item._id,
       name: item.name,
@@ -17,7 +20,8 @@ try {
       
     res.json({ items: items, params: params });
   } catch (error) {
-    console.error(error); // Log any errors
-    res.status(500).send('Error fetching data from API');
+    console.error(error); 
+    res.status(500).send('Lỗi khi lấy data');
   }
-});
+};
+
