@@ -1,5 +1,8 @@
 const axios = require("axios");
 
+exports.name = '/truyen-tranh/:keyword';
+
+exports.index = async (req, res, next) => {
 const keyword = req.params.keyword; // Access route parameter using req.params
 
   try {
@@ -12,6 +15,6 @@ const keyword = req.params.keyword; // Access route parameter using req.params
     res.json({ descriptionHead: descriptionHead, image: image, items: items});
   } catch (error) {
     console.error(error); // Log any errors
-    res.status(500).send('Error fetching data from API');
+    res.status(500).send('Lỗi khi lấy data');
   }
 });
