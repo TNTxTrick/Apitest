@@ -1,6 +1,9 @@
 const axios = require("axios");
 
-const keyword = req.query.keyword;
+exports.name = '/truyen/home';
+
+exports.index = async (req, res, next) => {
+  const keyword = req.query.keyword;
 
   try {
     const response = await axios.get(`https://otruyenapi.com/v1/api/tim-kiem?keyword=${keyword}`);
@@ -20,6 +23,7 @@ const keyword = req.query.keyword;
     res.json({ items: items, params: params });
   } catch (error) {
     console.error(error); // Log any errors
-    res.status(500).send('Error fetching data from API');
+    res.status(500).send('Lỗi khi lấy data');
   }
-});
+};
+
