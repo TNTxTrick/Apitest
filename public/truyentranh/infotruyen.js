@@ -1,6 +1,6 @@
 const axios = require("axios");
 
-exports.name = '/truyen-tranh/:keyword';
+exports.name = '/truyen/:keyword';
 
 exports.index = async (req, res, next) => {
 const keyword = req.params.keyword; // Access route parameter using req.params
