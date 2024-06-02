@@ -1,6 +1,6 @@
 const axios = require("axios");
 
-exports.name = '/truyen/home';
+exports.name = '/truyen/search';
 
 exports.index = async (req, res, next) => {
   const keyword = req.query.keyword;
