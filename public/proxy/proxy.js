@@ -1,17 +1,17 @@
 const axios = require('axios');
 
 exports.name = '/proxy';
-exports.index = async (req, res, next) => {
+exports.index = async (req, res) => {
   try {
-    const response = await axios.get(`https://api.proxyscrape.com/v3/free-proxy-list/get?request=displayproxies&proxy_format=ipport&format=text&timeout=9211`);
+    const response = await axios.get('https://api.proxyscrape.com/v3/free-proxy-list/get?request=displayproxies&proxy_format=ipport&format=text&timeout=9211');
     
-    // Handle response data appropriately
-    res.json(response.data);
+    // Trả về dữ liệu API mà không chỉnh sửa
+    res.send(response.data);
   } catch (error) {
-    // Log the error for debugging
+    // Log lỗi để debug
     console.error('Error fetching data:', error);
     
-    // Send a meaningful error message to the client
+    // Trả về thông báo lỗi cho client
     res.status(500).json({ error: 'Internal Server Error' });
   }
 };
