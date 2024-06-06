@@ -1,7 +1,11 @@
 const axios = require('axios');
 
 exports.name = '/accaov';
-
+let {apikey} = req.query;
+  
+  if (!apikey || apikey !== 'acclq'){
+    return res.json({result: 'Lấy apikey liên hệ admin'})
+  }
 exports.index = async (req, res) => {
     const ACCOUNTS_URL = 'https://tangacclienquan.shop/lq.txt';
 
