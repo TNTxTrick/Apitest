@@ -1,4 +1,5 @@
 const axios = require('axios');
+const FormData = require('form-data');
 
 exports.name = '/rutgonlink';
 exports.index = async (req, res, next) => {
@@ -20,3 +21,14 @@ exports.index = async (req, res, next) => {
       },
       data: data
     };
+
+    // Gửi request đến URL rút gọn và nhận kết quả
+    const response = await axios.request(options);
+    console.log(response.data);
+    return res.json(response.data);
+  } catch (error) {
+    console.error(error);
+    return res.json({ error: 'Có lỗi xảy ra khi tải tệp từ API' });
+  }
+};
+
