@@ -1,4 +1,7 @@
+const axios = require('axios');
 
+exports.name = '/hoyolab';
+exports.index = async (req, res, next) => {
 
 const link = req.query.link;
 
@@ -35,4 +38,4 @@ const link = req.query.link;
     console.error('Error fetching data:', error);
     res.status(500).send('Error fetching data');
   }
-});
+};
