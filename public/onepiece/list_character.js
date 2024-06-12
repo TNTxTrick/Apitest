@@ -3,7 +3,7 @@ const cheerio = require('cheerio');
 
 exports.name = '/onepiece/list_character';
 exports.index = async (req, res, next) => {
-const url = 'https://onepiece.fandom.com/vi/wiki/Thể_loại:Nhân_vật';
+  const url = 'https://onepiece.fandom.com/vi/wiki/Thể_loại:Nhân_vật';
 
   try {
     const { data: html } = await axios.get(url);
@@ -12,7 +12,7 @@ const url = 'https://onepiece.fandom.com/vi/wiki/Thể_loại:Nhân_vật';
     // Extract names from anchor tags within a specific section
     const names = [];
     $('a.category-page__member-link').each((i, element) => {
-      names.push($(element).text());
+      names.push($(element).text().trim());
     });
 
     res.json({
