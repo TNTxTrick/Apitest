@@ -1,21 +1,25 @@
+const axios = require('axios');
+const cheerio = require('cheerio');
 
-const url = 'https://honkai-star-rail.fandom.com/vi/wiki/Wiki_Honkai:_Star_Rail';
+exports.name = '/honkai/list_character';
+exports.index = async (req, res, next) => {
+  const url = 'https://honkai-star-rail.fandom.com/vi/wiki/Wiki_Honkai:_Star_Rail';
 
-  request(url, (error, response, html) => {
-    if (!error && response.statusCode == 200) {
-      const $ = cheerio.load(html);
+  try {
+    const { data: html } = await axios.get(url);
+    const $ = cheerio.load(html);
 
-      // Extract names from anchor tags within a specific section
-      const names = [];
-      $('span.card-text.card-font').each((i, element) => {
-        names.push($(element).text());
-      });
+    // Extract names from span elements with specific class
+    const names = [];
+    $('span.card-text.card-font').each((i, element) => {
+      names.push($(element).text().trim());
+    });
 
-      res.json({
-        names: names
-      });
-    } else {
-      res.status(500).json({ error: 'Failed to fetch data' });
-    }
-  });
-});
+    res.json({
+      names: names
+    });
+  } catch (error) {
+    console.error('Error:', error);
+    res.status(500).json({ error: 'Failed to fetch data' });
+  }
+};
