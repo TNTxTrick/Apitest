@@ -1,7 +1,6 @@
+exports.name = '/honkai/character/:name';
 const axios = require('axios');
 const cheerio = require('cheerio');
-
-exports.name = '/honkai/character/:name';
 
 exports.index = async (req, res, next) => {
 const name = req.params.name;
