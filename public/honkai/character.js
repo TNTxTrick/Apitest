@@ -6,8 +6,6 @@ exports.index = async (req, res, next) => {
 const name = req.params.name;
   const url = `https://honkai-star-rail.fandom.com/vi/wiki/${name}`;
 
-  request(url, (error, response, html) => {
-    if (!error && response.statusCode === 200) {
       const $ = cheerio.load(html);
 
       const story = $('div.srw-description-content').text().trim();
@@ -37,6 +35,4 @@ const name = req.params.name;
     } else {
       console.error('Error:', error);
       // Handle the error, maybe send an appropriate response back
-    }
-  });
-};
+    };
