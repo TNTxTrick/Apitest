@@ -1,7 +1,7 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
 
-exports.name = '/honkai/list_character';
+exports.name = '/onepiece/list_character';
 exports.index = async (req, res, next) => {
   const url = 'https://onepiece.fandom.com/vi/wiki/Thể_loại:Nhân_vật';
 
