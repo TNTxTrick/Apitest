@@ -10,10 +10,7 @@ exports.index = async (req, res, next) => {
     const $ = cheerio.load(html);
 
     // Extract names from span elements with specific class
-    const names = [];
-    $('a.category-page__member-link').each((i, element) => {
-      names.push($(element).text().trim());
-    });
+    const names = $('a.category-page__member-link').text();
 
     res.json({
       names: names
