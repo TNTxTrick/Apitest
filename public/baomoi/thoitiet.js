@@ -9,7 +9,7 @@ exports.index = async (req, res, next) => {
 
     const { weath } = response.data.data.date;
 
-    res.json({ weath: weath });
+    res.json({ weath });
   } catch (error) {
     console.error(error); // Log any errors
 
