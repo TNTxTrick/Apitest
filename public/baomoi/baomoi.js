@@ -9,7 +9,7 @@ exports.index = async (req, res, next) => {
 
     const { items } = response.data.data;
 
-    res.json({ items });
+    res.json({ items: items });
   } catch (error) {
     console.error(error); // Log any errors
 
