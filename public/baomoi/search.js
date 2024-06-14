@@ -9,7 +9,7 @@ exports.index = async (req, res, next) => {
     return res.status(400).send('Keyword is required');
   }
 
-  const page = req.query.page || 1; // Default to page 1 if not provided
+  // Default to page 1 if not provided
 
   const link = `https://w-api.baomoi.com/api/v1/content/get/list-by-custom?listType=search&keyword=${keyword}&page=2&ctime=1718359846&version=0.6.52&sig=6a76cfc7e92855425393f369656b856100b0b9e0aff6cd5e6db6573af66859c2&apiKey=kI44ARvPwaqL7v0KuDSM0rGORtdY1nnw`;
 
