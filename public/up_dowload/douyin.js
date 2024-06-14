@@ -1,5 +1,8 @@
-
-const axios = require('axios');
+exports.name = '/douyin';
+exports.index = async (req, res, next) => {
+  const link = req.query.link;
+  if (!link) return res.json({ error: 'Thiếu dữ liệu để khởi chạy chương trình' }); 
+  const axios = require('axios');
 
 const options = {
   method: 'POST',
