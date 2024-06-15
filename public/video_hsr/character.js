@@ -7,13 +7,13 @@ exports.index = async(req, res, next) => {
   if(info == undefined) return res.json({ error: 'không tìm thấy ID này!' });
   var ID = info.ID
   var name = info.name;
-  var image = info.image;
   var story = info.story;
   var skill = info.skill;
   var weapon = info.weapon;
   var ring = info.ring;
   var type = info.type;
   var type_dmg = info.type_dmg;
+  var image = info.image;
   return res.json({
     ID,
     name,
