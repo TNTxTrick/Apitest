@@ -1,6 +1,6 @@
 [
   {
-   "ID": "0",
+  "ID": "0",
   "name": "Lantern",
   "story": "Cô ấy đến với một bài thánh ca, xua tan những tai họa sau lưng cô ấy. Cô ấy là một lưỡi kiếm được mài giũa tinh xảo, một ngọn lửa không bao giờ tắt. Chừng nào bóng tối còn tồn tại, ánh sáng này sẽ tồn tại.",
   "skill": "Sự hủy diệt đơn độc: Shadowchaser",
@@ -9,16 +9,126 @@
   "type": "PSY",
   "type_dmg": "File PSY",
   "image": "https://fastcdn.hoyoverse.com/content-v2/bh3/123889/e848524120cc1901733b4f1718803121_2626275005725555183.png"
+  },
+  {
+  "ID": "1",
+  "name": "Thelema Nutriscu",
+  "story": "Người hầu, kẻ thù và thậm chí cả nỗi sợ hãi. Cô gái sẽ chinh phục tất cả những gì cô ấy nhìn thấy, và sau đó, soi sáng cho thế giới về bản chất thực sự của niềm vui. Bữa tiệc đã đến với chúng ta. Bây giờ, hãy nâng ly lên - và ca ngợi tên tôi!",
+  "skill": "Niềm vui điên cuồng: Shadowbringer",
+  "weapon": "Chained Blades",
+  "ring": "Wheel of Destiny",
+  "type": "MECH",
+  "type_dmg": "Ice DMG",
+  "image": "https://fastcdn.hoyoverse.com/content-v2/bh3/123308/63c858d13de76856b4bb1196b6810816_4933263355438035418.png"
+  },
+  {
+  "ID": "2",
+  "name": "Senadina",
+  "story": "Này, thế giới! Cô gái sinh ra từ Biển dữ liệu này cực kỳ tò mò về mọi thứ xung quanh mình. Trên hành trình theo đuổi ước mơ, cô ấy sẽ cùng bạn trải nghiệm đủ mọi cuộc phiêu lưu và gặp gỡ nhiều người thú vị. Nhân tiện, nếu cô ấy ghé qua vào đêm khuya, hãy đảm bảo đãi cô ấy một ít thịt nướng.",
+  "skill": "Mỏ neo không gian sâu: Ánh sáng đầu tiên",
+  "weapon": "Drive Core",
+  "ring": "World DMG",
+  "type": "SD-Type",
+  "type_dmg": "Lightning DMG",
+  "image": "https://fastcdn.hoyoverse.com/content-v2/bh3/122538/e8ede969e02136c62a8745790d64a145_834205063306460742.png"
+  },
+  {
+    "ID": "3",
+    "name": "Erdős Helia",
+    "story": "Nói lời tạm biệt với thói quen thường ngày, bắt đầu một cuộc phiêu lưu; băng qua bầu trời đầy sao và đi thuyền qua biển. Những lý tưởng tươi sáng đang ở ngay phía trước. Helia không thường xuyên hỏi về đích đến của một chuyến hành trình - cô ấy luôn di chuyển.",
+    "skill": "Cơn bão Valkyrie",
+    "weapon": "Rapid-Shot Crossbow",
+    "ring": "World Star",
+    "type": "MECH-type",
+    "type_dmg": "Linghtning DMG",
+    "image": "https://fastcdn.hoyoverse.com/content-v2/bh3/122539/3ae56ba163f94c4be4839ad7f05a9c83_4831044700843753755.png"
 },
   {
-"ID": "0",
-"name": "",
-"story": "",
-"skill": "",
-"weapon": "",
-"ring": "",
-"type": "",
-"type_dmg": "",
-"image": ""
+    "ID": "0",
+    "name": "",
+    "story": "",
+    "skill": "",
+    "weapon": "",
+    "ring": "",
+    "type": "",
+    "type_dmg": "",
+    "image": ""
+},
+  {
+    "ID": "0",
+    "name": "",
+    "story": "",
+    "skill": "",
+    "weapon": "",
+    "ring": "",
+    "type": "",
+    "type_dmg": "",
+    "image": ""
+},
+  {
+    "ID": "0",
+    "name": "",
+    "story": "",
+    "skill": "",
+    "weapon": "",
+    "ring": "",
+    "type": "",
+    "type_dmg": "",
+    "image": ""
+},
+  {
+    "ID": "0",
+    "name": "",
+    "story": "",
+    "skill": "",
+    "weapon": "",
+    "ring": "",
+    "type": "",
+    "type_dmg": "",
+    "image": ""
+},
+  {
+    "ID": "0",
+    "name": "",
+    "story": "",
+    "skill": "",
+    "weapon": "",
+    "ring": "",
+    "type": "",
+    "type_dmg": "",
+    "image": ""
+},
+  {
+    "ID": "0",
+    "name": "",
+    "story": "",
+    "skill": "",
+    "weapon": "",
+    "ring": "",
+    "type": "",
+    "type_dmg": "",
+    "image": ""
+},
+  {
+    "ID": "0",
+    "name": "",
+    "story": "",
+    "skill": "",
+    "weapon": "",
+    "ring": "",
+    "type": "",
+    "type_dmg": "",
+    "image": ""
+},
+  {
+    "ID": "0",
+    "name": "",
+    "story": "",
+    "skill": "",
+    "weapon": "",
+    "ring": "",
+    "type": "",
+    "type_dmg": "",
+    "image": ""
 }
 ]
