@@ -1,7 +1,24 @@
 [
   {
-    "",
-    "",
-    ""
-  }
+"ID": "0",
+"name": "Lantern",
+"story": "Cô ấy đến với một bài thánh ca, xua tan những tai họa sau lưng cô ấy. Cô ấy là một lưỡi kiếm được mài giũa tinh xảo, một ngọn lửa không bao giờ tắt. "Chừng nào bóng tối còn tồn tại, ánh sáng này sẽ tồn tại.",
+"skill": "Sự hủy diệt đơn độc: Shadowchaser",
+"weapon": "Rapid-Shot Crossbow",
+"ring": "Wheel of Destiny",
+"type": "PSY",
+"type_dmg": "File PSY",
+"image": "https://fastcdn.hoyoverse.com/content-v2/bh3/123889/e848524120cc1901733b4f1718803121_2626275005725555183.png"
+},
+  {
+"ID": "0",
+"name": "",
+"story": "",
+"skill": "",
+"weapon": "",
+"ring": "",
+"type": "",
+"type_dmg": "",
+"image": ""
+}
 ]
