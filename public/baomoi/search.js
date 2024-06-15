@@ -13,9 +13,9 @@ exports.index = async (req, res, next) => {
 
   try {
     const response = await axios.get(link);
-    const data = response.data.data;
+    const data = response.data.data; // Extract the entire data object
 
-    res.json(data);
+    res.json(data); // Send the entire data object in the response
   } catch (error) {
     console.error('Error fetching data from BaoMoi API:', error); // Log any errors
 
@@ -26,3 +26,5 @@ exports.index = async (req, res, next) => {
     }
   }
 };
+
+
