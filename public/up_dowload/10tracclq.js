@@ -15,7 +15,12 @@ exports.index = async (req, res) => {
     const fetchAccountsFromUrl = async (url) => {
         try {
             const response = await axios.get(url);
-            return response.data.split('\n').filter(line => line.trim() !== '');
+            return response.data.split('\n').filter(line => {
+                // Trim the line to remove leading/trailing whitespace
+                const trimmedLine = line.trim();
+                // Filter out lines containing \t or \r
+                return trimmedLine !== '' && !trimmedLine.includes('\t') && !trimmedLine.includes('\r');
+            });
         } catch (err) {
             console.error('Error fetching the accounts:', err);
             return [];
