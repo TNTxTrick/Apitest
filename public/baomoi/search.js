@@ -1,35 +1,22 @@
 const axios = require("axios");
 
-exports.name = '/baomoi/search';
+exports.name = '/baomoi/hanoi';
 
 exports.index = async (req, res, next) => {
-  const keyword = req.query.keyword;
-
-  if (!keyword) {
-    return res.status(400).send('Keyword is required');
-  }
-
-  const link = `https://w-api.baomoi.com/api/v1/content/get/list-by-custom?listType=search&keyword=${keyword}&page=2&ctime=1718359846&version=0.6.52&sig=6a76cfc7e92855425393f369656b856100b0b9e0aff6cd5e6db6573af66859c2&apiKey=kI44ARvPwaqL7v0KuDSM0rGORtdY1nnw`;
 
   try {
-    const response = await axios.get(link);
-    const data = response.data; // Entire response data
+    const response = await axios.get(`https://w-api.baomoi.com/api/v1/content/get/list-by-custom?listType=search&keyword=h%C3%A0%20n%E1%BB%99i&page=2&ctime=1718359846&version=0.6.52&sig=6a76cfc7e92855425393f369656b856100b0b9e0aff6cd5e6db6573af66859c2&apiKey=kI44ARvPwaqL7v0KuDSM0rGORtdY1nnw`);
 
-    if (data.err !== 0) {
-      throw new Error(data.msg || 'Error retrieving data');
-    }
+    const data = response.data.data;
 
-    const items = data.data.items; // Extract the items array
-    const ids = items.map(item => ({ id: item.id })); // Extract and wrap each id in {}
-
-    res.json({ ids }); // Send the ids in the response
+    res.json(data);
   } catch (error) {
-    console.error('Error fetching data from BaoMoi API:', error); // Log any errors
+    console.error(error); // Log any errors
 
-    if (error.response) {
-      res.status(error.response.status).send('Không tìm thấy data');
+    if (error.response && error.response.status === 404) {
+      res.status(404).send('Không tìm thấy dữ liệu'); // Resource not found
     } else {
-      res.status(500).send('Lỗi khi lấy dữ liệu: ' + error.message); // Send detailed error message
+      res.status(500).send('Lỗi khi lấy dữ liệu');
     }
   }
 };
