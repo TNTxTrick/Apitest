@@ -1,7 +1,7 @@
 const axios = require("axios");
 const cheerio = require("cheerio");
 
-exports.name = '/truyen18+/home';
+exports.name = '/truyen18/home';
 exports.index = async (req, res, next) => {
   try {
     const url = 'https://damconuong.net';
