@@ -6,10 +6,9 @@ exports.index = async (req, res, next) => {
   try {
     const url = 'https://damconuong.net';
     const { data } = await axios.get(url);
-    console.log("Successfully fetched data from URL"); // Debugging log
-
+    
     const $ = cheerio.load(data);
-    const responseData = [];
+    const results = [];
 
     $('div.relative').each((index, element) => {
       const img = $(element).find('img.rounded-t-lg.cover').attr('src');
@@ -19,8 +18,8 @@ exports.index = async (req, res, next) => {
       const link_chapnew = $(element).find('div.p-2 a').attr('href');
       const update = $(element).find('span.text-gray-400.text-xs').text().trim();
 
-      if (title && link) { // Check to ensure title and link are not undefined
-        responseData.push({
+      if (title && img && link && chapnew && link_chapnew && update) {
+        results.push({
           title: title,
           img: img,
           link: 'https://damconuong.net' + link,
@@ -31,17 +30,9 @@ exports.index = async (req, res, next) => {
       }
     });
 
-    // Check if items array is populated and send the response data as JSON
-    if (responseData.length > 0) {
-      res.json(responseData);
-    } else {
-      console.error('No items found');
-      res.status(500).json({ error: 'No items found' });
-    }
+    res.json(results);
   } catch (error) {
     console.error('Error:', error);
     res.status(500).json({ error: 'Failed to fetch data' });
   }
 };
-
-
