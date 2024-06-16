@@ -18,24 +18,21 @@ exports.index = async (req, res, next) => {
       const link_chapnew = $(element).find('div.p-2 a').attr('href');
       const update = $(element).find('span.text-gray-400.text-xs').text().trim();
 
-      const found = items.some(item => item.title === title);
-
-      if (!found) {
-        items.push({
-          title: title,
-          img: img,
-          link: 'https://damconuong.net' + link,
-          chapnew: chapnew,
-          link_chapnew: 'https://damconuong.net' + link_chapnew,
-          update: update
-        });
-      }
+      items.push({
+        title: title,
+        img: img,
+        link: 'https://damconuong.net' + link,
+        chapnew: chapnew,
+        link_chapnew: 'https://damconuong.net' + link_chapnew,
+        update: update
+      });
     });
 
-    return items;
+    // Returning the items array instead of the incorrect return statement
+    res.json(items);
   } catch (error) {
-        console.error('Error:', error);
-        res.status(500).json({ error: 'Failed to fetch data' });
-      }
-    };
- 
+    console.error('Error:', error);
+    res.status(500).json({ error: 'Failed to fetch data' });
+  }
+};
+
