@@ -1,4 +1,8 @@
-try {
+const axios = require("axios");
+
+exports.name = '/truyen18+/home';
+exports.index = async (req, res, next) => {
+
     const url = 'https://damconuong.net';
     const { data } = await axios.get(url);
     const $ = cheerio.load(data);
