@@ -34,8 +34,8 @@ exports.index = async (req, res, next) => {
 
     return items;
   } catch (error) {
-    console.error('Error occurred while scraping:', error);
-    throw error; // Ensure error is propagated for proper error handling
-  }
-};
+        console.error('Error:', error);
+        res.status(500).json({ error: 'Failed to fetch data' });
+      }
+    };
  
