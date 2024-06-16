@@ -38,3 +38,4 @@ exports.index = async (req, res, next) => {
     throw error; // Ensure error is propagated for proper error handling
   }
 };
+ 
