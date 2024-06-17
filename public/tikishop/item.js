@@ -1,3 +1,8 @@
+const axios = require("axios");
+
+exports.name = '/tiki/item';
+
+exports.index = async (req, res, next) => {
 const link = req.query.link;
 
   if (link && link.startsWith('https://tiki.vn/')) {
