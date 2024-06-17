@@ -25,4 +25,4 @@ const link = req.query.link;
   } else {
     res.status(400).send('Hãy nhập đúng link');
   }
-});
+};
