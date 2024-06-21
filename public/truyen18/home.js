@@ -1,6 +1,11 @@
+const axios = require('axios');
+const cheerio = require('cheerio');
+
+exports.name = '/truyen18/home';
+exports.index = async (req, res, next) => {
 try {
     const url = 'https://damconuong.net';
-    const { data } = await axios.get(url, { headers });
+    const { data } = await axios.get(url);
 
     const $ = cheerio.load(data);
     const responseData = [];
@@ -30,4 +35,4 @@ try {
     console.error('Error during data fetch or processing:', error);
     res.status(500).json({ error: 'Failed to fetch data' });
   }
-});
+};
