@@ -1,4 +1,8 @@
+const axios = require('axios');
+const cheerio = require('cheerio');
 
+exports.name = '/checkscam/search';
+exports.index = async (req, res, next) => {
 const q = req.query.q;
 
     if (!q) {
