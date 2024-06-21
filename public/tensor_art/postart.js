@@ -1,3 +1,8 @@
+const axios = require('axios');
+const cheerio = require('cheerio');
+
+exports.name = '/tensor/postart';
+exports.index = async (req, res, next) => {
 const link = req.query.link;
   if (!link) {
     return res.status(400).send('Link is required');
@@ -34,4 +39,4 @@ const link = req.query.link;
     console.error('Error fetching or parsing the page:', error);
     res.status(500).send('Error fetching or parsing the page');
   }
-});
+};
