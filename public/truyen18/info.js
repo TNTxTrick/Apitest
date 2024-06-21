@@ -1,4 +1,8 @@
+const axios = require('axios');
+const cheerio = require('cheerio');
 
+exports.name = '/truyen18/info';
+exports.index = async (req, res, next) => {
 const link = req.query.link;
   if (!link || !link.startsWith('https://damconuong.net/')) {
     return res.status(400).json({ error: 'Invalid or missing link parameter' });
