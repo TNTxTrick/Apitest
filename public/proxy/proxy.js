@@ -13,4 +13,4 @@ try {
     console.error('Error fetching proxy data:', error);
     res.status(500).send('An error occurred while fetching proxy data');
   }
-});
+};
