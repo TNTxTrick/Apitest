@@ -17,4 +17,4 @@ const id = req.query.id;
       console.error('Error fetching user profile:', error);
       res.status(500).send('Error fetching user profile');
     }
-  });
+  };
