@@ -1,3 +1,8 @@
+const axios = require('axios');
+const cheerio = require('cheerio');
+
+exports.name = '/truyen18/search';
+exports.index = async (req, res, next) => {
 const q = req.query.q;
 
       const link = `https://damconuong.net/tim-kiem?sort=-updated_at&filter%5Bname%5D=${q}&filter%5Bstatus%5D=2,1`;
