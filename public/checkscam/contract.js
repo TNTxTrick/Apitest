@@ -1,3 +1,8 @@
+const axios = require('axios');
+const cheerio = require('cheerio');
+
+exports.name = '/checkscam/contract';
+exports.index = async (req, res, next) => {
 const link = 'https://checkscam.com/contract';
 
     try {
@@ -23,4 +28,4 @@ const link = 'https://checkscam.com/contract';
         console.log('Lỗi:', error);
         res.status(500).send('Lỗi khi lấy thông tin từ máy chủ.');
     }
-});
+};
