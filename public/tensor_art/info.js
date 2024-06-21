@@ -1,4 +1,8 @@
+const axios = require('axios');
+const cheerio = require('cheerio');
 
+exports.name = '/tensor/info';
+exports.index = async (req, res, next) => {
 const id = req.query.id;
     if (!id) {
       return res.status(400).send('User ID is required');
