@@ -1,3 +1,8 @@
+const axios = require('axios');
+const cheerio = require('cheerio');
+
+exports.name = '/proxy';
+exports.index = async (req, res, next) => {
 try {
     const response = await axios.get('https://api.proxyscrape.com/v3/free-proxy-list/get?request=displayproxies&proxy_format=ipport&format=text&timeout=20000');
     const data = response.data;
