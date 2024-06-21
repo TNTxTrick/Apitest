@@ -4,7 +4,9 @@ const cheerio = require('cheerio');
 exports.name = '/truyen18/search';
 exports.index = async (req, res, next) => {
 const q = req.query.q;
-
+      if (!q) {
+      return res.status(400).json({ error: 'Thiếu từ khóa cần tìm kiếm.' });
+    }
       const link = `https://damconuong.net/tim-kiem?sort=-updated_at&filter%5Bname%5D=${q}&filter%5Bstatus%5D=2,1`;
       try {
           const { data } = await axios.get(link);
