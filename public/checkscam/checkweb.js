@@ -1,3 +1,8 @@
+const axios = require('axios');
+const cheerio = require('cheerio');
+
+exports.name = '/checkweb';
+exports.index = async (req, res, next) => {
 const url = req.query.url;
 
     if (!url) {
@@ -25,4 +30,4 @@ const url = req.query.url;
         console.error('Error fetching the page:', error);
         res.status(500).send('An error occurred while fetching the page.');
     }
-});
+};
