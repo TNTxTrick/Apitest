@@ -1,3 +1,7 @@
+const axios = require('axios');
+
+exports.name = '/checkhost';
+exports.index = async (req, res, next) => {
 const link = req.query.link;
   if (!link) {
     return res.status(400).json({ error: 'Missing link query parameter' });
