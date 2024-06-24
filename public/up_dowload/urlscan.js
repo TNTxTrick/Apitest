@@ -1,3 +1,7 @@
+const axios = require('axios');
+
+exports.name = '/urlscan';
+exports.index = async (req, res, next) => {
 const domain = req.query.domain;
     if (!domain) {
         return res.status(400).json({ error: 'Domain query parameter is required' });
@@ -10,4 +14,4 @@ const domain = req.query.domain;
         console.error('Error fetching data from urlscan.io:', error);
         res.status(500).json({ error: 'Internal Server Error' });
     }
-});
+};
