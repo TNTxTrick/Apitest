@@ -1,3 +1,7 @@
+const axios = require('axios');
+
+exports.name = '/image_anime';
+exports.index = async (req, res, next) => {
 try {
     const response = await axios.get('https://pic.re/image', {
       responseType: 'arraybuffer',
