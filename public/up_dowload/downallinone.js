@@ -7,11 +7,10 @@ exports.index = async (req, res, next) => {
 
   const options = {
     method: 'POST',
-    url: 'https://social-download-all-in-one.p.rapidapi.com/v1/social/autolink',
+    url: 'https://api.zm.io.vn/v1/social/autolink',
     headers: {
       'content-type': 'application/json',
-      'X-RapidAPI-Key': '15375c47d5msh3698cbdb105ac9bp167948jsn5ac92ee40cca',
-      'X-RapidAPI-Host': 'social-download-all-in-one.p.rapidapi.com'
+      'apikey': 'xijm4U3T5c52',
     },
     data: {
       url: link
