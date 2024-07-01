@@ -1,13 +1,15 @@
 const axios = require('axios');
 
-exports.name = '/checkdomain/:domain';
+exports.name = '/checkdomain';
 exports.index = async (req, res, next) => {
-const domain = req.params.domain;
-    try {
-        const response = await fetch(`https://whois.inet.vn/api/whois/domainspecify/${domain}`);
-        const data = await response.json();
-        res.json(data);
-    } catch (error) {
-        res.status(500).json({ error: error.message });
-    }
+  const domain = req.query.domain;
+  if (!domain) {
+    return res.status(400).json('Vui lòng nhập Domain')
+  }
+  try {
+    const response = await axios.get(`https://whois.inet.vn/api/whois/domainspecify/${domain}`);
+    res.json(response.data);
+  } catch (error) {
+    res.status(500).send('Something went wrong!');
+  }
 };
