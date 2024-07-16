@@ -1,12 +1,9 @@
+const axios = require("axios");
+
 exports.name = '/douyin';
+
 exports.index = async (req, res, next) => {
-  const axios = require('axios');
-
   const url = req.query.url;
-  if (!url) {
-    return res.status(400).send('Thiếu URL');
-  }
-
   try {
     const { data } = await axios.get(`https://dlpanda.com/vi?token=G7eRpMaa&url=${encodeURIComponent(url)}`);
     const $ = cheerio.load(data);
