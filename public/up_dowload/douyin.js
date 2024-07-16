@@ -1,4 +1,5 @@
 const axios = require("axios");
+const cheerio = require("cheerio");
 
 exports.name = '/douyin';
 
@@ -22,7 +23,7 @@ exports.index = async (req, res, next) => {
       if (videoUrl) {
         scrapedData.push({ url: 'https:' + videoUrl });
       }
-    });
+    }); // Added closing parenthesis here
 
     res.json({ videos: scrapedData, images: imgSrc });
   } catch (error) {
