@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <title>Welcome</title>
+    <style>
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 2rem;
+        }
+    </style>
+</head>
+<body class="bg-background text-foreground">
+<main class="container mx-auto p-4">
+    <div id="content" class="text-center">
+        <!-- Content will be loaded here -->
+    </div>
+</main>
+<script>
+    function loadPage(path) {
+        const content = document.getElementById('content');
+        
+        if (path === '/' || path === '') {
+            content.innerHTML = `
+                <h1 class="text-3xl font-bold mb-6">Welcome to My Web App</h1>
+                <p class="mb-6">Please choose an option below to proceed:</p>
+                <div class="flex justify-center space-x-4">
+                    <a href="/login" class="bg-blue-500 text-white px-4 py-2 rounded">Login</a>
+                    <a href="/register" class="bg-green-500 text-white px-4 py-2 rounded">Register</a>
+                </div>
+            `;
+        } else if (path === '/login') {
+            content.innerHTML = `
+                <h1 class="text-2xl font-bold mb-4">Login</h1>
+                <form id="login-form" class="space-y-4">
+                    <div>
+                        <label for="email" class="block text-sm font-medium">Email</label>
+                        <input type="email" id="email" name="email" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+                    </div>
+                    <div>
+                        <label for="password" class="block text-sm font-medium">Password</label>
+                        <input type="password" id="password" name="password" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <button type="submit" class="bg-blue-500 text-white p-2 rounded">Login</button>
+                        <a href="/register" class="text-blue-500">Register</a>
+                    </div>
+                </form>
+            `;
+        } else if (path === '/register') {
+            content.innerHTML = `
+                <h1 class="text-2xl font-bold mb-4">Register</h1>
+                <form id="register-form" class="space-y-4">
+                    <div>
+                        <label for="reg-email" class="block text-sm font-medium">Email</label>
+                        <input type="email" id="reg-email" name="email" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+                    </div>
+                    <div>
+                        <label for="reg-password" class="block text-sm font-medium">Password</label>
+                        <input type="password" id="reg-password" name="password" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+                    </div>
+                    <div>
+                        <label for="reg-password-confirm" class="block text-sm font-medium">Confirm Password</label>
+                        <input type="password" id="reg-password-confirm" name="password_confirm" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <button type="submit" class="bg-blue-500 text-white p-2 rounded">Register</button>
+                        <a href="/login" class="text-blue-500">Login</a>
+                    </div>
+                </form>
+            `;
+        } else if (path === '/api') {
+            content.innerHTML = `
+                <h1 class="text-2xl font-bold mb-4">API Endpoint</h1>
+                <p>This is a mock API endpoint. You can use this page to display API data or information.</p>
+            `;
+        } else {
+            content.innerHTML = '<h1 class="text-2xl font-bold">404 Not Found</h1>';
+        }
+    }
+
+    window.addEventListener('popstate', function() {
+        loadPage(location.pathname);
+    });
+
+    document.addEventListener('click', function(event) {
+        if (event.target.tagName === 'A' && event.target.getAttribute('href')) {
+            event.preventDefault();
+            const href = event.target.getAttribute('href');
+            history.pushState(null, '', href);
+            loadPage(href);
+        }
+    });
+
+    // Load the initial page
+    loadPage(location.pathname);
+</script>
+</body>
+</html>
