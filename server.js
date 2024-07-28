@@ -25,7 +25,10 @@ try {
     console.log('post/' + j);
   }
 
-
+  app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'public/index.html')));
+app.get('/login', (req, res) => res.sendFile(path.join(__dirname, 'public/login.html')));
+app.get('/register', (req, res) => res.sendFile(path.join(__dirname, 'public/register.html')));
+  
   router.get('/altp_data', function (req, res) {
     const data = JSON.parse(readFileSync('./altp_data.json', "utf-8"));
     res.header("Content-Type", 'application/json');
