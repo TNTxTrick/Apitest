@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Optional: Link to a CSS file for styling -->
+</head>
+<body>
+    <div class="container">
+        <h1>Dashboard</h1>
+        <p>Welcome to the API Dashboard!</p>
+        <button onclick="fetchAPIKey()">Get API Key</button>
+        <p id="apiKey"></p>
+        <button onclick="logout()">Logout</button>
+    </div>
+    <script>
+        function fetchAPIKey() {
+            fetch('/api-key')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('apiKey').innerText = `Your API Key: ${data.apiKey}`;
+                });
+        }
+
+        function logout() {
+            fetch('/logout', { method: 'GET' })
+                .then(() => {
+                    window.location.href = 'login.html';
+                });
+        }
+    </script>
+</body>
+</html>
