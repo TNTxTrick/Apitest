@@ -9,7 +9,7 @@ const getIP = require('ipware')().get_ip;
 const checkIPBlocked = require('./blockIp.js');
 
 const app = express();
-const server = require("./server.js");  // Ensure server.js is implemented correctly
+const server = require("./server.js");
 
 const blockedIPs = JSON.parse(fs.readFileSync('./blockedIP.json', { encoding: 'utf-8' }));
 
@@ -37,17 +37,27 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));  // To parse form data
 app.use(cors());
 
-// Static file serving
-app.use(express.static(path.join(__dirname, 'web', 'login')));
-
-// Load user data
+// Path to the users file
 const usersFilePath = path.join(__dirname, 'web', 'login', 'users.json');
+
+// Initialize users as an empty array
 let users = [];
 try {
-    users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+    // Read and parse the JSON file
+    const usersData = fs.readFileSync(usersFilePath, 'utf-8');
+    users = JSON.parse(usersData);
 } catch (err) {
     console.error("Error reading users file:", err);
 }
+
+// Ensure users is an array
+if (!Array.isArray(users)) {
+    console.error("Users data is not an array");
+    users = [];
+}
+
+// Static file serving
+app.use(express.static(path.join(__dirname, 'web', 'login')));
 
 // Routes
 app.get('/login', (req, res) => {
@@ -64,9 +74,9 @@ app.post('/login', (req, res) => {
     // Simple authentication logic
     const user = users.find(user => user.username === username && user.password === password);
     if (user) {
-        res.redirect('/dash');  // Redirect to dashboard page
+        res.redirect('/dash');  // Redirect to dashboard page on successful login
     } else {
-        res.redirect('/login?error=1');  // Redirect with error query parameter
+        res.redirect('/login?error=1');  // Redirect with error parameter on login failure
     }
 });
 
@@ -76,7 +86,7 @@ app.post('/register', (req, res) => {
     // Check if user already exists
     const existingUser = users.find(user => user.username === username);
     if (existingUser) {
-        res.redirect('/register?error=1');  // Redirect with error query parameter
+        res.redirect('/register?error=1');  // Redirect with error parameter
         return;
     }
 
@@ -84,7 +94,7 @@ app.post('/register', (req, res) => {
     const newUser = { username, password };
     users.push(newUser);
     fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
-    res.redirect('/login?success=1');  // Redirect with success query parameter
+    res.redirect('/login?success=1');  // Redirect with success parameter
 });
 
 app.get('/dash', (req, res) => {
