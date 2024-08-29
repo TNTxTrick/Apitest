@@ -10,7 +10,7 @@ exports.index = async (req, res, next) => {
     url: 'https://api.zm.io.vn/v1/social/autolink',
     headers: {
       'content-type': 'application/json',
-      'apikey': 'xijm4U3T5c52',
+      'apikey': 'Olq6W9131Wx5j2',
     },
     data: {
       url: link
