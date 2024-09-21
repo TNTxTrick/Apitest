@@ -2,7 +2,7 @@ exports.name = '/infofacebook';
 exports.index = async (req, res, next) => {
   const id = req.query.id;
   const axios = require("axios");
-  axios.get(`https://graph.facebook.com/${id}?fields=id,is_verified,cover,updated_time,work,education,likes,created_time,work,posts,hometown,username,family,timezone,link,name,locale,location,about,website,birthday,gender,relationship_status,significant_other,quotes,first_name,subscribers.limit(0)&access_token=EAAD6V7os0gcBOZCPtgM0RNYzx2SZCyiVErBxaC4TDhd12lvpAky7kKoRETO3ZBKOLh8hP5gUehzZBKywMcE3Jw1XfTZCO0GZBtugfMGSRvG1lVbXAGUwExy8TU4840fa99O4QSU3SGlYmpBBMO12L0qvjuw7gpBJwaQ8lqB9GSNUqQaPMF33bkEDIatwZDZD`)
+  axios.get(`https://graph.facebook.com/${id}?fields=id,is_verified,cover,updated_time,work,education,likes,created_time,work,posts,hometown,username,family,timezone,link,name,locale,location,about,website,birthday,gender,relationship_status,significant_other,quotes,first_name,subscribers.limit(0)&access_token=EAAD6V7os0gcBO2QVwZADlNKChwNEGl5LNRoZBfLxGHDDlFfafWu2L1ecC1XyZAZAzd4QLxyUrwZBMhiCTX1CsvU1sCO3ok9KNOdIYHaxOJUDhY8uzhy6MCKkkiUJlrnq1VZBlXFMNYjHExN6tlr0tslA3UKZCYcTAlRgOzkUCvAHvTaPh2onG4ZB40RvQgZDZD`)
     .then(resp => {
       const dj = {
         uid: resp.data.id,
