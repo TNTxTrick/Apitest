@@ -29,7 +29,7 @@ const extractLinks = (text) => {
           'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
           'Cookie': 'sign=cde3417f57c29391af8c079891d42d74; device-time=1736159122859',
           'Referer': 'https://3bic.com/vi',
-          'Host': 'ssscap.net',
+          'Host': '3bic.com',
           'Accept-Language': 'en-US,en;q=0.9',
           'Accept': 'application/json, text/plain, */*',
           'Sec-Fetch-Dest': 'empty',
