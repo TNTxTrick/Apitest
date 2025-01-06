@@ -23,12 +23,12 @@ const extractLinks = (text) => {
       const videoId = getUrlResponse.data.url.split("/")[4].split("?")[0];
       const options = {
         method: 'GET',
-        url: `https://ssscap.net/api/download/${videoId}`,
+        url: `https://3bic.com/api/download/${videoId}`,
         headers: {
           'Connection': 'keep-alive',
           'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
           'Cookie': 'sign=08321c1cc11dbdd2d6e3c63f44248dcf; device-time=1699454542608',
-          'Referer': 'https://ssscap.net/vi',
+          'Referer': 'https://3bic.com/vi',
           'Host': 'ssscap.net',
           'Accept-Language': 'vi-VN,vi;q=0.9',
           'Accept': 'application/json, text/plain, */*',
@@ -44,7 +44,7 @@ const extractLinks = (text) => {
           title: title,
           description: description,
           usage: usage,
-          video: `https://ssscap.net${originalVideoUrl}`
+          video: `https://3bic.com${originalVideoUrl}`
       });
     }
   } catch (error) {
