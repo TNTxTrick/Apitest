@@ -19,7 +19,7 @@ const extractLinks = (text) => {
     }
 
     for (const link of extractedLinks) {
-      const getUrlResponse = await axios.get(`https://ssscap.net/api/download/get-url?url=${link}`);
+      const getUrlResponse = await axios.get(`https://3bic.com/api/download/get-url?url=${link}`);
       const videoId = getUrlResponse.data.url.split("/")[4].split("?")[0];
       const options = {
         method: 'GET',
