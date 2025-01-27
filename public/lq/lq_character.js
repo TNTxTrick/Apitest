@@ -1,8 +1,12 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
 
-exports.name = '/lq/info/:tuong';
+exports.name = '/lq/info';
+const tuong = req.query.tuong; 
 
+  if (!tuong) {
+    return res.status(400).send('Missing "tuong" query parameter');
+  }
 exports.index = async (req, res, next) => {
   
   try {
