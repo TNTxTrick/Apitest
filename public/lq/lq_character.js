@@ -1,43 +1,52 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
 
-exports.name = '/lq/info/:id';
+exports.name = '/lq/info/:tuong';
 
 exports.index = async (req, res, next) => {
+  
   try {
-    const id = req.params.id;
-    const response = await axios.get(`https://lienquan.garena.vn/tuong-chi-tiet/${id}`);
-    const html = response.data;
-    const $ = cheerio.load(html);
+    
+    const { data } = await axios.get(`https://lienquan.garena.vn/hoc-vien/tuong-skin/d/${tuong}`);
 
-    const hero = $('section.heroes-page div.inner-page div.skin-hero h2').text().trim();
+    
+    const $ = cheerio.load(data);
 
-    const skinImages = $('div.tabs-content-skin img[src]');
-    const cont = $('div.col p span[data-original]');
-    const skills = $('div.in-skill h2');
+   
+    const name = $('h3').text().trim();
 
-    const skinUrls = skinImages.map((index, element) => $(element).attr('src')).get();
-    const conts = cont.map((index, element) => $(element).attr('data-original')).get();
-    const skillNames = skills.map((index, element) => $(element).text().trim()).get();
+    
+    const cleanedName = name.split(' ')[0];  
 
-    const contObjects = conts.map((value, index) => ({ [index + 1]: value }));
-    const skillObjects = skillNames.map((value, index) => ({ [index + 1]: value }));
+    
+    const imageUrls = [];
 
-    const completeSkinUrls = skinUrls.map(url => `https://lienquan.garena.vn${url}`);
+    $('ul.hero__skins--list li a img').each((index, element) => {
+      const src = $(element).attr('src'); 
+      if (src) {
+        imageUrls.push(src); 
+      }
+    });
 
-    console.log('Hero:', hero);
-    console.log('Skin URLs:', completeSkinUrls);
-    console.log('Cont:', contObjects);
-    console.log('Skills:', skillObjects);
+    const skills = [];
 
-    const responseData = {
-      hero: hero,
-      skin: completeSkinUrls,
-      cont: contObjects,
-      skills: skillObjects
-    };
+    
+    $('ul.hero__skills--list li').each((index, element) => {
+      
+      const imgSrc = $(element).find('a img').attr('src');
 
-    res.json(responseData);
+      const skillTitle = $(element).find('a').attr('title');
+
+      const skillDetail = $(`#heroSkill-${index + 1} article`).text().trim();
+
+      skills.push({
+        img: imgSrc,
+        title: skillTitle,
+        description: skillDetail,
+      });
+    });
+
+    res.json({ name: cleanedName, img: imageUrls, skills });
   } catch (error) {
     console.error('Error:', error);
     res.status(500).send('Error fetching data');
