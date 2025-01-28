@@ -1,3 +1,9 @@
+const axios = require('axios');
+
+exports.name = '/ytb';
+exports.index = async (req, res, next) => {
+  const link = req.query.link; 
+  try {
 const response = await axios.post(
       'https://iloveyt.net/proxy.php',
       new URLSearchParams({
@@ -23,3 +29,8 @@ const response = await axios.post(
         }
       }
     );
+res.json(response.data);
+  } catch (error) {
+    res.status(500).send(error.toString());
+  }
+};
