@@ -1,8 +1,12 @@
+exports.name = '/ngyt';
+exports.index = async (req, res, next) => {
+ 
+const axios = require('axios');
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Define your GET route
-app.get('/api', async (req, res) => {
   // Extract query parameters from the request
   const sender = req.query.sender;
   const receiver = req.query.receiver;
@@ -68,3 +72,8 @@ app.get('/api', async (req, res) => {
 
     // Return the URL in the response
     res.json({ url: link, message: 'Đã tạo thiệp thành công
+  } catch (error) {
+    console.error(error);
+    return res.json({ error: 'Có lỗi xảy ra khi tải xuống dữ liệu từ API' });
+  }
+};
