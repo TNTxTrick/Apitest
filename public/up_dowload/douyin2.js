@@ -1,3 +1,9 @@
+const axios = require("axios");
+const cheerio = require("cheerio");
+
+exports.name = '/douyin2';
+
+exports.index = async (req, res, next) => {
 try {
     const link = req.query.link;
 
@@ -29,3 +35,7 @@ try {
     );
     // Send the response back to the client
     res.json(response.data);
+  } catch (error) {
+    res.status(500).send('Lỗi');
+  }
+};
