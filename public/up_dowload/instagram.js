@@ -4,8 +4,8 @@ const cheerio = require("cheerio");
 exports.name = '/instagram';
 
 exports.index = async (req, res, next) => {
-try {
     const link = req.query.link;
+try {
 
     // Make the POST request using axios
     const response = await axios.post(
