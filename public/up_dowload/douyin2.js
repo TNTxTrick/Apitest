@@ -2,11 +2,9 @@ const axios = require("axios");
 const cheerio = require("cheerio");
 
 exports.name = '/douyin2';
-
+const link = req.query.link
 exports.index = async (req, res, next) => {
 try {
-    const link = req.query.link;
-
     // Make the POST request using axios
     const response = await axios.post(
       'https://snapvideo.io/wp-json/aio-dl/video-data/',
