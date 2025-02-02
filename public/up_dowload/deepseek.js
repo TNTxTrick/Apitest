@@ -3,6 +3,9 @@ const axios = require('axios');
 exports.name = '/deepseek';
 exports.index = async (req, res, next) => {
    const text = req.query.text;
+   if (!text) {
+        return res.status(400).json({ error: 'Nhap cau Hoi di cu' });
+   }
   const options = {
     method: 'POST',
     url: 'https://deepseek-v3.p.rapidapi.com/chat',
