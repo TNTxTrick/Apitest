@@ -4,27 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API Explorer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        bg: '#0D1117',
-                        text: '#E6EDF3',
-                        card: '#161B22',
-                        border: '#30363D',
-                        primary: '#A855F7',
-                        muted: '#21262D'
-                    }
-                }
-            }
-        };
-    </script>
 
     <style>
+        /* Custom styles for dark mode and general layout */
+        body {
+            background-color: #0D1117;
+            color: #E6EDF3;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 16px;
+        }
+
+        /* Sidebar styles */
         .sidebar {
             position: fixed;
             top: 0;
@@ -34,11 +34,47 @@
             background: rgba(22, 27, 34, 0.8);
             backdrop-filter: blur(8px);
             transform: translateX(-100%);
-            transition: 0.3s;
+            transition: transform 0.3s ease-in-out;
             padding: 16px;
+            box-shadow: 4px 0 10px rgba(0, 0, 0, 0.3);
             z-index: 100;
+            color: white;
         }
-        .sidebar.open { transform: translateX(0); }
+
+        .sidebar.open {
+            transform: translateX(0);
+        }
+
+        .sidebar h3 {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 12px;
+        }
+
+        .sidebar button {
+            background: #21262D;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            color: #E6EDF3;
+            text-align: left;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .sidebar button:hover {
+            background: #30363D;
+        }
+
+        /* Overlay background when menu is open */
         .overlay {
             position: fixed;
             top: 0;
@@ -48,85 +84,188 @@
             background: rgba(0, 0, 0, 0.5);
             opacity: 0;
             visibility: hidden;
-            transition: 0.3s;
+            transition: opacity 0.3s ease-in-out;
             z-index: 99;
         }
+
         .overlay.show {
             opacity: 1;
             visibility: visible;
         }
+
+        /* Content area styles */
+        .content {
+            padding: 20px;
+            margin-left: 270px;
+            width: calc(100% - 270px);
+        }
+
+        .content h2 {
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+
+        .content p {
+            color: #8B949E;
+            margin-bottom: 16px;
+        }
+
+        .content input, .content button {
+            padding: 12px;
+            width: 100%;
+            margin-bottom: 12px;
+            border-radius: 5px;
+            border: 1px solid #30363D;
+            background-color: #21262D;
+            color: #E6EDF3;
+            font-size: 16px;
+        }
+
+        .content button {
+            background-color: #A855F7;
+            cursor: pointer;
+        }
+
+        .content button:hover {
+            background-color: #8B949E;
+        }
+
+        /* Code block style */
+        pre {
+            background-color: #161B22;
+            color: #A0B0C0;
+            padding: 16px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-size: 14px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Button for the menu toggle */
+        #menuBtn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: #A855F7;
+            color: white;
+            font-size: 24px;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 50;
+        }
+
+        #menuBtn:focus {
+            outline: none;
+        }
+
     </style>
 </head>
-<body class="bg-bg text-text flex justify-center items-center min-h-screen">
+<body>
 
-<!-- Nút mở menu -->
-<button id="menuBtn" class="fixed top-4 left-4 text-white text-2xl bg-primary p-3 rounded">☰</button>
+    <!-- Nút mở Menu -->
+    <button id="menuBtn" onclick="toggleMenu(true)">☰</button>
 
-<!-- Overlay -->
-<div id="overlay" class="overlay"></div>
+    <!-- Overlay nền tối khi menu mở -->
+    <div id="overlay" class="overlay"></div>
 
-<!-- Sidebar -->
-<div id="sidebar" class="sidebar">
-    <div class="flex justify-between items-center mb-4">
-        <h3 class="text-lg font-bold text-white">Danh sách API</h3>
-        <button onclick="toggleMenu(false)" class="text-white text-2xl">&times;</button>
-    </div>
-    <ul>
-        <li><button onclick="showAPI('intro')" class="block w-full p-2 bg-muted hover:bg-gray-700 rounded">Giới thiệu</button></li>
-        <li><button onclick="showAPI('trends')" class="block w-full p-2 bg-muted hover:bg-gray-700 rounded">Trends API</button></li>
-        <li><button onclick="showAPI('user')" class="block w-full p-2 bg-muted hover:bg-gray-700 rounded">User API</button></li>
-    </ul>
-</div>
-
-<!-- Nội dung -->
-<div id="content" class="p-6 w-full max-w-lg">
-    <div id="intro-api" class="api-content">
-        <h2 class="text-2xl font-bold">Chào mừng đến với API Explorer</h2>
-        <p class="text-gray-400">Khám phá các API hữu ích với giao diện thân thiện.</p>
+    <!-- Sidebar Menu -->
+    <div id="sidebar" class="sidebar">
+        <div class="flex justify-between items-center mb-4">
+            <h3>Danh sách API</h3>
+            <button onclick="toggleMenu(false)">×</button>
+        </div>
+        <ul>
+            <li><button onclick="showAPI('intro')">Giới thiệu</button></li>
+            <li><button onclick="showAPI('trends')">Trends API</button></li>
+            <li><button onclick="showAPI('user')">User API</button></li>
+        </ul>
     </div>
 
-    <div id="trends-api" class="api-content hidden">
-        <h2 class="text-2xl font-bold">Trends API</h2>
-        <input id="woeid" type="number" placeholder="Nhập WOEID" class="border border-border bg-muted text-text p-2 rounded w-full mb-3">
-        <button id="fetchTrends" class="bg-primary text-white p-2 rounded w-full">Thử ngay</button>
-        <pre class="bg-muted border p-3 rounded text-xs"><code id="result-trends"></code></pre>
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Trang giới thiệu API -->
+        <div id="intro-api" class="api-content">
+            <h2>Chào mừng đến với API Explorer</h2>
+            <p>Khám phá các API hữu ích với giao diện thân thiện.</p>
+        </div>
+
+        <!-- Trends API -->
+        <div id="trends-api" class="api-content hidden">
+            <h2>Trends API</h2>
+            <p>Nhập WOEID để tìm kiếm xu hướng.</p>
+            <input id="woeid" type="number" placeholder="Nhập WOEID">
+            <button id="fetchTrends">Thử ngay</button>
+            <pre><code id="result-trends" class="json"></code></pre>
+        </div>
+
+        <!-- User API -->
+        <div id="user-api" class="api-content hidden">
+            <h2>User API</h2>
+            <p>Lấy thông tin người dùng bằng ID.</p>
+            <input id="userId" type="number" placeholder="Nhập User ID">
+            <button id="fetchUser">Thử ngay</button>
+            <pre><code id="result-user" class="json"></code></pre>
+        </div>
     </div>
 
-    <div id="user-api" class="api-content hidden">
-        <h2 class="text-2xl font-bold">User API</h2>
-        <input id="userId" type="number" placeholder="Nhập User ID" class="border border-border bg-muted text-text p-2 rounded w-full mb-3">
-        <button id="fetchUser" class="bg-primary text-white p-2 rounded w-full">Thử ngay</button>
-        <pre class="bg-muted border p-3 rounded text-xs"><code id="result-user"></code></pre>
-    </div>
-</div>
+    <script>
+        function toggleMenu(open) {
+            const sidebar = document.getElementById("sidebar");
+            const overlay = document.getElementById("overlay");
+            const menuBtn = document.getElementById("menuBtn");
 
-<script>
-    function toggleMenu(open) {
-        document.getElementById("sidebar").classList.toggle("open", open);
-        document.getElementById("overlay").classList.toggle("show", open);
-        document.getElementById("menuBtn").style.display = open ? "none" : "block";
-    }
+            if (open) {
+                sidebar.classList.add("open");
+                overlay.classList.add("show");
+                menuBtn.style.display = "none"; // Ẩn nút ☰ khi menu mở
+            } else {
+                sidebar.classList.remove("open");
+                overlay.classList.remove("show");
+                menuBtn.style.display = "block"; // Hiện lại nút ☰ khi menu đóng
+            }
+        }
 
-    function showAPI(api) {
-        document.querySelectorAll(".api-content").forEach(el => el.classList.add("hidden"));
-        document.getElementById(api + "-api").classList.remove("hidden");
-        toggleMenu(false);
-    }
+        function showAPI(apiName) {
+            document.querySelectorAll(".api-content").forEach(el => el.classList.add("hidden"));
+            document.getElementById(apiName + "-api").classList.remove("hidden");
 
-    function fetchData(inputId, resultId, data) {
-        const inputValue = document.getElementById(inputId).value.trim();
-        if (!inputValue) return alert("Vui lòng nhập dữ liệu");
-        document.getElementById(resultId).textContent = JSON.stringify(data, null, 2);
-    }
+            // Đóng menu khi chọn API
+            toggleMenu(false);
+        }
 
-    document.getElementById("fetchTrends").addEventListener("click", () => {
-        fetchData("woeid", "result-trends", { trends: ["Công Nghệ Mới", "Bóng Đá Hôm Nay"] });
-    });
+        function displayData(id, data) {
+            const resultContainer = document.getElementById(id);
+            resultContainer.textContent = JSON.stringify(data, null, 2);
+        }
 
-    document.getElementById("fetchUser").addEventListener("click", () => {
-        fetchData("userId", "result-user", { id: "123", name: "Người dùng A" });
-    });
-</script>
+        document.getElementById("fetchTrends").addEventListener("click", () => {
+            const woeid = document.getElementById("woeid").value.trim();
+            if (!woeid) {
+                alert("Vui lòng nhập WOEID");
+                return;
+            }
+
+            const sampleData = { "data": [{ "trend_name": "Công Nghệ Mới" }, { "trend_name": "Bóng Đá Hôm Nay" }] };
+            displayData("result-trends", sampleData);
+        });
+
+        document.getElementById("fetchUser").addEventListener("click", () => {
+            const userId = document.getElementById("userId").value.trim();
+            if (!userId) {
+                alert("Vui lòng nhập User ID");
+                return;
+            }
+
+            const sampleData = { "user": { "id": userId, "name": "Người dùng A", "email": "user@example.com" } };
+            displayData("result-user", sampleData);
+        });
+    </script>
 
 </body>
 </html>
