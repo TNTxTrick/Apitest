@@ -81,11 +81,82 @@
         .api-info p {
             margin-left: 10px;
         }
+html {
+    height: 100%;
+}
 
-        h5 {
-            margin-bottom: 20px;
-            color: #333;
-        }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a2e; /* Nền tím đen */
+    color: #fff; /* Chữ màu trắng */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Ngăn cuộn trang */
+}
+
+.container {
+    background-color: #0f0f1f; /* Màu nền hộp */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.5); /* Hiệu ứng phát sáng tím */
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+h1, h5, h3 {
+    color: #a29bfe; /* Màu chữ tím */
+}
+
+.api-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #6c5ce7; /* Viền tím */
+    border-radius: 5px;
+    background-color: #2d2d4a; /* Màu nền ô API */
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #dcdde1; /* Màu chữ xám nhạt */
+    margin: 0;
+}
+
+.api-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #6c5ce7; /* Màu tím */
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+}
+
+.api-button:hover {
+    background-color: #4b4dda; /* Màu tím nhạt hơn khi hover */
+}
+
+.api-info {
+    display: flex;
+    align-items: center;
+}
+
+.api-info p {
+    margin-left: 10px;
+}
+
     </style>
 </head>
 <body>
