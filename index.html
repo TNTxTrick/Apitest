@@ -34,43 +34,7 @@
             margin-bottom: 10px;
         }
 
-        /* Ô nhập và nút */
-        .input-group {
-            display: flex;
-            gap: 10px;
-        }
-
-        input {
-            flex: 1;
-            padding: 10px;
-            border-radius: 10px;
-            border: 1px solid #30363D;
-            background-color: #21262D;
-            color: #E6EDF3;
-            font-size: 16px;
-            outline: none;
-        }
-
-        button {
-            padding: 10px 16px;
-            border-radius: 10px;
-            border: none;
-            background-color: #A855F7;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
-        }
-
-        button:hover {
-            background-color: #8B949E;
-        }
-
-        button:active {
-            box-shadow: 0 0 10px #A855F7;
-        }
-
-        /* Danh sách nút API */
+        /* Nút copy link API */
         .api-buttons {
             display: flex;
             gap: 10px;
@@ -80,12 +44,21 @@
         }
 
         .api-buttons button {
-            border-radius: 20px;
             padding: 12px 24px;
             font-weight: bold;
+            border-radius: 20px;
+            border: none;
+            background-color: #A855F7;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
         }
 
-        /* Hiệu ứng phát sáng khi nhấn vào nút API */
+        .api-buttons button:hover {
+            background-color: #8B949E;
+        }
+
         .api-buttons button:active {
             box-shadow: 0 0 15px #A855F7;
         }
@@ -106,72 +79,47 @@
 <body>
 
     <div class="container">
-        <!-- Danh sách các nút API -->
+        <!-- Nút copy API -->
         <div class="api-buttons">
-            <button onclick="scrollToAPI('intro')">Giới thiệu</button>
-            <button onclick="scrollToAPI('trends')">Trends API</button>
-            <button onclick="scrollToAPI('user')">User API</button>
-        </div>
-
-        <!-- Giới thiệu API -->
-        <div id="intro">
-            <h2>Chào mừng đến với API Explorer</h2>
-            <p>Khám phá các API hữu ích với giao diện đơn giản và dễ sử dụng.</p>
+            <button onclick="copyAPI('https://api.example.com/trends')">Copy Trends API</button>
+            <button onclick="copyAPI('https://api.example.com/user')">Copy User API</button>
         </div>
 
         <!-- Trends API -->
         <div id="trends">
             <h2>Trends API</h2>
-            <p>Nhập WOEID để tìm kiếm xu hướng.</p>
-            <div class="input-group">
-                <input id="woeid" type="number" placeholder="Nhập WOEID">
-                <button id="fetchTrends">Thử ngay</button>
-            </div>
+            <p>Dữ liệu API:</p>
             <pre><code id="result-trends" class="json"></code></pre>
         </div>
 
         <!-- User API -->
         <div id="user">
             <h2>User API</h2>
-            <p>Lấy thông tin người dùng bằng ID.</p>
-            <div class="input-group">
-                <input id="userId" type="number" placeholder="Nhập User ID">
-                <button id="fetchUser">Thử ngay</button>
-            </div>
+            <p>Dữ liệu API:</p>
             <pre><code id="result-user" class="json"></code></pre>
         </div>
     </div>
 
     <script>
-        function scrollToAPI(apiId) {
-            document.getElementById(apiId).scrollIntoView({ behavior: "smooth", block: "start" });
+        function copyAPI(apiUrl) {
+            navigator.clipboard.writeText(apiUrl).then(() => {
+                alert("Đã sao chép: " + apiUrl);
+            }).catch(err => {
+                alert("Lỗi khi sao chép!");
+                console.error(err);
+            });
         }
 
         function displayData(id, data) {
             document.getElementById(id).textContent = JSON.stringify(data, null, 2);
         }
 
-        document.getElementById("fetchTrends").addEventListener("click", () => {
-            const woeid = document.getElementById("woeid").value.trim();
-            if (!woeid) {
-                alert("Vui lòng nhập WOEID");
-                return;
-            }
+        // Hiển thị sẵn dữ liệu API
+        const trendsData = { "data": [{ "trend_name": "Công Nghệ Mới" }, { "trend_name": "Bóng Đá Hôm Nay" }] };
+        displayData("result-trends", trendsData);
 
-            const sampleData = { "data": [{ "trend_name": "Công Nghệ Mới" }, { "trend_name": "Bóng Đá Hôm Nay" }] };
-            displayData("result-trends", sampleData);
-        });
-
-        document.getElementById("fetchUser").addEventListener("click", () => {
-            const userId = document.getElementById("userId").value.trim();
-            if (!userId) {
-                alert("Vui lòng nhập User ID");
-                return;
-            }
-
-            const sampleData = { "user": { "id": userId, "name": "Người dùng A", "email": "user@example.com" } };
-            displayData("result-user", sampleData);
-        });
+        const userData = { "user": { "id": "12345", "name": "Người dùng A", "email": "user@example.com" } };
+        displayData("result-user", userData);
     </script>
 
 </body>
