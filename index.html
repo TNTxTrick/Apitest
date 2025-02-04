@@ -6,7 +6,7 @@
     <title>API Explorer</title>
 
     <style>
-        /* Custom styles for dark mode and general layout */
+        /* Thiết lập giao diện chung */
         body {
             background-color: #0D1117;
             color: #E6EDF3;
@@ -16,102 +16,28 @@
             align-items: center;
             min-height: 100vh;
             margin: 0;
+            flex-direction: column;
+            padding-top: 20px;
         }
 
         .container {
             width: 100%;
-            max-width: 1200px;
-            padding: 16px;
-        }
-
-        /* Sidebar styles */
-        .sidebar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 250px;
-            height: 100%;
-            background: rgba(22, 27, 34, 0.8);
-            backdrop-filter: blur(8px);
-            transform: translateX(-100%);
-            transition: transform 0.3s ease-in-out;
-            padding: 16px;
-            box-shadow: 4px 0 10px rgba(0, 0, 0, 0.3);
-            z-index: 100;
-            color: white;
-        }
-
-        .sidebar.open {
-            transform: translateX(0);
-        }
-
-        .sidebar h3 {
-            font-size: 24px;
-            margin-bottom: 16px;
-        }
-
-        .sidebar ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .sidebar li {
-            margin-bottom: 12px;
-        }
-
-        .sidebar button {
-            background: #21262D;
-            padding: 10px;
-            width: 100%;
-            border: none;
-            color: #E6EDF3;
-            text-align: left;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .sidebar button:hover {
-            background: #30363D;
-        }
-
-        /* Overlay background when menu is open */
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease-in-out;
-            z-index: 99;
-        }
-
-        .overlay.show {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        /* Content area styles */
-        .content {
+            max-width: 800px;
             padding: 20px;
-            margin-left: 270px;
-            width: calc(100% - 270px);
         }
 
-        .content h2 {
-            font-size: 32px;
-            margin-bottom: 16px;
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
         }
 
-        .content p {
+        p {
             color: #8B949E;
-            margin-bottom: 16px;
+            margin-bottom: 10px;
         }
 
-        .content input, .content button {
-            padding: 12px;
+        input, button {
+            padding: 10px;
             width: 100%;
             margin-bottom: 12px;
             border-radius: 5px;
@@ -121,16 +47,36 @@
             font-size: 16px;
         }
 
-        .content button {
+        button {
             background-color: #A855F7;
             cursor: pointer;
         }
 
-        .content button:hover {
+        button:hover {
             background-color: #8B949E;
         }
 
-        /* Code block style */
+        /* Danh sách gợi ý */
+        .suggestions {
+            background: #161B22;
+            border: 1px solid #30363D;
+            border-radius: 5px;
+            position: absolute;
+            width: 100%;
+            z-index: 10;
+            display: none;
+        }
+
+        .suggestions div {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .suggestions div:hover {
+            background: #A855F7;
+        }
+
+        /* Code block */
         pre {
             background-color: #161B22;
             color: #A0B0C0;
@@ -142,61 +88,27 @@
             word-wrap: break-word;
         }
 
-        .hidden {
-            display: none;
+        .search-box {
+            position: relative;
+            margin-bottom: 20px;
         }
-
-        /* Button for the menu toggle */
-        #menuBtn {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            background-color: #A855F7;
-            color: white;
-            font-size: 24px;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            z-index: 50;
-        }
-
-        #menuBtn:focus {
-            outline: none;
-        }
-
     </style>
 </head>
 <body>
 
-    <!-- Nút mở Menu -->
-    <button id="menuBtn" onclick="toggleMenu(true)">☰</button>
-
-    <!-- Overlay nền tối khi menu mở -->
-    <div id="overlay" class="overlay"></div>
-
-    <!-- Sidebar Menu -->
-    <div id="sidebar" class="sidebar">
-        <div class="flex justify-between items-center mb-4">
-            <h3>Danh sách API</h3>
-            <button onclick="toggleMenu(false)">×</button>
+    <div class="container">
+        <!-- Ô tìm kiếm API -->
+        <div class="search-box">
+            <input id="searchAPI" type="text" placeholder="Tìm kiếm API...">
+            <div id="suggestions" class="suggestions"></div>
         </div>
-        <ul>
-            <li><button onclick="showAPI('intro')">Giới thiệu</button></li>
-            <li><button onclick="showAPI('trends')">Trends API</button></li>
-            <li><button onclick="showAPI('user')">User API</button></li>
-        </ul>
-    </div>
 
-    <!-- Main Content -->
-    <div class="content">
-        <!-- Trang giới thiệu API -->
-        <div id="intro-api" class="api-content">
-            <h2>Chào mừng đến với API Explorer</h2>
-            <p>Khám phá các API hữu ích với giao diện thân thiện.</p>
-        </div>
+        <!-- Giới thiệu API -->
+        <h2 id="intro">Chào mừng đến với API Explorer</h2>
+        <p>Khám phá các API hữu ích với giao diện đơn giản và dễ sử dụng.</p>
 
         <!-- Trends API -->
-        <div id="trends-api" class="api-content hidden">
+        <div id="trends">
             <h2>Trends API</h2>
             <p>Nhập WOEID để tìm kiếm xu hướng.</p>
             <input id="woeid" type="number" placeholder="Nhập WOEID">
@@ -205,7 +117,7 @@
         </div>
 
         <!-- User API -->
-        <div id="user-api" class="api-content hidden">
+        <div id="user">
             <h2>User API</h2>
             <p>Lấy thông tin người dùng bằng ID.</p>
             <input id="userId" type="number" placeholder="Nhập User ID">
@@ -215,33 +127,44 @@
     </div>
 
     <script>
-        function toggleMenu(open) {
-            const sidebar = document.getElementById("sidebar");
-            const overlay = document.getElementById("overlay");
-            const menuBtn = document.getElementById("menuBtn");
+        const apiList = [
+            { id: "intro", name: "Giới thiệu" },
+            { id: "trends", name: "Trends API" },
+            { id: "user", name: "User API" }
+        ];
 
-            if (open) {
-                sidebar.classList.add("open");
-                overlay.classList.add("show");
-                menuBtn.style.display = "none"; // Ẩn nút ☰ khi menu mở
+        const searchInput = document.getElementById("searchAPI");
+        const suggestionsBox = document.getElementById("suggestions");
+
+        searchInput.addEventListener("input", function () {
+            const query = this.value.toLowerCase();
+            suggestionsBox.innerHTML = "";
+            if (query) {
+                const filtered = apiList.filter(api => api.name.toLowerCase().includes(query));
+                filtered.forEach(api => {
+                    const div = document.createElement("div");
+                    div.textContent = api.name;
+                    div.onclick = function () {
+                        document.getElementById(api.id).scrollIntoView({ behavior: "smooth", block: "start" });
+                        searchInput.value = "";
+                        suggestionsBox.style.display = "none";
+                    };
+                    suggestionsBox.appendChild(div);
+                });
+                suggestionsBox.style.display = "block";
             } else {
-                sidebar.classList.remove("open");
-                overlay.classList.remove("show");
-                menuBtn.style.display = "block"; // Hiện lại nút ☰ khi menu đóng
+                suggestionsBox.style.display = "none";
             }
-        }
+        });
 
-        function showAPI(apiName) {
-            document.querySelectorAll(".api-content").forEach(el => el.classList.add("hidden"));
-            document.getElementById(apiName + "-api").classList.remove("hidden");
-
-            // Đóng menu khi chọn API
-            toggleMenu(false);
-        }
+        document.addEventListener("click", function (event) {
+            if (!searchInput.contains(event.target) && !suggestionsBox.contains(event.target)) {
+                suggestionsBox.style.display = "none";
+            }
+        });
 
         function displayData(id, data) {
-            const resultContainer = document.getElementById(id);
-            resultContainer.textContent = JSON.stringify(data, null, 2);
+            document.getElementById(id).textContent = JSON.stringify(data, null, 2);
         }
 
         document.getElementById("fetchTrends").addEventListener("click", () => {
