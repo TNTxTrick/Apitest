@@ -6,24 +6,22 @@
     <title>API Explorer</title>
 
     <style>
-        /* Thiết lập giao diện chung */
+        /* Giao diện chính */
         body {
             background-color: #0D1117;
             color: #E6EDF3;
             font-family: Arial, sans-serif;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            flex-direction: column;
-            padding-top: 20px;
+            padding: 20px;
         }
 
         .container {
             width: 100%;
             max-width: 800px;
-            padding: 20px;
         }
 
         h2 {
@@ -36,44 +34,60 @@
             margin-bottom: 10px;
         }
 
-        input, button {
+        /* Ô nhập và nút */
+        .input-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        input {
+            flex: 1;
             padding: 10px;
-            width: 100%;
-            margin-bottom: 12px;
-            border-radius: 5px;
+            border-radius: 10px;
             border: 1px solid #30363D;
             background-color: #21262D;
             color: #E6EDF3;
             font-size: 16px;
+            outline: none;
         }
 
         button {
+            padding: 10px 16px;
+            border-radius: 10px;
+            border: none;
             background-color: #A855F7;
+            color: white;
+            font-size: 16px;
             cursor: pointer;
+            transition: all 0.3s ease-in-out;
         }
 
         button:hover {
             background-color: #8B949E;
         }
 
-        /* Danh sách gợi ý */
-        .suggestions {
-            background: #161B22;
-            border: 1px solid #30363D;
-            border-radius: 5px;
-            position: absolute;
-            width: 100%;
-            z-index: 10;
-            display: none;
+        button:active {
+            box-shadow: 0 0 10px #A855F7;
         }
 
-        .suggestions div {
-            padding: 10px;
-            cursor: pointer;
+        /* Danh sách nút API */
+        .api-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
-        .suggestions div:hover {
-            background: #A855F7;
+        .api-buttons button {
+            border-radius: 20px;
+            padding: 12px 24px;
+            font-weight: bold;
+        }
+
+        /* Hiệu ứng phát sáng khi nhấn vào nút API */
+        .api-buttons button:active {
+            box-shadow: 0 0 15px #A855F7;
         }
 
         /* Code block */
@@ -87,32 +101,32 @@
             white-space: pre-wrap;
             word-wrap: break-word;
         }
-
-        .search-box {
-            position: relative;
-            margin-bottom: 20px;
-        }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- Ô tìm kiếm API -->
-        <div class="search-box">
-            <input id="searchAPI" type="text" placeholder="Tìm kiếm API...">
-            <div id="suggestions" class="suggestions"></div>
+        <!-- Danh sách các nút API -->
+        <div class="api-buttons">
+            <button onclick="scrollToAPI('intro')">Giới thiệu</button>
+            <button onclick="scrollToAPI('trends')">Trends API</button>
+            <button onclick="scrollToAPI('user')">User API</button>
         </div>
 
         <!-- Giới thiệu API -->
-        <h2 id="intro">Chào mừng đến với API Explorer</h2>
-        <p>Khám phá các API hữu ích với giao diện đơn giản và dễ sử dụng.</p>
+        <div id="intro">
+            <h2>Chào mừng đến với API Explorer</h2>
+            <p>Khám phá các API hữu ích với giao diện đơn giản và dễ sử dụng.</p>
+        </div>
 
         <!-- Trends API -->
         <div id="trends">
             <h2>Trends API</h2>
             <p>Nhập WOEID để tìm kiếm xu hướng.</p>
-            <input id="woeid" type="number" placeholder="Nhập WOEID">
-            <button id="fetchTrends">Thử ngay</button>
+            <div class="input-group">
+                <input id="woeid" type="number" placeholder="Nhập WOEID">
+                <button id="fetchTrends">Thử ngay</button>
+            </div>
             <pre><code id="result-trends" class="json"></code></pre>
         </div>
 
@@ -120,48 +134,18 @@
         <div id="user">
             <h2>User API</h2>
             <p>Lấy thông tin người dùng bằng ID.</p>
-            <input id="userId" type="number" placeholder="Nhập User ID">
-            <button id="fetchUser">Thử ngay</button>
+            <div class="input-group">
+                <input id="userId" type="number" placeholder="Nhập User ID">
+                <button id="fetchUser">Thử ngay</button>
+            </div>
             <pre><code id="result-user" class="json"></code></pre>
         </div>
     </div>
 
     <script>
-        const apiList = [
-            { id: "intro", name: "Giới thiệu" },
-            { id: "trends", name: "Trends API" },
-            { id: "user", name: "User API" }
-        ];
-
-        const searchInput = document.getElementById("searchAPI");
-        const suggestionsBox = document.getElementById("suggestions");
-
-        searchInput.addEventListener("input", function () {
-            const query = this.value.toLowerCase();
-            suggestionsBox.innerHTML = "";
-            if (query) {
-                const filtered = apiList.filter(api => api.name.toLowerCase().includes(query));
-                filtered.forEach(api => {
-                    const div = document.createElement("div");
-                    div.textContent = api.name;
-                    div.onclick = function () {
-                        document.getElementById(api.id).scrollIntoView({ behavior: "smooth", block: "start" });
-                        searchInput.value = "";
-                        suggestionsBox.style.display = "none";
-                    };
-                    suggestionsBox.appendChild(div);
-                });
-                suggestionsBox.style.display = "block";
-            } else {
-                suggestionsBox.style.display = "none";
-            }
-        });
-
-        document.addEventListener("click", function (event) {
-            if (!searchInput.contains(event.target) && !suggestionsBox.contains(event.target)) {
-                suggestionsBox.style.display = "none";
-            }
-        });
+        function scrollToAPI(apiId) {
+            document.getElementById(apiId).scrollIntoView({ behavior: "smooth", block: "start" });
+        }
 
         function displayData(id, data) {
             document.getElementById(id).textContent = JSON.stringify(data, null, 2);
