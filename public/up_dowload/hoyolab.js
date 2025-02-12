@@ -12,7 +12,7 @@ const link = req.query.link;
 
     const sanitizedLink = link.split('?')[0];
   
-  const postIdMatch = url.match(/(\d+)$/);
+  const postIdMatch = link.match(/(\d+)$/);
   if (!postIdMatch) {
     return res.status(400).json({ error: 'Invalid URL format' });
   }
