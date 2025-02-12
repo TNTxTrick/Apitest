@@ -10,7 +10,7 @@ const link = req.query.link;
           return res.status(400).send('Missing link parameter');
         }
 
-    url = url.split('?')[0];
+    const sanitizedLink = link.split('?')[0];
   
   const postIdMatch = url.match(/(\d+)$/);
   if (!postIdMatch) {
