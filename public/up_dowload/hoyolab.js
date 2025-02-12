@@ -11,7 +11,7 @@ const url = req.query.url;
         }
 
     
-  url = url.split('?')[0];
+ const url = url.split('?')[0];
   
   const postIdMatch = url.match(/(\d+)$/);
   if (!postIdMatch) {
