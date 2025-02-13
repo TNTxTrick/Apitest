@@ -9,12 +9,10 @@ exports.index = async (req, res, next) => {
     }
 
     try {
-        // Nếu URL là hoyo.link, cần lấy URL đầy đủ
+        // Nếu URL là hoyo.link, lấy URL đầy đủ bằng request HEAD
         if (url.includes('hoyo.link')) {
             try {
-                // Gửi request GET nhưng không cho phép tự động redirect
                 const response = await axios.get(url, { maxRedirects: 0 }).catch(err => err.response);
-                
                 if (response && response.headers && response.headers.location) {
                     url = response.headers.location; // Lấy URL đầy đủ từ redirect
                 } else {
@@ -25,17 +23,19 @@ exports.index = async (req, res, next) => {
             }
         }
 
-        // Trích xuất postId từ URL đầy đủ
-        let cleanUrl = url.split('?')[0]; // Loại bỏ tham số truy vấn
-        const postIdMatch = cleanUrl.match(/article\/(\d+)/);
-        
+        // Loại bỏ tham số truy vấn
+        let cleanUrl = url.split('?')[0];
+
+        // Cập nhật regex để lấy postId chính xác hơn
+        const postIdMatch = cleanUrl.match(/(?:article\/|post\/)(\d+)/);
+
         if (!postIdMatch) {
-            return res.status(400).json({ error: 'Invalid URL format' });
+            return res.status(400).json({ error: 'Invalid URL format', url_received: url });
         }
 
         const postId = postIdMatch[1];
 
-        // Gọi API của Hoyolab
+        // Gọi API Hoyolab
         const response = await axios.get('https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull', {
             params: { post_id: postId, scene: '1' },
             headers: {
