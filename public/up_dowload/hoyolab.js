@@ -2,25 +2,11 @@ const axios = require('axios');
 
 exports.name = '/hoyolab';
 exports.index = async (req, res, next) => {
-    let { url } = req.query;
+    const url = req.query.url;
 
+    // Kiểm tra nếu thiếu tham số URL
     if (!url) {
         return res.status(400).json({ error: 'Missing link parameter' });
-    }
-
-    // Kiểm tra nếu URL là dạng rút gọn hoyo.link
-    if (url.includes('hoyo.link')) {
-        try {
-            const response = await axios.head(url, { maxRedirects: 0, validateStatus: null });
-            const redirectedUrl = response.headers.location;
-            if (redirectedUrl) {
-                url = redirectedUrl; // Cập nhật URL với link gốc
-            } else {
-                return res.status(400).json({ error: 'Unable to resolve shortened link' });
-            }
-        } catch (error) {
-            return res.status(500).json({ error: 'Error resolving shortened link', details: error.message });
-        }
     }
 
     let cleanUrl = url.split('?')[0];
@@ -33,6 +19,7 @@ exports.index = async (req, res, next) => {
     const postId = postIdMatch[1];
 
     try {
+        // Gọi API của Hoyolab
         const response = await axios.get('https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull', {
             params: { post_id: postId, scene: '1' },
             headers: {
@@ -59,7 +46,7 @@ exports.index = async (req, res, next) => {
         try {
             content = JSON.parse(postData.content);
         } catch (e) {
-            content = { imgs: [], describe: "" };
+            content = { imgs: [], describe: "" }; // Giá trị mặc định nếu lỗi
         }
 
         res.json({
