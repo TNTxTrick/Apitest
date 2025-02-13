@@ -2,23 +2,33 @@ const axios = require('axios');
 
 exports.name = '/hoyolab';
 exports.index = async (req, res, next) => {
-    const url = req.query.url;
+    let { url } = req.query;
 
-    // Kiểm tra nếu thiếu tham số URL
     if (!url) {
         return res.status(400).json({ error: 'Missing link parameter' });
     }
 
-    let cleanUrl = url.split('?')[0];
-    const postIdMatch = cleanUrl.match(/(\d+)$/);
-    
-    if (!postIdMatch) {
-        return res.status(400).json({ error: 'Invalid URL format' });
-    }
-
-    const postId = postIdMatch[1];
-
     try {
+        // Nếu URL là hoyo.link, cần lấy URL đầy đủ
+        if (url.includes('hoyo.link')) {
+            const response = await axios.head(url, { maxRedirects: 0 }).catch(err => err.response);
+            if (response && response.headers && response.headers.location) {
+                url = response.headers.location; // Lấy URL đầy đủ từ redirect
+            } else {
+                return res.status(400).json({ error: 'Invalid hoyo.link or redirection failed' });
+            }
+        }
+
+        // Trích xuất postId từ URL đầy đủ
+        let cleanUrl = url.split('?')[0]; // Loại bỏ tham số truy vấn
+        const postIdMatch = cleanUrl.match(/article\/(\d+)/);
+        
+        if (!postIdMatch) {
+            return res.status(400).json({ error: 'Invalid URL format' });
+        }
+
+        const postId = postIdMatch[1];
+
         // Gọi API của Hoyolab
         const response = await axios.get('https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull', {
             params: { post_id: postId, scene: '1' },
@@ -50,6 +60,8 @@ exports.index = async (req, res, next) => {
         }
 
         res.json({
+            original_url: req.query.url,
+            resolved_url: url, // URL sau khi xử lý
             subject: postData.subject,
             post_id: postData.post_id,
             uid: postData.uid,
