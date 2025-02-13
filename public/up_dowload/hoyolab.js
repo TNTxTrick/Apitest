@@ -8,34 +8,31 @@ exports.index = async (req, res, next) => {
         return res.status(400).json({ error: 'Missing link parameter' });
     }
 
-    try {
-        // Nếu URL là hoyo.link, lấy URL đầy đủ bằng request HEAD
-        if (url.includes('hoyo.link')) {
-            try {
-                const response = await axios.get(url, { maxRedirects: 0 }).catch(err => err.response);
-                if (response && response.headers && response.headers.location) {
-                    url = response.headers.location; // Lấy URL đầy đủ từ redirect
-                } else {
-                    return res.status(400).json({ error: 'Failed to resolve hoyo.link' });
-                }
-            } catch (error) {
-                return res.status(500).json({ error: 'Error resolving hoyo.link', details: error.message });
+    // Kiểm tra nếu URL là dạng rút gọn hoyo.link
+    if (url.includes('hoyo.link')) {
+        try {
+            const response = await axios.head(url, { maxRedirects: 0, validateStatus: null });
+            const redirectedUrl = response.headers.location;
+            if (redirectedUrl) {
+                url = redirectedUrl; // Cập nhật URL với link gốc
+            } else {
+                return res.status(400).json({ error: 'Unable to resolve shortened link' });
             }
+        } catch (error) {
+            return res.status(500).json({ error: 'Error resolving shortened link', details: error.message });
         }
+    }
 
-        // Loại bỏ tham số truy vấn
-        let cleanUrl = url.split('?')[0];
+    let cleanUrl = url.split('?')[0];
+    const postIdMatch = cleanUrl.match(/(\d+)$/);
+    
+    if (!postIdMatch) {
+        return res.status(400).json({ error: 'Invalid URL format' });
+    }
 
-        // Cập nhật regex để lấy postId chính xác hơn
-        const postIdMatch = cleanUrl.match(/(?:article\/|post\/)(\d+)/);
+    const postId = postIdMatch[1];
 
-        if (!postIdMatch) {
-            return res.status(400).json({ error: 'Invalid URL format', url_received: url });
-        }
-
-        const postId = postIdMatch[1];
-
-        // Gọi API Hoyolab
+    try {
         const response = await axios.get('https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull', {
             params: { post_id: postId, scene: '1' },
             headers: {
@@ -62,12 +59,10 @@ exports.index = async (req, res, next) => {
         try {
             content = JSON.parse(postData.content);
         } catch (e) {
-            content = { imgs: [], describe: "" }; // Giá trị mặc định nếu lỗi
+            content = { imgs: [], describe: "" };
         }
 
         res.json({
-            original_url: req.query.url,
-            resolved_url: url, // URL sau khi xử lý
             subject: postData.subject,
             post_id: postData.post_id,
             uid: postData.uid,
