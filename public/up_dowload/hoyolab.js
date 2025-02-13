@@ -11,11 +11,17 @@ exports.index = async (req, res, next) => {
     try {
         // Nếu URL là hoyo.link, cần lấy URL đầy đủ
         if (url.includes('hoyo.link')) {
-            const response = await axios.head(url, { maxRedirects: 0 }).catch(err => err.response);
-            if (response && response.headers && response.headers.location) {
-                url = response.headers.location; // Lấy URL đầy đủ từ redirect
-            } else {
-                return res.status(400).json({ error: 'Invalid hoyo.link or redirection failed' });
+            try {
+                // Gửi request GET nhưng không cho phép tự động redirect
+                const response = await axios.get(url, { maxRedirects: 0 }).catch(err => err.response);
+                
+                if (response && response.headers && response.headers.location) {
+                    url = response.headers.location; // Lấy URL đầy đủ từ redirect
+                } else {
+                    return res.status(400).json({ error: 'Failed to resolve hoyo.link' });
+                }
+            } catch (error) {
+                return res.status(500).json({ error: 'Error resolving hoyo.link', details: error.message });
             }
         }
 
