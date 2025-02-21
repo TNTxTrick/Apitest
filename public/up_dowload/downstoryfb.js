@@ -4,7 +4,7 @@ const cheerio = require('cheerio');
 exports.name = '/storyfb';
 exports.index = async (req, res, next) => {
   try {
-        const { url } = req.query;
+        const url = req.query.url;
       if (!url) {
             return res.status(400).json({ error: 'Thiếu tham số url' });
         }
@@ -31,6 +31,8 @@ exports.index = async (req, res, next) => {
                 }
             }
         );
+
+    console.log(response.data);
 
 
         // Load HTML vào Cheerio
