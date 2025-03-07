@@ -25,7 +25,7 @@ exports.index = async (req, res, next) => {
       const response = await axios.get(url, { headers });
       const data = response.data?.data;
 
-      // Ưu tiên lấy link MP4 từ `durl`
+      // Lấy link MP4 từ `durl`
       return data?.durl?.[0]?.url || null;
     }
 
@@ -54,7 +54,7 @@ exports.index = async (req, res, next) => {
       shares: videoInfo.stat.share,
       upload_date: new Date(videoInfo.pubdate * 1000).toISOString(),
       duration: videoInfo.duration,
-      videoUrl: videoUrl, // ✅ Link chuẩn dạng akamaized.net
+      videoUrl: videoUrl, // ✅ Link MP4 trực tiếp
     });
   } catch (error) {
     console.error('Error fetching data:', error.message);
