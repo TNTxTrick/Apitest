@@ -18,13 +18,12 @@ exports.index = async (req, res, next) => {
       const url = `https://api.bilibili.com/x/player/playurl?bvid=${bvid}&cid=${cid}&qn=120&fnval=16`;
       const headers = {
         "Referer": "https://www.bilibili.com/",
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36",
+        "User-Agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Mobile Safari/537.36",
       };
 
       const response = await axios.get(url, { headers });
       const data = response.data?.data;
 
-      // Kiểm tra trong `durl` để lấy link MP4
       return data?.durl?.[0]?.url || null;
     }
 
@@ -53,7 +52,7 @@ exports.index = async (req, res, next) => {
       shares: videoInfo.stat.share,
       upload_date: new Date(videoInfo.pubdate * 1000).toISOString(),
       duration: videoInfo.duration,
-      videoUrl: videoUrl, // ✅ Link video MP4 trực tiếp
+      videoUrl: videoUrl, // ✅ Link dạng akamaized.net
     });
   } catch (error) {
     console.error('Error fetching data:', error.message);
