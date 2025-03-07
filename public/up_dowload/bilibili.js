@@ -15,7 +15,7 @@ exports.index = async (req, res, next) => {
     }
 
     async function getVideoUrl(bvid, cid) {
-      const url = `https://api.bilibili.com/x/player/playurl?bvid=${bvid}&cid=${cid}&qn=120&fnval=80&fourk=1`;
+      const url = `https://api.bilibili.com/x/player/playurl?bvid=${bvid}&cid=${cid}&qn=120&fnval=16`;
       const headers = {
         "Referer": "https://www.bilibili.com/",
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36",
@@ -24,8 +24,8 @@ exports.index = async (req, res, next) => {
       const response = await axios.get(url, { headers });
       const data = response.data?.data;
 
-      // Kiểm tra durl hoặc video để lấy link
-      return data?.durl?.[0]?.url || data?.video?.[0]?.baseUrl || null;
+      // Kiểm tra trong `durl` để lấy link MP4
+      return data?.durl?.[0]?.url || null;
     }
 
     const { url } = req.query;
@@ -38,7 +38,7 @@ exports.index = async (req, res, next) => {
     if (!videoInfo) return res.status(404).json({ error: "Không tìm thấy video" });
 
     const videoUrl = await getVideoUrl(bvid, videoInfo.cid);
-    if (!videoUrl) return res.status(404).json({ error: "Không tìm thấy link video" });
+    if (!videoUrl) return res.status(404).json({ error: "Không tìm thấy link video MP4" });
 
     return res.json({
       title: videoInfo.title,
@@ -53,7 +53,7 @@ exports.index = async (req, res, next) => {
       shares: videoInfo.stat.share,
       upload_date: new Date(videoInfo.pubdate * 1000).toISOString(),
       duration: videoInfo.duration,
-      videoUrl: videoUrl,
+      videoUrl: videoUrl, // ✅ Link video MP4 trực tiếp
     });
   } catch (error) {
     console.error('Error fetching data:', error.message);
