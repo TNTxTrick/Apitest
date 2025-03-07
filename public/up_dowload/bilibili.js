@@ -15,15 +15,17 @@ exports.index = async (req, res, next) => {
     }
 
     async function getVideoUrl(bvid, cid) {
-      const url = `https://api.bilibili.com/x/player/playurl?bvid=${bvid}&cid=${cid}&qn=120&fnval=16`;
+      const url = `https://api.bilibili.com/x/player/playurl?bvid=${bvid}&cid=${cid}&qn=120&fnval=80`;
       const headers = {
         "Referer": "https://www.bilibili.com/",
-        "User-Agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Mobile Safari/537.36",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36",
+        "Cookie": "SESSDATA=your_sessdata_here", // Nếu cần đăng nhập để lấy link
       };
 
       const response = await axios.get(url, { headers });
       const data = response.data?.data;
 
+      // Ưu tiên lấy link MP4 từ `durl`
       return data?.durl?.[0]?.url || null;
     }
 
@@ -37,7 +39,7 @@ exports.index = async (req, res, next) => {
     if (!videoInfo) return res.status(404).json({ error: "Không tìm thấy video" });
 
     const videoUrl = await getVideoUrl(bvid, videoInfo.cid);
-    if (!videoUrl) return res.status(404).json({ error: "Không tìm thấy link video MP4" });
+    if (!videoUrl) return res.status(404).json({ error: "Không tìm thấy link video MP4 (có thể cần SESSDATA)" });
 
     return res.json({
       title: videoInfo.title,
@@ -52,7 +54,7 @@ exports.index = async (req, res, next) => {
       shares: videoInfo.stat.share,
       upload_date: new Date(videoInfo.pubdate * 1000).toISOString(),
       duration: videoInfo.duration,
-      videoUrl: videoUrl, // ✅ Link dạng akamaized.net
+      videoUrl: videoUrl, // ✅ Link chuẩn dạng akamaized.net
     });
   } catch (error) {
     console.error('Error fetching data:', error.message);
