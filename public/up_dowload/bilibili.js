@@ -2,60 +2,99 @@ const axios = require('axios');
 
 exports.name = '/bilibili';
 exports.index = async (req, res, next) => {
-  try {
-    function extractBvid(url) {
-      const match = url.match(/\/video\/(BV[a-zA-Z0-9]+)/);
-      return match ? match[1] : null;
+  const resolveShortLink = async (shortUrl) => {
+    try {
+        const response = await axios.get(shortUrl, { maxRedirects: 0, validateStatus: null });
+        if (response.status === 302) {
+            return response.headers.location;
+        } else {
+            return null;
+        }
+    } catch (error) {
+        console.error("Lỗi khi giải mã short link:", error);
+        return null;
+    }
+};
+
+// Hàm trích xuất bvid từ link
+const extractBVID = (url) => {
+    const match = url.match(/BV[\w\d]+/);
+    return match ? match[0] : null;
+};
+
+// Hàm lấy thông tin video
+const getVideoInfo = async (bvid) => {
+    const url = `https://api.bilibili.com/x/web-interface/view?bvid=${bvid}`;
+    try {
+        const response = await axios.get(url, {
+            headers: { "User-Agent": "Mozilla/5.0" }
+        });
+        return response.data;
+    } catch (error) {
+        console.error("Lỗi khi lấy thông tin video:", error);
+        return null;
+    }
+};
+
+// Hàm lấy link phát trực tiếp
+const getPlayUrl = async (bvid, cid) => {
+    const url = `https://api.bilibili.com/x/player/playurl?bvid=${bvid}&cid=${cid}&qn=80&fnval=0`;
+    try {
+        const response = await axios.get(url, {
+            headers: { "User-Agent": "Mozilla/5.0" }
+        });
+        return response.data;
+    } catch (error) {
+        console.error("Lỗi khi lấy link phát trực tiếp:", error);
+        return null;
+    }
+};
+
+// API lấy thông tin video và link phát trực tiếp
+    let { shortUrl } = req.query;
+
+    if (!shortUrl) {
+        return res.status(400).json({ error: "Thiếu tham số shortUrl." });
     }
 
-    async function getVideoInfo(bvid) {
-      const url = `https://api.bilibili.com/x/web-interface/view?bvid=${bvid}`;
-      const response = await axios.get(url);
-      return response.data?.data || null;
+    let bvid = extractBVID(shortUrl);
+
+    if (!bvid) {
+        const originalUrl = await resolveShortLink(shortUrl);
+        if (!originalUrl) {
+            return res.status(400).json({ error: "Không thể giải mã short link." });
+        }
+        bvid = extractBVID(originalUrl);
     }
 
-    async function getVideoUrl(bvid, cid) {
-      const url = `https://api.bilibili.com/x/player/playurl?bvid=${bvid}&cid=${cid}&qn=120&fnval=80`;
-      const headers = {
-        "Referer": "https://www.bilibili.com/",
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36",
-        "Cookie": "SESSDATA=your_sessdata_here", // Nếu cần đăng nhập để lấy link
-      };
-
-      const response = await axios.get(url, { headers });
-      const data = response.data?.data;
-
-      // Lấy link MP4 từ `durl`
-      return data?.durl?.[0]?.url || null;
+    if (!bvid) {
+        return res.status(400).json({ error: "Không thể trích xuất bvid từ link." });
     }
 
-    const { url } = req.query;
-    if (!url) return res.status(400).json({ error: "Thiếu tham số URL" });
-
-    const bvid = extractBvid(url);
-    if (!bvid) return res.status(400).json({ error: "URL không hợp lệ hoặc không tìm thấy bvid" });
-
+    // Lấy thông tin video
     const videoInfo = await getVideoInfo(bvid);
-    if (!videoInfo) return res.status(404).json({ error: "Không tìm thấy video" });
+    if (!videoInfo || !videoInfo.data || !videoInfo.data.cid) {
+        return res.status(400).json({ error: "Không thể lấy thông tin video." });
+    }
 
-    const videoUrl = await getVideoUrl(bvid, videoInfo.cid);
-    if (!videoUrl) return res.status(404).json({ error: "Không tìm thấy link video MP4 (có thể cần SESSDATA)" });
+    const cid = videoInfo.data.cid;
 
-    return res.json({
-      title: videoInfo.title,
-      description: videoInfo.desc,
-      thumbnail: videoInfo.pic,
-      uploader: videoInfo.owner.name,
-      uploader_avatar: videoInfo.owner.face,
-      views: videoInfo.stat.view,
-      likes: videoInfo.stat.like,
-      comments: videoInfo.stat.reply,
-      favorites: videoInfo.stat.favorite,
-      shares: videoInfo.stat.share,
-      upload_date: new Date(videoInfo.pubdate * 1000).toISOString(),
-      duration: videoInfo.duration,
-      videoUrl: videoUrl, // ✅ Link MP4 trực tiếp
+    // Lấy link phát trực tiếp
+    const playUrlInfo = await getPlayUrl(bvid, cid);
+    if (!playUrlInfo || !playUrlInfo.data || !playUrlInfo.data.durl || !playUrlInfo.data.durl[0]) {
+        return res.status(400).json({ error: "Không thể lấy link phát trực tiếp." });
+    }
+
+    const videoUrl = playUrlInfo.data.durl[0].url;
+
+    // Trả về thông tin video và link phát trực tiếp
+    res.json({
+        bvid,
+        title: videoInfo.data.title,
+        author: videoInfo.data.owner.name,
+        videoUrl: videoUrl,
     });
+});
   } catch (error) {
     console.error('Error fetching data:', error.message);
     res.status(500).json({ error: "Lỗi khi xử lý yêu cầu", details: error.message });
