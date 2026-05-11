@@ -1,62 +1,67 @@
-const router = require("express").Router();
-const { readdirSync, readFileSync } = require('fs-extra');
+// src/routes.js
+const express = require('express');
+const router = express.Router();
+const fs = require('fs');
 const path = require('path');
-try {
-  // ------------------------------------------------------------------------//
-  // ------------------------/     Fodel public    /-------------------------//
-  // ------------------------------------------------------------------------//
-  var i, j, n = 0;
-  const srcPath = path.join(__dirname, "/public/");
-  const hosting = readdirSync(srcPath).filter((file) => file.endsWith(".js"));
-  for (i of hosting) {
-    const { index, name } = require(srcPath + i);
-    router.get(name, index);
-    n++
-    console.log(i);
-  }
 
-  // for 'post' folder
-  const srcPathPost = path.join(__dirname, "/post/");
-  const hostingPost = readdirSync(srcPathPost).filter((file) => file.endsWith(".js"));
-  for (j of hostingPost) {
-    const { index, name } = require(srcPathPost + j);
-    router.post(name, index);
-    n++
-    console.log('post/' + j);
-  }
-  
-  router.get('/altp_data', function (req, res) {
-    const data = JSON.parse(readFileSync('./altp_data.json', "utf-8"));
-    res.header("Content-Type", 'application/json');
-    res.send(JSON.stringify(data, null, 4));
-  });
-  // ------------------------------------------------------------------------//
-  // ----------------------------/     Fodel    /----------------------------//
-  // ------------------------------------------------------------------------//
-  const getDirs = readdirSync(srcPath).filter((file) => !file.endsWith(".js") && !file.endsWith(".json"));
-  for (const dir of getDirs) {
-    const fileName = readdirSync(path.join(__dirname, '/public/' + dir + '/')).filter((file) => file.endsWith(".js"));
-    for (j of fileName) {
-      const { index, name } = require(path.join(__dirname, '/public/' + dir + '/') + j);
-      router.get(name, index);
-      n++
-      console.log('\x1b[38;5;220m[ LOADING ] \x1b[33m→\x1b[40m\x1b[1m\x1b[38;5;161m Đã tải thành công ' + j);
+const { logSuccess, logError } = require('./core/logger'); // mình sẽ viết sau
+
+let loadedCount = 0;
+
+/**
+ * Hàm load tất cả API từ một thư mục
+ * @param {string} baseDir 
+ * @param {string} method 
+ */
+function loadRoutesFromDir(baseDir, method = 'get') {
+    if (!fs.existsSync(baseDir)) return;
+
+    const items = fs.readdirSync(baseDir);
+
+    for (const item of items) {
+        const fullPath = path.join(baseDir, item);
+        const stat = fs.statSync(fullPath);
+
+        try {
+            if (stat.isDirectory()) {
+                // Load subfolder
+                loadRoutesFromDir(fullPath, method);
+            } 
+            else if (item.endsWith('.js')) {
+                const module = require(fullPath);
+                
+                if (module.index && module.name) {
+                    const routePath = module.name.startsWith('/') ? module.name : '/' + module.name;
+                    
+                    if (method === 'post') {
+                        router.post(routePath, module.index);
+                    } else {
+                        router.get(routePath, module.index);
+                    }
+
+                    loadedCount++;
+                    logSuccess(`[${method.toUpperCase()}] Đã load → ${routePath} (${item})`);
+                }
+            }
+        } catch (error) {
+            logError(`Lỗi load ${item}: ${error.message}`);
+        }
     }
-  }
+}
 
-  // for 'post' folder
-  const getDirsPost = readdirSync(srcPathPost).filter((file) => !file.endsWith(".js") && !file.endsWith(".json"));
-  for (const dir of getDirsPost) {
-    const fileName = readdirSync(path.join(__dirname, '/post/' + dir + '/')).filter((file) => file.endsWith(".js"));
-    for (j of fileName) {
-      const { index, name } = require(path.join(__dirname, '/post/' + dir + '/') + j);
-      router.post(name, index);
-      n++
-      console.log('\x1b[38;5;220m[ LOADING ] \x1b[33m→\x1b[38;5;197m Đã tải thành công POST/' + j);
-    }
-  }
-  console.log(`\x1b[38;5;220m[ LOADING ] \x1b[33m→\x1b[38;5;197m Đã load thành công ${n} file API`);
-} catch (e) { console.log(e); }
+// ====================== LOAD ROUTES ======================
 
-// -------------------------->      END     <------------------------------//
+console.log('\n🔄 Đang load tất cả APIs...');
+
+// Load GET routes từ folder public
+loadRoutesFromDir(path.join(__dirname, 'public'));
+
+// Load POST routes từ folder post  
+loadRoutesFromDir(path.join(__dirname, 'post'), 'post');
+
+// Load thêm nếu bạn có folder con đặc biệt
+// loadRoutesFromDir(path.join(__dirname, 'apis/lienquan'), 'get');
+
+console.log(`\n✅ Đã load thành công ${loadedCount} API routes\n`);
+
 module.exports = router;
