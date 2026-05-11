@@ -3,58 +3,77 @@ const cheerio = require('cheerio');
 
 exports.name = '/onepiece/character/:name';
 exports.index = async (req, res, next) => {
-const name = req.params.name;
-      const url = `https://onepiece.fandom.com/vi/wiki/${name}`;
+    let rawName = req.params.name;
+    const name = decodeURIComponent(rawName);
 
-      try {
-        const { data: html } = await axios.get(url);
-        const $ = cheerio.load(html);
+    const url = `https://onepiece.fandom.com/vi/wiki/${encodeURIComponent(name)}`;
 
-        const characterName = $('h2.pi-item.pi-item-spacing.pi-title.pi-secondary-background').text().trim();
-        const name_ja = $('div.pi-data-value.pi-font').eq(0).text().trim();
-        const phonetic_name = $('div.pi-data-value.pi-font').eq(1).text().trim();
-        const appear = $('div.pi-data-value.pi-font').eq(3).text().trim();
-        const faction = $('div.pi-data-value.pi-font').eq(4).text().trim();
-        const position = $('div.pi-data-value.pi-font').eq(5).text().trim();
-        const accommodation = $('div.pi-data-value.pi-font').eq(6).text().trim();
-        const age = $('div.pi-data-value.pi-font').eq(7).text().trim();
-        const nickname = $('div.pi-data-value.pi-font').eq(8).text().trim();
-        const names = $('div.pi-data-value.pi-font').eq(9).text().trim();
-        const current_status = $('div.pi-data-value.pi-font').eq(10).text().trim();
-        const birthday = $('div.pi-data-value.pi-font').eq(11).text().trim();
-        const blood_group = $('div.pi-data-value.pi-font').eq(12).text().trim();
-        const height = $('div.pi-data-value.pi-font').eq(13).text().trim();
-        const fruit = $('div.pi-data-value.pi-font').eq(17).text().trim();
-        const generation = $('div.pi-data-value.pi-font').eq(19).text().trim();
-        const spanElement = $('span:has(img[alt="Bsymbol"])');
-
-        // Extract the number after the <span> element
-        const wanted_money = spanElement[0].nextSibling.nodeValue.trim();
-        const img = $('img').attr('src');
-
-        res.json({
-          name: characterName,
-          name_ja: name_ja,
-          phonetic_name: phonetic_name,
-          appear: appear,
-          faction: faction,
-          img: img,
-          position: position,
-          accommodation: accommodation,
-          age: age,
-          nickname: nickname,
-          names: names,
-          current_status: current_status,
-          birthday: birthday,
-          blood_group: blood_group,
-          height: height,
-          wanted_money: wanted_money,
-          fruit: fruit,
-          generation: generation
+    try {
+        const { data: html } = await axios.get(url, {
+            headers: {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+            },
+            timeout: 15000
         });
 
-      } catch (error) {
-        console.error('Error:', error);
-        res.status(500).json({ error: 'Failed to fetch data' });
-      }
-    };
+        const $ = cheerio.load(html);
+
+        // Tên nhân vật
+        const characterName = $('h1.page-header__title').text().trim() || 
+                             $('.pi-title').first().text().trim() || 
+                             name.replace(/_/g, ' ');
+
+        // Ảnh nhân vật
+        let img = $('figure.pi-image img').attr('src') || 
+                  $('a.image img').first().attr('src') ||
+                  $('meta[property="og:image"]').attr('content');
+
+        if (img && !img.startsWith('http')) img = 'https:' + img;
+
+        // Helper lấy thông tin từ infobox
+        const getValue = (label) => {
+            return $(`div.pi-data-label:contains("${label}")`).next('.pi-data-value').text().trim() ||
+                   $(`th:contains("${label}")`).next('td').text().trim();
+        };
+
+        const data = {
+            success: true,
+            name: characterName,
+            url: url,
+            image: img,
+            japanese_name: getValue('Tên tiếng Nhật') || getValue('Tên romaji'),
+            nickname: getValue('Biệt danh'),
+            debut: getValue('Xuất hiện lần đầu'),
+            faction: getValue('Thuộc phe') || getValue('Phe phái'),
+            position: getValue('Chức vụ'),
+            age: getValue('Tuổi'),
+            birthday: getValue('Sinh nhật'),
+            blood_type: getValue('Nhóm máu'),
+            height: getValue('Chiều cao'),
+            bounty: getValue('Tiền thưởng') || $('span[style*="color:red"]').text().trim(),
+            devil_fruit: getValue('Trái ác quỷ'),
+            status: getValue('Tình trạng'),
+            description: $('div.mw-parser-output p').first().text().trim() || 'Không có mô tả.',
+            crawled_at: new Date().toISOString()
+        };
+
+        res.json(data);
+
+    } catch (error) {
+        console.error('One Piece Character Error:', error.message);
+
+        if (error.response?.status === 404) {
+            return res.status(404).json({
+                success: false,
+                error: 'Không tìm thấy nhân vật',
+                message: `Không tồn tại nhân vật: ${name}`
+            });
+        }
+
+        res.status(500).json({
+            success: false,
+            error: 'Lỗi khi lấy thông tin nhân vật',
+            message: error.message
+        });
+    }
+};
